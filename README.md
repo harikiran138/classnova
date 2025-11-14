@@ -93,6 +93,16 @@ npm run preview
 - Installs dependencies and builds project
 - Catches build errors early
 
+#### 7. **Modular DIDAC Landing Sections**
+- `src/pages/Index.tsx` now composes 18+ purpose-built sections from `src/sections/*`
+- Each section follows the DIDAC India 2025 blueprint with placeholder media + TODO markers
+- Easy to swap order, reuse in other routes, or hydrate with live CMS data later
+
+#### 8. **Floating CTAs & Scroll Progress**
+- `src/sections/FloatingCtas.tsx` exposes WhatsApp, DIDAC booking, and demo anchors
+- Includes smooth "Back to top" behavior and an accessible page-progress indicator
+- Buttons stay fixed on mobile/desktop to maximize demo conversions
+
 ---
 
 ## 📁 Project Structure
@@ -100,11 +110,15 @@ npm run preview
 ```
 src/
 ├── components/
-│   ├── Navigation.tsx              # Main navbar with anchor links
-│   ├── Hero.tsx                    # Hero section
-│   ├── ScrollAnimationDemo.tsx      # Animation showcase (NEW)
-│   ├── [Other sections]
+│   ├── Navigation.tsx              # Sticky navbar with anchor map
+│   ├── ScrollAnimationDemo.tsx     # Animation showcase
 │   └── ui/                         # Radix UI + shadcn components
+├── sections/                       # Modular marketing sections (NEW)
+│   ├── HeroSection.tsx
+│   ├── TrustBanner.tsx
+│   ├── ProblemSolutionSection.tsx
+│   ├── ... (20 total per blueprint)
+│   └── FloatingCtas.tsx            # WhatsApp / demo buttons + scroll progress
 ├── lib/
 │   ├── use-lenis.tsx               # Lenis initialization hook (NEW)
 │   ├── lenis-provider.tsx          # Provider component (NEW)
@@ -130,6 +144,23 @@ public/
 ├── robots.txt
 └── [favicon, assets]
 ```
+
+### 🔗 Section Anchor Map
+
+| Anchor | Section | Component |
+| --- | --- | --- |
+| `#hero` | Hero + CTA | `HeroSection.tsx` |
+| `#trust` | Brand trust banner | `TrustBanner.tsx` |
+| `#problem` | Problem vs solution | `ProblemSolutionSection.tsx` |
+| `#deployment` | 4-step setup | `SetupStepsSection.tsx` |
+| `#hardware` | Hardware showcase | `HardwareShowcaseSection.tsx` |
+| `#software` | Software interface | `SoftwareInterfaceSection.tsx` |
+| `#benefits` | Key benefits/stats | `BenefitsSection.tsx` |
+| `#pricing` | Plans | `PricingSection.tsx` |
+| `#didac` | DIDAC banner | `DidacBannerSection.tsx` |
+| `#stories` | Testimonials + case studies | `TestimonialsSection.tsx` + `CaseStudiesSection.tsx` |
+| `#demo` | Demo request form | `DemoRequestSection.tsx` |
+| `#contact` | Footer contact | `FooterSection.tsx` |
 
 ---
 
