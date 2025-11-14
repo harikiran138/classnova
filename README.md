@@ -1,3 +1,39 @@
+# ClassNova (React + Vite)
+
+This repository is a React + TypeScript + Vite app with TailwindCSS and Radix UI.
+
+What's added in this branch:
+
+- Lenis smooth-scrolling integration (accessible, respects prefers-reduced-motion)
+- Anchor link interception using Lenis (clicking navbar links uses smooth scroll)
+- A small scroll animation demo using IntersectionObserver
+- CI workflow to run build on push
+
+Quick start
+
+Install:
+
+```bash
+npm install
+```
+
+Run dev server:
+
+```bash
+npm run dev
+```
+
+Build:
+
+```bash
+npm run build
+```
+
+Notes
+
+- The Lenis provider lives in `src/lib/lenis-provider.tsx` and exposes the Lenis instance via context.
+- Reduced motion is detected with `src/lib/use-prefers-reduced-motion.ts` and disables Lenis when the user prefers reduced motion.
+- For richer scroll-driven animations consider adding GSAP + ScrollTrigger and wiring it to Lenis.
 # Welcome to your Lovable project
 
 ## Project info

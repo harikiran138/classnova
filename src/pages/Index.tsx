@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
 import DemoBooking from "@/components/DemoBooking";
 import Footer from "@/components/Footer";
+import ScrollAnimationDemo from "@/components/ScrollAnimationDemo";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
       <div id="pricing">
         <PricingSection />
       </div>
+      <ScrollAnimationDemo />
       <DemoBooking />
       <Footer />
     </div>
