@@ -42,6 +42,22 @@ export const SetupStepsSection = () => {
             </div>
           ))}
         </div>
+
+        <div className="mt-14 flex justify-center">
+          <div className="max-w-4xl rounded-[32px] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 text-center">
+            <p className="text-sm uppercase tracking-[0.3em] text-white/60">Prototype render</p>
+            <h3 className="mt-2 text-2xl font-semibold">Watch the 3-minute setup simulation</h3>
+            <div className="mt-6 aspect-video w-full rounded-2xl border border-dashed border-white/20 bg-[#02060F] flex items-center justify-center">
+              <button className="rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur">
+                <span className="mr-2 text-lg" aria-hidden>
+                  ▶
+                </span>
+                Play prototype demo
+              </button>
+            </div>
+            <p className="mt-4 text-sm text-white/60">Rendered walkthrough of the deployment flow. Real-world recording arrives after pilot.</p>
+          </div>
+        </div>
       </div>
     </section>
   );

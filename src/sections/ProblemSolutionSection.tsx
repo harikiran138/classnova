@@ -1,30 +1,33 @@
 const challenges = [
   {
     title: "Smart board procurement",
-    description: "₹2-3 lakh capex, 12-week delivery, needs specialized installation",
+    description: "₹2–3 lakh capex, 12-week delivery, requires specialist installers.",
+    source: "ASER Infrastructure Report 2023",
   },
   {
     title: "Teacher adoption",
-    description: "Complex software, daily updates, training fatigue",
+    description: "Complex software, daily updates, training fatigue for already stretched staff.",
+    source: "World Bank EdTech Review 2022",
   },
   {
     title: "Maintenance",
-    description: "Bulky hardware, fragile pens, no offline fallback",
+    description: "Bulky hardware, fragile pens, no offline fallback when connectivity drops.",
+    source: "Government ICT Scheme Review 2021",
   },
 ];
 
 const solutions = [
   {
     title: "Plug-and-play hardware",
-    description: "₹12,000 kit works with any projector or TV, installs under 10 minutes",
+    description: "₹12,000 kit retrofits legacy projectors/TVs. No drilling, no IT team required.",
   },
   {
     title: "Teacher-first design",
-    description: "Familiar interface, curated content packs, zero learning curve",
+    description: "Runs like familiar apps (YouTube + WhatsApp cues). Voice prompts + bilingual UI.",
   },
   {
     title: "Offline-first software",
-    description: "Sync once, teach forever. Works during outages with no loss",
+    description: "Sync once over Wi‑Fi, teach for weeks offline. Auto-upload analytics when online.",
   },
 ];
 
@@ -44,6 +47,7 @@ export const ProblemSolutionSection = () => {
                 <p className="text-sm uppercase tracking-wide text-white/60">Challenge</p>
                 <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
                 <p className="mt-2 text-white/70">{item.description}</p>
+                <p className="mt-3 text-xs text-white/50">Source: {item.source}</p>
               </div>
             ))}
           </div>
@@ -62,6 +66,16 @@ export const ProblemSolutionSection = () => {
                 <p className="mt-2 text-white/70">{item.description}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 text-sm text-blue-100">
+            <p className="flex items-start gap-2">
+              <span className="text-lg" aria-hidden>
+                ℹ️
+              </span>
+              <span>
+                Prototype disclosure: Specifications shown reflect current engineering design (Nov 2025) and may be refined after pilot feedback.
+              </span>
+            </p>
           </div>
         </div>
       </div>

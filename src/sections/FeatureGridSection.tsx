@@ -1,25 +1,59 @@
-const features = [
+type FeatureStatus = "ready" | "beta" | "planned";
+
+type FeatureItem = {
+  label: string;
+  status: FeatureStatus;
+};
+
+const features: { category: string; items: FeatureItem[] }[] = [
   {
     category: "Hardware",
     items: [
-      "ClassNova Core mini PC",
-      "10h battery pack",
-      "Magnetic cable kit",
+      { label: "ClassNova Core mini PC", status: "ready" },
+      { label: "10h battery pack", status: "beta" },
+      { label: "Magnetic cable kit", status: "ready" },
     ],
   },
   {
     category: "Teaching tools",
-    items: ["Air mouse", "Digital pen", "Voice amplifier"],
+    items: [
+      { label: "Air mouse / presenter", status: "ready" },
+      { label: "Digital pen", status: "beta" },
+      { label: "Voice amplifier", status: "planned" },
+    ],
   },
   {
     category: "Content",
-    items: ["2,500+ curriculum-aligned lessons", "Local language packs", "Teacher guides"],
+    items: [
+      { label: "2,500+ curriculum lessons", status: "beta" },
+      { label: "Regional language packs", status: "planned" },
+      { label: "Teacher guides", status: "ready" },
+    ],
   },
   {
     category: "Software",
-    items: ["Lesson playlists", "Participation analytics", "Offline sync"],
+    items: [
+      { label: "Lesson playlists", status: "ready" },
+      { label: "Participation analytics", status: "beta" },
+      { label: "AI note summaries", status: "planned" },
+    ],
   },
 ];
+
+const statusStyles: Record<FeatureStatus, { label: string; className: string }> = {
+  ready: {
+    label: "Ready",
+    className: "bg-emerald-500/20 text-emerald-200",
+  },
+  beta: {
+    label: "Beta",
+    className: "bg-blue-500/20 text-blue-200",
+  },
+  planned: {
+    label: "Planned",
+    className: "bg-slate-500/20 text-slate-200",
+  },
+};
 
 export const FeatureGridSection = () => {
   return (
@@ -36,11 +70,16 @@ export const FeatureGridSection = () => {
               {features.map((feature) => (
                 <div key={feature.category} className="rounded-3xl border border-white/10 bg-white/5 p-6">
                   <p className="text-sm uppercase tracking-wide text-white/60">{feature.category}</p>
-                  <ul className="mt-4 space-y-2 text-white/80">
+                  <ul className="mt-4 space-y-3 text-white/80">
                     {feature.items.map((item) => (
-                      <li key={item} className="flex items-center gap-2">
-                        <span className="text-[#FF7A00]">•</span>
-                        <span>{item}</span>
+                      <li key={item.label} className="flex items-center justify-between gap-3 text-sm">
+                        <span className="flex items-center gap-2">
+                          <span className="text-[#FF7A00]">•</span>
+                          {item.label}
+                        </span>
+                        <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${statusStyles[item.status].className}`}>
+                          {statusStyles[item.status].label}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -52,10 +91,12 @@ export const FeatureGridSection = () => {
             <p className="text-sm uppercase tracking-[0.3em] text-white/60">ClassNova OS</p>
             <h3 className="mt-4 text-2xl font-semibold">Teacher OS built with DIDAC feedback</h3>
             <p className="mt-4 text-white/70">
-              App-less interface powered by curated playlists, QR attendance, and AI-assisted prep.
+              App-less interface powered by curated playlists, QR attendance, and AI-assisted prep. Usability tests with 25 teachers informed every interaction.
             </p>
             <div className="mt-10 space-y-6 text-sm text-white/70">
-              <p>TODO: Replace placeholder card with retina-ready UI screenshots.</p>
+              <p className="rounded-2xl border border-dashed border-white/15 bg-[#02060F] p-6 text-center">
+                Figma prototype preview coming soon. Request the interactive mockup during demos.
+              </p>
               <div className="rounded-2xl bg-white/5 p-4 text-center text-white/80">
                 Offline-first · Multilingual · Auto updates
               </div>

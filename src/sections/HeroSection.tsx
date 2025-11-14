@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Play } from "lucide-react";
+import { ArrowRight, Download, Play, Sparkles } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -15,23 +15,23 @@ export const HeroSection = () => {
       <div className="container mx-auto flex min-h-screen flex-col gap-16 px-4 pb-24 pt-40 lg:flex-row lg:items-center lg:gap-12">
         <div className="relative z-10 flex-1 space-y-10">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80">
-              <span className="text-orange-300">Live at DIDAC India 2025</span>
+            <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80">
+              <span className="text-orange-300">Launching at DIDAC India · Dec 12-14</span>
               <span className="opacity-70">Hall 7 · Booth E-24</span>
             </div>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Transform Any Projector Into A <span className="bg-gradient-to-r from-[#FF7A00] via-[#FF9A3C] to-[#FFD8A8] bg-clip-text text-transparent">Complete Smart Classroom</span>
+              Transform Any Projector Into A <span className="bg-gradient-to-r from-[#FF7A00] via-[#FF9A3C] to-[#FFD8A8] bg-clip-text text-transparent">Smart Classroom</span>
             </h1>
             <p className="text-lg text-white/80 lg:text-xl">
-              ₹12,000 solution replacing ₹2 lakh smart boards. Plug, play, and revolutionize teaching in 5 minutes.
+              ₹12,000 retrofit kit replacing ₹2–3 lakh smart boards. <strong className="font-semibold text-white">Launching February 2026.</strong> Reserve early access and see the prototype live.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-4 text-white/80 sm:grid-cols-3">
             {[
-              { label: "Classrooms", value: "15,000+", icon: "📊" },
-              { label: "Offline Ready", value: "100%", icon: "⚡" },
-              { label: "Cost Reduction", value: "85%", icon: "💰" },
+              { label: "Target Reach", value: "15,000+", icon: "🎯" },
+              { label: "Works", value: "100% Offline", icon: "⚡" },
+              { label: "Cost Savings", value: "85%", icon: "💰" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -48,22 +48,31 @@ export const HeroSection = () => {
 
           <div className="flex flex-col gap-4 text-base sm:flex-row">
             <Button className="h-14 rounded-full bg-[#FF7A00] text-base font-semibold text-white shadow-lg shadow-[#FF7A00]/40 transition hover:scale-[1.02]">
-              Book Live Demo at DIDAC
+              🎫 Reserve DIDAC Booth Visit
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="outline"
               className="h-14 rounded-full border-white/30 bg-transparent text-base font-semibold text-white hover:bg-white/10"
             >
-              Download Brochure
+              📄 Download Concept Brief
               <Download className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
               className="h-14 rounded-full text-base font-semibold text-white hover:bg-white/10"
             >
-              <Play className="mr-2 h-4 w-4" /> Watch 2-min Video
+              <Play className="mr-2 h-4 w-4" /> Watch Vision Video
             </Button>
+          </div>
+
+          <div className="rounded-2xl border border-orange-500/30 bg-orange-500/10 px-5 py-4 text-sm text-orange-100">
+            <p className="flex items-start gap-2">
+              <Sparkles className="mt-0.5 h-4 w-4 text-orange-300" />
+              <span>
+                <strong className="font-semibold">Early Access Program:</strong> First 50 schools receive 30% launch discount + free installation support. Fully refundable pre-order.
+              </span>
+            </p>
           </div>
         </div>
 

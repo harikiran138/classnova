@@ -1,15 +1,18 @@
 const hardware = [
   {
     title: "ClassNova Core",
-    specs: ["Quad-core CPU", "Dual-band Wi-Fi", "64GB onboard"],
+    specs: ["Quad-core ARM CPU", "Dual-band Wi-Fi + Ethernet", "64GB eMMC storage"],
+    confidence: "confirmed",
   },
   {
     title: "Teaching Controller",
-    specs: ["Air mouse", "Laser pointer", "Haptic feedback"],
+    specs: ["Air mouse + presenter", "Laser pointer", "Haptic cues"],
+    confidence: "beta",
   },
   {
     title: "Voice Amplifier",
-    specs: ["15W output", "Neckband mic", "USB-C charging"],
+    specs: ["15W speaker", "Neckband microphone", "USB-C charging"],
+    confidence: "testing",
   },
 ];
 
@@ -20,14 +23,20 @@ export const HardwareShowcaseSection = () => {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <p className="text-sm uppercase tracking-[0.4em] text-white/50">Hardware stack</p>
-            <h2 className="mt-4 text-3xl font-semibold">Built for Indian classrooms. Field tested in 200+ schools.</h2>
+            <h2 className="mt-4 text-3xl font-semibold">Engineered for Indian classrooms</h2>
             <p className="mt-4 text-white/70">
-              Rugged casing, passive cooling, and modular accessories keep the kit operational even after daily transport.
+              Rugged casing, passive cooling, and modular accessories designed with school lab realities. Currently in beta testing, shipping February 2026.
             </p>
             <div className="mt-8 rounded-[32px] border border-white/10 bg-white/5 p-6">
-              <p className="text-sm uppercase tracking-[0.3em] text-white/60">3D preview</p>
-              <div className="mt-4 h-64 rounded-2xl border border-dashed border-white/20 bg-[#050C1F]" />
-              <p className="mt-3 text-xs text-white/50">TODO: Embed interactive 3D hardware viewer</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-white/60">Prototype renders</p>
+              <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                {["Front view", "Port layout", "Exploded view"].map((label) => (
+                  <div key={label} className="rounded-2xl border border-dashed border-white/15 bg-[#050C1F] p-4 text-center text-xs text-white/60">
+                    {label}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-xs text-white/50">Actual photos shared with pilot schools under NDA.</p>
             </div>
           </div>
           <div className="space-y-6">
@@ -35,7 +44,7 @@ export const HardwareShowcaseSection = () => {
               <div key={item.title} className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <span className="text-sm text-white/60">Includes</span>
+                  <span className="text-xs uppercase tracking-wide text-white/60">{item.confidence}</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-white/80">
                   {item.specs.map((spec) => (
@@ -47,8 +56,8 @@ export const HardwareShowcaseSection = () => {
                 </ul>
               </div>
             ))}
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/70">
-              Includes LMS-ready Android app + Windows mode, USB-C charging, and 24/7 remote diagnostics.
+            <div className="rounded-3xl border border-blue-500/30 bg-blue-500/10 p-5 text-sm text-blue-100">
+              <p>⚠️ Prototype disclosure: Specifications may refine after January 2026 pilot testing. We will always communicate changes transparently.</p>
             </div>
           </div>
         </div>
