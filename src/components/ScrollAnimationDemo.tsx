@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLenisContext } from "@/lib/lenis-context";
+import { useGsapScrollTrigger } from "@/lib/use-gsap-scrolltrigger";
 
 const ScrollAnimationDemo: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -25,13 +26,24 @@ const ScrollAnimationDemo: React.FC = () => {
   // also demonstrate pulling current scroll position from lenis (if available)
   useEffect(() => {
     if (!lenis) return;
-    const onScroll = ({ scroll }: any) => {
+
+    type LenisLike = {
+      on: (event: string, cb: (payload: { scroll: number }) => void) => void;
+      off: (event: string, cb: (payload: { scroll: number }) => void) => void;
+    };
+
+    const onScroll = ({ scroll }: { scroll: number }) => {
       // could drive animations with this value; here we just toggle lighter state
       // keep small to avoid re-rendering too often
+      void scroll;
     };
-    lenis.on("scroll", onScroll);
-    return () => lenis.off("scroll", onScroll);
+
+    (lenis as unknown as LenisLike).on("scroll", onScroll);
+    return () => (lenis as unknown as LenisLike).off("scroll", onScroll);
   }, [lenis]);
+
+  // setup GSAP ScrollTrigger when lenis is available
+  useGsapScrollTrigger(lenis);
 
   return (
     <section className="container mx-auto px-4 py-24">

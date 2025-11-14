@@ -1,35 +1,49 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import StorySection from "@/components/StorySection";
-import FeaturesSection from "@/components/FeaturesSection";
-import DidacSection from "@/components/DidacSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import PricingSection from "@/components/PricingSection";
-import DemoBooking from "@/components/DemoBooking";
-import Footer from "@/components/Footer";
+import HeroSection from "@/sections/HeroSection";
+import TrustBanner from "@/sections/TrustBanner";
+import ProblemSolutionSection from "@/sections/ProblemSolutionSection";
+import SetupStepsSection from "@/sections/SetupStepsSection";
+import FeatureGridSection from "@/sections/FeatureGridSection";
+import HardwareShowcaseSection from "@/sections/HardwareShowcaseSection";
+import SoftwareInterfaceSection from "@/sections/SoftwareInterfaceSection";
+import BenefitsSection from "@/sections/BenefitsSection";
+import PricingSection from "@/sections/PricingSection";
+import DidacBannerSection from "@/sections/DidacBannerSection";
+import TestimonialsSection from "@/sections/TestimonialsSection";
+import CaseStudiesSection from "@/sections/CaseStudiesSection";
+import FaqSection from "@/sections/FaqSection";
+import PartnersSection from "@/sections/PartnersSection";
+import ComparisonSection from "@/sections/ComparisonSection";
+import ResourcesSection from "@/sections/ResourcesSection";
+import DemoRequestSection from "@/sections/DemoRequestSection";
+import FooterSection from "@/sections/FooterSection";
+import FloatingCtas from "@/sections/FloatingCtas";
 import ScrollAnimationDemo from "@/components/ScrollAnimationDemo";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <StorySection />
-      <div id="features">
-        <FeaturesSection />
-      </div>
-      <div id="didac">
-        <DidacSection />
-      </div>
-      <div id="testimonials">
-        <TestimonialsSection />
-      </div>
-      <div id="pricing">
-        <PricingSection />
-      </div>
+      <HeroSection />
+      <TrustBanner />
+      <ProblemSolutionSection />
+      <SetupStepsSection />
+      <FeatureGridSection />
+      <HardwareShowcaseSection />
+      <SoftwareInterfaceSection />
+      <BenefitsSection />
+      <PricingSection />
+      <DidacBannerSection />
+      <TestimonialsSection />
+      <CaseStudiesSection />
+      <FaqSection />
+      <PartnersSection />
+      <ComparisonSection />
+      <ResourcesSection />
+      <DemoRequestSection />
       <ScrollAnimationDemo />
-      <DemoBooking />
-      <Footer />
+      <FooterSection />
+      <FloatingCtas />
     </div>
   );
 };
