@@ -1,6 +1,6 @@
 export const DidacBannerSection = () => {
   return (
-    <section className="bg-[#050C1F] py-20 text-white">
+    <section id="didac" className="bg-[#050C1F] py-20 text-white">
       <div className="container mx-auto px-4">
         <div className="rounded-[40px] border border-[#FF7A00]/40 bg-gradient-to-r from-[#120A02] to-[#050C1F] p-10 text-center">
           <p className="text-sm uppercase tracking-[0.4em] text-[#FFB36D]">DIDAC India 2025</p>

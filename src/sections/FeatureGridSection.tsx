@@ -23,7 +23,7 @@ const features = [
 
 export const FeatureGridSection = () => {
   return (
-    <section className="bg-[#050C1F] py-24 text-white">
+    <section id="features" className="bg-[#050C1F] py-24 text-white">
       <div className="container mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>

@@ -10,7 +10,7 @@ const Navigation = () => {
     { label: "Hardware", href: "#hardware" },
     { label: "Software", href: "#software" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Stories", href: "#testimonials" },
+  { label: "Stories", href: "#stories" },
     { label: "Demo", href: "#demo" },
   ];
 

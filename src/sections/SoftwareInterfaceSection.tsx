@@ -15,7 +15,7 @@ const tabs = [
 
 export const SoftwareInterfaceSection = () => {
   return (
-    <section className="bg-[#050C1F] py-24 text-white">
+    <section id="software" className="bg-[#050C1F] py-24 text-white">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm uppercase tracking-[0.4em] text-white/60">Software</p>

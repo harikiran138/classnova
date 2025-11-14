@@ -9,7 +9,7 @@ const partners = [
 
 export const PartnersSection = () => {
   return (
-    <section className="bg-[#050C1F] py-20 text-white">
+    <section id="partners" className="bg-[#050C1F] py-20 text-white">
       <div className="container mx-auto px-4">
         <div className="rounded-[40px] border border-white/10 bg-white/5 p-8">
           <p className="text-sm uppercase tracking-[0.4em] text-white/60">Partners</p>

@@ -15,7 +15,7 @@ const hardware = [
 
 export const HardwareShowcaseSection = () => {
   return (
-    <section className="bg-[#030814] py-24 text-white">
+    <section id="hardware" className="bg-[#030814] py-24 text-white">
       <div className="container mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
