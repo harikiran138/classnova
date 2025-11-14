@@ -1,81 +1,57 @@
-const challenges = [
-  {
-    title: "Smart board procurement",
-    description: "₹2–3 lakh capex, 12-week delivery, requires specialist installers.",
-    source: "ASER Infrastructure Report 2023",
-  },
-  {
-    title: "Teacher adoption",
-    description: "Complex software, daily updates, training fatigue for already stretched staff.",
-    source: "World Bank EdTech Review 2022",
-  },
-  {
-    title: "Maintenance",
-    description: "Bulky hardware, fragile pens, no offline fallback when connectivity drops.",
-    source: "Government ICT Scheme Review 2021",
-  },
+const highlights = [
+  "Works with any projector or TV",
+  "No training or IT team needed",
+  "Offline-first, syncs when online",
+  "Built for government, private, NGO schools",
 ];
 
-const solutions = [
+const miniCards = [
   {
-    title: "Plug-and-play hardware",
-    description: "₹12,000 kit retrofits legacy projectors/TVs. No drilling, no IT team required.",
+    title: "Plug-and-play core",
+    body: "Connect via HDMI, power on, and the teaching OS appears instantly.",
   },
   {
-    title: "Teacher-first design",
-    description: "Runs like familiar apps (YouTube + WhatsApp cues). Voice prompts + bilingual UI.",
+    title: "All tools included",
+    body: "Whiteboard, content library, lesson recording, sharing — all built in.",
   },
   {
-    title: "Offline-first software",
-    description: "Sync once over Wi‑Fi, teach for weeks offline. Auto-upload analytics when online.",
+    title: "Trusted rollout",
+    body: "Pilot-ready hardware with transparent timelines and support.",
   },
 ];
 
 export const ProblemSolutionSection = () => {
   return (
     <section id="problem" className="section-padding bg-[#050C1F] text-white">
-      <div className="section-shell grid gap-16 lg:grid-cols-2">
+      <div className="section-shell grid gap-16 lg:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="section-eyebrow text-[#FFB36D]">The gap</p>
-          <h2 className="section-heading mt-4">Smart classrooms never scaled for India</h2>
+          <p className="section-eyebrow text-[#FFB36D]">What is ClassNova?</p>
+          <h2 className="section-heading mt-4">A compact device that modernizes any classroom</h2>
           <p className="section-subtitle mt-4">
-            Most solutions were built for metro budgets, assume perfect connectivity, and require specialist maintenance teams.
+            ClassNova brings digital teaching tools, content, and recording into one simple system designed for teachers.
           </p>
-          <div className="mt-10 space-y-6">
-            {challenges.map((item) => (
-              <div key={item.title} className="glass-panel p-6">
-                <p className="text-sm uppercase tracking-wide text-white/60">Challenge</p>
-                <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
-                <p className="mt-2 text-white/70">{item.description}</p>
-                <p className="mt-3 text-xs text-white/50">Source: {item.source}</p>
+          <div className="mt-10 space-y-3 text-base text-white/80">
+            {highlights.map((item) => (
+              <div key={item} className="flex items-center gap-3 rounded-full border border-white/10 px-5 py-3 text-sm uppercase tracking-wide">
+                <span className="h-2 w-2 rounded-full bg-[#FF7A00]" />
+                {item}
               </div>
             ))}
           </div>
         </div>
         <div>
-          <p className="section-eyebrow text-emerald-300">The ClassNova approach</p>
-          <h2 className="section-heading mt-4">Designed for Government + Affordable schools</h2>
-          <p className="section-subtitle mt-4">
-            Built with the realities of Indian classrooms: intermittent power, legacy projectors, busy teachers, and strict budgets.
-          </p>
-          <div className="mt-10 space-y-6">
-            {solutions.map((item) => (
-              <div key={item.title} className="glass-panel bg-gradient-to-br from-white/10 to-transparent p-6">
-                <p className="text-sm uppercase tracking-wide text-white/60">Solution</p>
-                <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
-                <p className="mt-2 text-white/70">{item.description}</p>
+          <p className="section-eyebrow text-emerald-300">How it fits</p>
+          <h2 className="section-heading mt-4">All essentials inside one kit</h2>
+          <div className="mt-10 space-y-4">
+            {miniCards.map((card) => (
+              <div key={card.title} className="glass-panel p-6">
+                <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+                <p className="mt-2 text-white/70">{card.body}</p>
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 text-sm text-blue-100">
-            <p className="flex items-start gap-2">
-              <span className="text-lg" aria-hidden>
-                ℹ️
-              </span>
-              <span>
-                Prototype disclosure: Specifications shown reflect current engineering design (Nov 2025) and may be refined after pilot feedback.
-              </span>
-            </p>
+          <div className="mt-8 rounded-[28px] border border-white/15 bg-white/5 p-5 text-sm text-white/70">
+            Built for busy teachers: no training decks, no external technicians, no waiting for network.
           </div>
         </div>
       </div>

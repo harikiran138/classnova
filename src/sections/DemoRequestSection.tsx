@@ -4,12 +4,12 @@ export const DemoRequestSection = () => {
       <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <p className="section-eyebrow">Request a walkthrough</p>
-            <h2 className="section-heading mt-4">Join the pilot review queue</h2>
+            <p className="section-eyebrow">Demo</p>
+            <h2 className="section-heading mt-4">Request a walkthrough</h2>
             <p className="section-subtitle mt-4">
-              We onboard a maximum of 2 institutions per month so the core team can be on-site. Expect an honest conversation about risks, not a sales pitch.
+              We onboard two institutions per month so every pilot gets full attention.
             </p>
-            <div className="mt-8 space-y-4 text-white/80">
+            <div className="mt-8 space-y-3 text-white/80 text-base">
               <p>📍 Bengaluru · Mumbai · Delhi</p>
               <p>📞 +91 98765 43210</p>
               <p>✉️ hello@classnova.com</p>
@@ -36,11 +36,11 @@ export const DemoRequestSection = () => {
               <input className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" />
             </div>
             <div>
-              <label className="text-sm text-white/70">Requirement</label>
+              <label className="text-sm text-white/70">What do you need?</label>
               <textarea className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" rows={4} />
             </div>
             <button className="btn-pill w-full bg-white py-3 text-sm font-semibold text-[#050C1F]">Request pilot review</button>
-            <p className="text-xs text-white/50">We reply with a shared notes doc + NDA within 24 hours.</p>
+            <p className="text-xs text-white/50">We reply within 24 hours with notes, NDA, and next steps.</p>
           </form>
         </div>
       </div>

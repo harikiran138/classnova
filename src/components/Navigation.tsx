@@ -16,9 +16,9 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-soft">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 shadow-soft backdrop-blur-lg">
+      <div className="section-shell">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl bg-gradient-warm flex items-center justify-center shadow-soft">
@@ -41,21 +41,18 @@ const Navigation = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
-            <Button
-              variant="outline"
-              className="rounded-full border-primary/30 hover:border-primary hover:bg-primary/5 transition-smooth"
-            >
-              Download brief
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="outline" className="btn-ghost-pill h-11 border-white/20 text-sm">
+              Download brochure
             </Button>
-            <Button className="gradient-warm text-white rounded-full shadow-soft hover:scale-105 transition-bounce">
-              Reserve prototype
+            <Button className="btn-primary-pill h-11 text-sm">
+              Book a demo
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-smooth"
+            className="rounded-lg p-2 transition-smooth hover:bg-secondary md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -76,15 +73,12 @@ const Navigation = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
-                <Button
-                  variant="outline"
-                  className="rounded-full border-primary/30 hover:border-primary hover:bg-primary/5 transition-smooth"
-                >
-                  Download brief
+              <div className="flex flex-col gap-3 border-t border-border/50 pt-4">
+                <Button variant="outline" className="btn-ghost-pill w-full border-white/20">
+                  Download brochure
                 </Button>
-                <Button className="gradient-warm text-white rounded-full shadow-soft">
-                  Reserve prototype
+                <Button className="btn-primary-pill w-full">
+                  Book a demo
                 </Button>
               </div>
             </div>

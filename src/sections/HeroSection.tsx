@@ -16,61 +16,55 @@ export const HeroSection = () => {
         <div className="relative z-10 flex-1 space-y-10">
           <div className="space-y-6">
             <div className="pill">
-              <span className="text-orange-300">Launching at DIDAC India · Dec 12-14</span>
-              <span className="hidden text-white/60 sm:inline">Hall 7 · Booth E-24</span>
+              <span className="text-orange-300">ClassNova · Pilot ready</span>
+              <span className="hidden text-white/60 sm:inline">Meet us at DIDAC India</span>
             </div>
             <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px]">
-              Transform Any Projector Into A <span className="bg-gradient-to-r from-[#FF7A00] via-[#FF9A3C] to-[#FFD8A8] bg-clip-text text-transparent">Smart Classroom</span>
+              Transform any classroom into a <span className="bg-gradient-to-r from-[#FF7A00] via-[#FF9A3C] to-[#FFD8A8] bg-clip-text text-transparent">smart classroom</span>
             </h1>
-            <p className="section-subtitle text-lg lg:text-xl">
-              ₹12,000 retrofit kit replacing ₹2–3 lakh smart boards. <strong className="font-semibold text-white">Launching February 2026.</strong> Reserve early access and see the prototype live.
+            <p className="text-balance text-lg text-white/80 lg:text-xl">
+              A powerful, portable device that turns projectors and TVs into interactive teaching hubs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 text-white/80 sm:grid-cols-3">
+          <div className="grid gap-4 text-white/80 sm:grid-cols-3">
             {[
-              { label: "Target Reach", value: "15,000+", icon: "🎯" },
-              { label: "Works", value: "100% Offline", icon: "⚡" },
-              { label: "Cost Savings", value: "85%", icon: "💰" },
+              { label: "Simple setup", value: "Plug & teach" },
+              { label: "Teacher-friendly", value: "No training" },
+              { label: "Budget ready", value: "₹12k kit" },
             ].map((stat) => (
-              <div
-                key={stat.label}
-                className="stat-card px-4 py-5"
-              >
-                <div className="text-3xl" aria-hidden>
-                  {stat.icon}
-                </div>
-                <p className="text-2xl font-semibold text-white">{stat.value}</p>
-                <p className="text-sm uppercase tracking-wide text-white/70">{stat.label}</p>
+              <div key={stat.label} className="stat-card px-5 py-6 text-left">
+                <p className="text-xs uppercase tracking-[0.3em] text-white/50">{stat.label}</p>
+                <p className="mt-2 text-2xl font-semibold text-white">{stat.value}</p>
               </div>
             ))}
           </div>
 
           <div className="flex flex-col gap-4 text-base sm:flex-row">
             <Button className="btn-primary-pill h-14 text-base">
-              🎫 Reserve DIDAC Booth Visit
+              Book a demo
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="outline"
               className="btn-ghost-pill h-14 border-white/30 text-base"
             >
-              📄 Download Concept Brief
+              Download brochure
               <Download className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
               className="btn-pill h-14 text-base text-white hover:bg-white/10"
             >
-              <Play className="mr-2 h-4 w-4" /> Watch Vision Video
+              <Play className="mr-2 h-4 w-4" /> Watch product tour
             </Button>
           </div>
 
-          <div className="rounded-2xl border border-orange-500/30 bg-orange-500/10 px-5 py-4 text-sm text-orange-100">
-            <p className="flex items-start gap-2">
+          <div className="glass-panel border-orange-500/30 bg-orange-500/5 px-6 py-5 text-sm text-orange-100">
+            <p className="flex items-start gap-2 text-balance">
               <Sparkles className="mt-0.5 h-4 w-4 text-orange-300" />
               <span>
-                <strong className="font-semibold">Early Access Program:</strong> First 50 schools receive 30% launch discount + free installation support. Fully refundable pre-order.
+                Built for teachers, tested in live classrooms, and ready for DIDAC previews.
               </span>
             </p>
           </div>

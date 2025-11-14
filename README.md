@@ -247,6 +247,43 @@ public/
 - Container queries for flexible components
 - Touch-friendly tap targets (min 48px)
 
+### Premium UI Guidelines (2025 refresh)
+
+**Typography scale**
+- H1: 52/60, bold
+- H2: 40/48, semibold
+- H3: 28/36, medium
+- Body: 18/32, regular
+- Eyebrow/caption: 12/18, uppercase, tracking 0.3em
+
+**Spacing rhythm**
+- Sections: `section-padding` (clamp 64–96px)
+- Cards: 32px padding, 32px radius
+- Buttons: 48px min height, shared pill class
+- Grid gutters: 24px mobile, 32px desktop
+
+**Components**
+- Use `section-shell` for all content widths
+- Cards rely on `glass-panel` or `surface-panel`
+- Primary CTA: `btn-primary-pill`; secondary: `btn-ghost-pill`
+- Keep icons, radiuses, and shadows consistent across sections
+
+**Color + balance**
+- Deep navy background, soft grey/white surfaces
+- Orange reserved for CTAs/highlights; optional soft blue accent for trust states
+- Minimal gradients, generous negative space
+
+**Animation guidance**
+- Default entrance: `.animate-fade-up` (20px lift, 0.6s)
+- Stagger cards by 80–120ms for premium feel
+- Avoid large parallax or bouncing; keep motion subtle and interruptible
+
+**Conversion & trust tips**
+- Pair every CTA with a supporting line (e.g., “Wait time: 10 days”)
+- Keep testimonials short, human, and tied to real contexts
+- Surfaces referencing prototypes should mention transparency/roadmap
+- Highlight DIDAC presence + contact info in multiple sections
+
 ---
 
 ## 📊 Performance Optimizations
