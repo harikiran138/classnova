@@ -153,12 +153,21 @@ public/
 | `#trust` | Brand trust banner | `TrustBanner.tsx` |
 | `#problem` | Problem vs solution | `ProblemSolutionSection.tsx` |
 | `#deployment` | 4-step setup | `SetupStepsSection.tsx` |
+| `#features` | Feature grid | `FeatureGridSection.tsx` |
 | `#hardware` | Hardware showcase | `HardwareShowcaseSection.tsx` |
 | `#software` | Software interface | `SoftwareInterfaceSection.tsx` |
+| `#timeline` | Build timeline | `DevelopmentTimelineSection.tsx` |
+| `#team` | Team & advisors | `TeamSection.tsx` |
 | `#benefits` | Key benefits/stats | `BenefitsSection.tsx` |
 | `#pricing` | Plans | `PricingSection.tsx` |
 | `#didac` | DIDAC banner | `DidacBannerSection.tsx` |
-| `#stories` | Testimonials + case studies | `TestimonialsSection.tsx` + `CaseStudiesSection.tsx` |
+| `#stories` | Educator interviews | `TestimonialsSection.tsx` |
+| `#impact` | Impact scenarios | `CaseStudiesSection.tsx` |
+| `#transparency` | Metrics + risks | `TransparencySection.tsx` |
+| `#faq` | Prototype FAQ | `FaqSection.tsx` |
+| `#partners` | Collaborators | `PartnersSection.tsx` |
+| `#comparison` | Smart board vs ClassNova | `ComparisonSection.tsx` |
+| `#resources` | Briefings + downloads | `ResourcesSection.tsx` |
 | `#demo` | Demo request form | `DemoRequestSection.tsx` |
 | `#contact` | Footer contact | `FooterSection.tsx` |
 

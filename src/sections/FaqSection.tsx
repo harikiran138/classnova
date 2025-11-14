@@ -1,15 +1,15 @@
 const faq = [
   {
-    question: "Does it work without constant internet?",
-    answer: "Yes. Sync once over Wi-Fi. All lessons, quizzes, and analytics queue offline.",
+    question: "Is the hardware certified yet?",
+    answer: "EMI/EMC tests are complete; BIS filing happens in January. Until then, pilots run under supervised exemptions.",
   },
   {
-    question: "How do we train teachers?",
-    answer: "2-hour session + WhatsApp hotline. Adoption kits available in 5 languages.",
+    question: "What data do you actually have?",
+    answer: "Setup times, UI click paths, and offline resilience were measured in lab + teacher dry runs. Learning gains will be captured only after live pilots.",
   },
   {
-    question: "Is maintenance included?",
-    answer: "Onsite swaps + remote diagnostics + 3-year warranty standard.",
+    question: "How does support work before launch?",
+    answer: "Founders + two engineers travel for every pilot. We publish post-mortems weekly so stakeholders see fixes in motion.",
   },
 ];
 
@@ -19,7 +19,7 @@ export const FaqSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <p className="text-sm uppercase tracking-[0.4em] text-white/60">FAQ</p>
-          <h2 className="mt-4 text-3xl font-semibold">Questions district teams ask us</h2>
+          <h2 className="mt-4 text-3xl font-semibold">Most common prototype-stage questions</h2>
         </div>
         <div className="mx-auto mt-12 max-w-3xl space-y-4">
           {faq.map((item) => (

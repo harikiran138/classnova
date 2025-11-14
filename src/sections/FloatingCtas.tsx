@@ -41,19 +41,19 @@ export const FloatingCtas = () => {
         className="rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold shadow-lg shadow-[#25D366]/50"
         aria-label="Chat with ClassNova team on WhatsApp"
       >
-        WhatsApp team
+        Pilot desk (WA)
       </a>
       <a
-        href="#didac"
+        href="#timeline"
         className="rounded-full bg-[#FF7A00] px-5 py-3 text-sm font-semibold shadow-lg shadow-[#FF7A00]/50"
       >
-        Book DIDAC slot
+        View build timeline
       </a>
       <a
-        href="#demo"
+        href="#transparency"
         className="rounded-full bg-white/10 px-5 py-3 text-sm font-semibold backdrop-blur"
       >
-        Request demo
+        See transparency data
       </a>
       <button
         type="button"

@@ -9,8 +9,9 @@ const Navigation = () => {
     { label: "Solution", href: "#problem" },
     { label: "Hardware", href: "#hardware" },
     { label: "Software", href: "#software" },
-    { label: "Pricing", href: "#pricing" },
-  { label: "Stories", href: "#stories" },
+    { label: "Timeline", href: "#timeline" },
+    { label: "Transparency", href: "#transparency" },
+    { label: "Impact", href: "#impact" },
     { label: "Demo", href: "#demo" },
   ];
 
@@ -41,14 +42,14 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button 
+            <Button
               variant="outline"
               className="rounded-full border-primary/30 hover:border-primary hover:bg-primary/5 transition-smooth"
             >
-              Login
+              Download brief
             </Button>
             <Button className="gradient-warm text-white rounded-full shadow-soft hover:scale-105 transition-bounce">
-              Book Demo
+              Reserve prototype
             </Button>
           </div>
 
@@ -76,14 +77,14 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
-                <Button 
+                <Button
                   variant="outline"
                   className="rounded-full border-primary/30 hover:border-primary hover:bg-primary/5 transition-smooth"
                 >
-                  Login
+                  Download brief
                 </Button>
                 <Button className="gradient-warm text-white rounded-full shadow-soft">
-                  Book Demo
+                  Reserve prototype
                 </Button>
               </div>
             </div>

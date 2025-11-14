@@ -1,27 +1,31 @@
 const benefits = [
   {
-    title: "Budget friendly",
-    detail: "₹12,000 per classroom vs ₹2 lakh smart boards",
+    title: "7 kg carry kit",
+    detail: "Teachers tested the backpack during 22 dry runs — no trolley or cabling crew needed.",
+    status: "Validated in lab",
   },
   {
-    title: "Teacher adoption",
-    detail: "Familiar interface with bilingual voice prompts",
+    title: "Language-first UI",
+    detail: "Prototype uses WhatsApp-like patterns so bilingual teachers could navigate in under 4 minutes.",
+    status: "In usability testing",
   },
   {
-    title: "Offline resilience",
-    detail: "Works during outages with automatic sync later",
+    title: "Offline lesson vault",
+    detail: "Core OS stores 90 lessons locally. Sync service is still being hardened for patchy LTE.",
+    status: "In development",
   },
   {
-    title: "District visibility",
-    detail: "Every session logged with zero manual effort",
+    title: "Automated reporting",
+    detail: "Pilot dashboard exports CSV logs; integration with DIKSHA is planned for Q2 FY26.",
+    status: "Planned",
   },
 ];
 
 const stats = [
-  { value: "85%", label: "Capex saved" },
-  { value: "5 min", label: "Setup time" },
-  { value: "12 hrs", label: "Battery backup" },
-  { value: "4x", label: "Teacher adoption" },
+  { value: "3", label: "Pilot classrooms ready", meta: "Bengaluru + Pune" },
+  { value: "11", label: "Teachers onboarded", meta: "Through Jan 2025" },
+  { value: "2", label: "Hardware revisions", meta: "Awaiting BIS cert" },
+  { value: "6", label: "Content partners", meta: "MoUs drafted" },
 ];
 
 export const BenefitsSection = () => {
@@ -30,15 +34,18 @@ export const BenefitsSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-sm uppercase tracking-[0.4em] text-white/60">Why schools switch</p>
-            <h2 className="mt-4 text-3xl font-semibold">Unbeatable ROI for governments and affordable schools</h2>
+            <p className="text-sm uppercase tracking-[0.4em] text-white/60">Why early adopters lean in</p>
+            <h2 className="mt-4 text-3xl font-semibold">Transparent view of value before mass rollout</h2>
             <p className="mt-4 text-white/70">
-              Proven deployments across multiple states with rigorous QA, onboarding, and 10-year refresh roadmap.
+              Every claim below is tied to current prototype evidence. If we don’t have the data yet, we say so and show the plan to get it.
             </p>
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {benefits.map((benefit) => (
                 <div key={benefit.title} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                  <h3 className="text-xl font-semibold">{benefit.title}</h3>
+                  <div className="flex items-center justify-between gap-3">
+                    <h3 className="text-xl font-semibold">{benefit.title}</h3>
+                    <span className="rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-wide text-white/60">{benefit.status}</span>
+                  </div>
                   <p className="mt-3 text-white/70">{benefit.detail}</p>
                 </div>
               ))}
@@ -51,11 +58,12 @@ export const BenefitsSection = () => {
                   <div key={stat.label} className="rounded-3xl bg-white/5 p-6 text-center">
                     <p className="text-3xl font-semibold text-white">{stat.value}</p>
                     <p className="mt-2 text-sm text-white/70">{stat.label}</p>
+                    <p className="text-xs text-white/50">{stat.meta}</p>
                   </div>
                 ))}
               </div>
               <p className="mt-6 text-sm text-white/60">
-                Numbers based on pilots with Kendriya Vidyalaya, TFI, and multiple CSR deployments.
+                Data updated 15 Nov 2025. We’ll publish refreshed numbers after each pilot sprint.
               </p>
             </div>
           </div>

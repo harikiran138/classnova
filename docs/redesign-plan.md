@@ -17,18 +17,21 @@
 | 6 | Feature Grid (9 cards) | `src/sections/FeatureGridSection.tsx` | Replaces previous `FeaturesSection` | ✅ |
 | 7 | Hardware Showcase | `src/sections/HardwareShowcaseSection.tsx` | Placeholder for 3D viewer + accessories + specs table | ✅ |
 | 8 | Software Interface | `src/sections/SoftwareInterfaceSection.tsx` | Tabbed mockup (static images placeholders) | ✅ |
-| 9 | Key Benefits | `src/sections/BenefitsSection.tsx` | 2x2 grid + stats bar | ✅ |
-|10 | Pricing | `src/sections/PricingSection.tsx` | 3-tier cards, additional info | ✅ |
-|11 | DIDAC 2025 Banner | `src/sections/DidacBannerSection.tsx` | Countdown placeholder, gallery | ✅ |
-|12 | Testimonials | `src/sections/TestimonialsSection.tsx` | Carousel placeholder + videos | ✅ |
-|13 | Success Stories | `src/sections/CaseStudiesSection.tsx` | Before/after cards | ✅ |
-|14 | FAQ | `src/sections/FaqSection.tsx` | Accordion by categories | ✅ |
-|15 | Partners & Collaborations | `src/sections/PartnersSection.tsx` | Logo grid | ✅ |
-|16 | Comparison + Cost Calculator | `src/sections/ComparisonSection.tsx` | Interactive table placeholder | ✅ |
-|17 | Blog / Resources | `src/sections/ResourcesSection.tsx` | Card grid + newsletter | ✅ |
-|18 | Demo Request Form | `src/sections/DemoRequestSection.tsx` | Two-column layout | ✅ |
-|19 | Footer | `src/sections/FooterSection.tsx` | Multi-column + badges, contact info | ✅ |
-|20 | Floating CTAs & Sticky Header | `src/sections/FloatingCtas.tsx` | WhatsApp, Demo, Callback, progress bar | ✅ |
+| 9 | Key Benefits | `src/sections/BenefitsSection.tsx` | 2x2 grid + status-aware stats | ✅ |
+|10 | Pricing | `src/sections/PricingSection.tsx` | Access models + deposits | ✅ |
+|11 | DIDAC 2025 Banner | `src/sections/DidacBannerSection.tsx` | Prototype booking stats | ✅ |
+|12 | Educator Feedback | `src/sections/TestimonialsSection.tsx` | Interview snippets + consent notes | ✅ |
+|13 | Impact Scenarios | `src/sections/CaseStudiesSection.tsx` | Hypothesis cards vs proof needed | ✅ |
+|14 | Development Timeline | `src/sections/DevelopmentTimelineSection.tsx` | Milestone list with statuses | ✅ |
+|15 | Team & Advisors | `src/sections/TeamSection.tsx` | Core build team + advisors | ✅ |
+|16 | Transparency Dashboard | `src/sections/TransparencySection.tsx` | Metrics + risks | ✅ |
+|17 | FAQ | `src/sections/FaqSection.tsx` | Prototype-specific Q&A | ✅ |
+|18 | Partners & Collaborations | `src/sections/PartnersSection.tsx` | Logo grid + status chips | ✅ |
+|19 | Comparison + Cost Calculator | `src/sections/ComparisonSection.tsx` | Honest table + TODO | ✅ |
+|20 | Blog / Resources | `src/sections/ResourcesSection.tsx` | Briefings + subscription | ✅ |
+|21 | Demo Request Form | `src/sections/DemoRequestSection.tsx` | Pilot queue form | ✅ |
+|22 | Footer | `src/sections/FooterSection.tsx` | Multi-column + prototype disclaimer | ✅ |
+|23 | Floating CTAs & Sticky Header | `src/sections/FloatingCtas.tsx` | WhatsApp, timeline, transparency links | ✅ |
 
 ## Implementation Phases
 1. **Scaffold components** with placeholder data & TODO markers. ✅ Completed (all sections live in `src/sections/*`).
@@ -48,3 +51,13 @@
 - Add GSAP timelines (e.g., hero stat counters, hardware cards) triggered via `useGsapScrollTrigger`.
 - Connect demo request form to backend or marketing automation (HubSpot, Zoho, etc.).
 - Add sticky-header state change (opaque background, progress) once scroll states are finalized.
+
+## Prototype-Stage Honesty Updates (In Progress)
+- **Benefits + Pricing** — Reword claims with real pilot data, add status badges, and highlight refundable deposits instead of full pricing.
+- **DIDAC Banner + Floating CTAs** — Align CTAs with “experience the prototype” and cap slot counts transparently.
+- **Educator Feedback & Impact Scenarios** — Replace testimonials/case studies with interview snippets and simulation data clearly labeled as “in validation”.
+- **Development Timeline** — New section outlining completed, in-progress, and upcoming milestones through June 2025.
+- **Team & Advisors** — Spotlight the 4-person build team plus advisors so buyers know who ships/supports pilots.
+- **Transparency Dashboard** — New section showcasing current pilot count, hardware readiness, software modules %, and known risks.
+- **FAQ + Partners + Comparison** — Update copy for prototype context, cite data sources, and remove overconfident metrics.
+- **Resources + Demo Request + Footer** — Swap language to reflect preview kits, unsubscribe options, and compliance notes.

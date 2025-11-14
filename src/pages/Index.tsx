@@ -6,11 +6,14 @@ import SetupStepsSection from "@/sections/SetupStepsSection";
 import FeatureGridSection from "@/sections/FeatureGridSection";
 import HardwareShowcaseSection from "@/sections/HardwareShowcaseSection";
 import SoftwareInterfaceSection from "@/sections/SoftwareInterfaceSection";
+import DevelopmentTimelineSection from "@/sections/DevelopmentTimelineSection";
+import TeamSection from "@/sections/TeamSection";
 import BenefitsSection from "@/sections/BenefitsSection";
 import PricingSection from "@/sections/PricingSection";
 import DidacBannerSection from "@/sections/DidacBannerSection";
 import TestimonialsSection from "@/sections/TestimonialsSection";
 import CaseStudiesSection from "@/sections/CaseStudiesSection";
+import TransparencySection from "@/sections/TransparencySection";
 import FaqSection from "@/sections/FaqSection";
 import PartnersSection from "@/sections/PartnersSection";
 import ComparisonSection from "@/sections/ComparisonSection";
@@ -31,11 +34,14 @@ const Index = () => {
       <FeatureGridSection />
       <HardwareShowcaseSection />
       <SoftwareInterfaceSection />
+  <DevelopmentTimelineSection />
+  <TeamSection />
       <BenefitsSection />
       <PricingSection />
       <DidacBannerSection />
       <TestimonialsSection />
       <CaseStudiesSection />
+  <TransparencySection />
       <FaqSection />
       <PartnersSection />
       <ComparisonSection />
