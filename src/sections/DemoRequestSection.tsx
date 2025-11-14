@@ -1,12 +1,12 @@
 export const DemoRequestSection = () => {
   return (
-    <section id="demo" className="bg-[#030814] py-24 text-white">
-      <div className="container mx-auto px-4">
+    <section id="demo" className="section-padding bg-[#030814] text-white">
+      <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-sm uppercase tracking-[0.4em] text-white/60">Request a walkthrough</p>
-            <h2 className="mt-4 text-3xl font-semibold">Join the pilot review queue</h2>
-            <p className="mt-4 text-white/70">
+            <p className="section-eyebrow">Request a walkthrough</p>
+            <h2 className="section-heading mt-4">Join the pilot review queue</h2>
+            <p className="section-subtitle mt-4">
               We onboard a maximum of 2 institutions per month so the core team can be on-site. Expect an honest conversation about risks, not a sales pitch.
             </p>
             <div className="mt-8 space-y-4 text-white/80">
@@ -39,7 +39,7 @@ export const DemoRequestSection = () => {
               <label className="text-sm text-white/70">Requirement</label>
               <textarea className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" rows={4} />
             </div>
-            <button className="w-full rounded-full bg-white py-3 text-sm font-semibold text-[#050C1F]">Request pilot review</button>
+            <button className="btn-pill w-full bg-white py-3 text-sm font-semibold text-[#050C1F]">Request pilot review</button>
             <p className="text-xs text-white/50">We reply with a shared notes doc + NDA within 24 hours.</p>
           </form>
         </div>

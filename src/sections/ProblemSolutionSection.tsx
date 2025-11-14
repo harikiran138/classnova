@@ -33,17 +33,17 @@ const solutions = [
 
 export const ProblemSolutionSection = () => {
   return (
-    <section id="problem" className="bg-[#050C1F] py-24 text-white">
-      <div className="container mx-auto grid gap-16 px-4 lg:grid-cols-2">
+    <section id="problem" className="section-padding bg-[#050C1F] text-white">
+      <div className="section-shell grid gap-16 lg:grid-cols-2">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF7A00]">The gap</p>
-          <h2 className="mt-4 text-3xl font-semibold">Smart classrooms never scaled for India</h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="section-eyebrow text-[#FFB36D]">The gap</p>
+          <h2 className="section-heading mt-4">Smart classrooms never scaled for India</h2>
+          <p className="section-subtitle mt-4">
             Most solutions were built for metro budgets, assume perfect connectivity, and require specialist maintenance teams.
           </p>
           <div className="mt-10 space-y-6">
             {challenges.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div key={item.title} className="glass-panel p-6">
                 <p className="text-sm uppercase tracking-wide text-white/60">Challenge</p>
                 <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
                 <p className="mt-2 text-white/70">{item.description}</p>
@@ -53,14 +53,14 @@ export const ProblemSolutionSection = () => {
           </div>
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-300">The ClassNova approach</p>
-          <h2 className="mt-4 text-3xl font-semibold">Designed for Government + Affordable schools</h2>
-          <p className="mt-4 text-lg text-white/70">
+          <p className="section-eyebrow text-emerald-300">The ClassNova approach</p>
+          <h2 className="section-heading mt-4">Designed for Government + Affordable schools</h2>
+          <p className="section-subtitle mt-4">
             Built with the realities of Indian classrooms: intermittent power, legacy projectors, busy teachers, and strict budgets.
           </p>
           <div className="mt-10 space-y-6">
             {solutions.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6">
+              <div key={item.title} className="glass-panel bg-gradient-to-br from-white/10 to-transparent p-6">
                 <p className="text-sm uppercase tracking-wide text-white/60">Solution</p>
                 <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
                 <p className="mt-2 text-white/70">{item.description}</p>

@@ -9,11 +9,11 @@ const partners = [
 
 export const PartnersSection = () => {
   return (
-    <section id="partners" className="bg-[#050C1F] py-20 text-white">
-      <div className="container mx-auto px-4">
+    <section id="partners" className="section-padding bg-[#050C1F] text-white">
+      <div className="section-shell">
         <div className="rounded-[40px] border border-white/10 bg-white/5 p-8">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/60">Partners</p>
-          <h2 className="mt-4 text-3xl font-semibold">Who’s helping us validate ClassNova</h2>
+          <p className="section-eyebrow">Partners</p>
+          <h2 className="section-heading mt-4">Who’s helping us validate ClassNova</h2>
           <div className="mt-8 grid gap-6 text-center sm:grid-cols-2 lg:grid-cols-3">
             {partners.map((partner) => (
               <div key={partner.name} className="rounded-3xl border border-white/10 bg-[#030814] px-4 py-6 text-sm uppercase tracking-wide text-white/70">

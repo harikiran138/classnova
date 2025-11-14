@@ -15,16 +15,16 @@ const scenarios = [
 
 export const CaseStudiesSection = () => {
   return (
-    <section id="impact" className="bg-[#050C1F] py-24 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/60">Impact scenarios</p>
-          <h2 className="mt-4 text-3xl font-semibold">What we still need to validate with real pilots</h2>
-          <p className="mt-4 text-white/70">Instead of recycling old success stories, we’re publishing the hypotheses we will test with partner schools.</p>
+    <section id="impact" className="section-padding bg-[#050C1F] text-white">
+      <div className="section-shell">
+        <div className="text-center space-y-4">
+          <p className="section-eyebrow">Impact scenarios</p>
+          <h2 className="section-heading">What we still need to validate with real pilots</h2>
+          <p className="section-subtitle">Instead of recycling old success stories, we’re publishing the hypotheses we will test with partner schools.</p>
         </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {scenarios.map((scenario) => (
-            <div key={scenario.org} className="rounded-3xl border border-white/10 bg-white/5 p-8">
+            <div key={scenario.org} className="glass-panel p-8">
               <div className="flex items-center justify-between text-sm uppercase tracking-wide text-white/60">
                 <span>{scenario.org}</span>
                 <span className="rounded-full border border-white/20 px-3 py-1 text-xs text-white/60">{scenario.status}</span>

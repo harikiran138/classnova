@@ -23,12 +23,12 @@ const rows = [
 
 export const ComparisonSection = () => {
   return (
-    <section id="comparison" className="bg-[#030814] py-24 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/60">Comparison</p>
-          <h2 className="mt-4 text-3xl font-semibold">How we stack up today (and what’s still unproven)</h2>
-          <p className="mt-4 text-white/70">Numbers marked with * will change after live pilots. We publish updates in the transparency dashboard.</p>
+    <section id="comparison" className="section-padding bg-[#030814] text-white">
+      <div className="section-shell">
+        <div className="text-center space-y-4">
+          <p className="section-eyebrow">Comparison</p>
+          <h2 className="section-heading">How we stack up today (and what’s still unproven)</h2>
+          <p className="section-subtitle">Numbers marked with * will change after live pilots. We publish updates in the transparency dashboard.</p>
         </div>
         <div className="mt-10 overflow-hidden rounded-[32px] border border-white/10">
           <table className="w-full text-left text-white/80">

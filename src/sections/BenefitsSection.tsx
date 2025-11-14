@@ -30,18 +30,18 @@ const stats = [
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="bg-[#050C1F] py-24 text-white">
-      <div className="container mx-auto px-4">
+    <section id="benefits" className="section-padding bg-[#050C1F] text-white">
+      <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-sm uppercase tracking-[0.4em] text-white/60">Why early adopters lean in</p>
-            <h2 className="mt-4 text-3xl font-semibold">Transparent view of value before mass rollout</h2>
-            <p className="mt-4 text-white/70">
+            <p className="section-eyebrow">Why early adopters lean in</p>
+            <h2 className="section-heading mt-4">Transparent view of value before mass rollout</h2>
+            <p className="section-subtitle mt-4">
               Every claim below is tied to current prototype evidence. If we don’t have the data yet, we say so and show the plan to get it.
             </p>
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {benefits.map((benefit) => (
-                <div key={benefit.title} className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div key={benefit.title} className="glass-panel p-6">
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="text-xl font-semibold">{benefit.title}</h3>
                     <span className="rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-wide text-white/60">{benefit.status}</span>
@@ -52,7 +52,7 @@ export const BenefitsSection = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center">
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-8">
+            <div className="glass-panel bg-gradient-to-b from-white/10 to-transparent p-8">
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((stat) => (
                   <div key={stat.label} className="rounded-3xl bg-white/5 p-6 text-center">

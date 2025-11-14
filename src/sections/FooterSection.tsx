@@ -1,7 +1,7 @@
 export const FooterSection = () => {
   return (
-    <footer id="contact" className="bg-[#01040B] py-12 text-white">
-      <div className="container mx-auto grid gap-8 px-4 lg:grid-cols-[2fr_1fr_1fr_1fr]">
+    <footer id="contact" className="bg-[#01040B] py-16 text-white">
+      <div className="section-shell grid gap-8 lg:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
           <p className="text-lg font-semibold">ClassNova</p>
           <p className="mt-3 text-sm text-white/60">

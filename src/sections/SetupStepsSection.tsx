@@ -19,18 +19,18 @@ const steps = [
 
 export const SetupStepsSection = () => {
   return (
-    <section id="deployment" className="bg-[#050C1F] py-20 text-white">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-white/60">Deployment</p>
-          <h2 className="mt-4 text-3xl font-semibold">4 steps to digitize a classroom</h2>
-          <p className="mt-4 text-white/70">
+    <section id="deployment" className="section-padding bg-[#050C1F] text-white">
+      <div className="section-shell">
+        <div className="mx-auto max-w-2xl text-center space-y-4">
+          <p className="section-eyebrow">Deployment</p>
+          <h2 className="section-heading">4 steps to digitize a classroom</h2>
+          <p className="section-subtitle">
             District teams can deploy 100 classrooms a week with existing technicians.
           </p>
         </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-4">
           {steps.map((step, index) => (
-            <div key={step.title} className="relative rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div key={step.title} className="relative glass-panel p-6">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-xl font-semibold">
                 {index + 1}
               </div>
@@ -43,12 +43,12 @@ export const SetupStepsSection = () => {
           ))}
         </div>
 
-        <div className="mt-14 flex justify-center">
-          <div className="max-w-4xl rounded-[32px] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-white/60">Prototype render</p>
+        <div className="mt-16 flex justify-center">
+          <div className="max-w-4xl rounded-[32px] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 text-center shadow-soft">
+            <p className="section-eyebrow text-white/60">Prototype render</p>
             <h3 className="mt-2 text-2xl font-semibold">Watch the 3-minute setup simulation</h3>
             <div className="mt-6 aspect-video w-full rounded-2xl border border-dashed border-white/20 bg-[#02060F] flex items-center justify-center">
-              <button className="rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur">
+              <button className="btn-ghost-pill">
                 <span className="mr-2 text-lg" aria-hidden>
                   ▶
                 </span>

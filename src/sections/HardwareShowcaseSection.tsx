@@ -16,19 +16,25 @@ const hardware = [
   },
 ];
 
+const confidenceStyles: Record<typeof hardware[number]["confidence"], string> = {
+  confirmed: "bg-emerald-400/15 text-emerald-200",
+  beta: "bg-amber-400/15 text-amber-200",
+  testing: "bg-blue-400/15 text-blue-200",
+};
+
 export const HardwareShowcaseSection = () => {
   return (
-    <section id="hardware" className="bg-[#030814] py-24 text-white">
-      <div className="container mx-auto px-4">
+    <section id="hardware" className="section-padding bg-[#030814] text-white">
+      <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-sm uppercase tracking-[0.4em] text-white/50">Hardware stack</p>
-            <h2 className="mt-4 text-3xl font-semibold">Engineered for Indian classrooms</h2>
-            <p className="mt-4 text-white/70">
+            <p className="section-eyebrow">Hardware stack</p>
+            <h2 className="section-heading mt-4">Engineered for Indian classrooms</h2>
+            <p className="section-subtitle mt-4">
               Rugged casing, passive cooling, and modular accessories designed with school lab realities. Currently in beta testing, shipping February 2026.
             </p>
-            <div className="mt-8 rounded-[32px] border border-white/10 bg-white/5 p-6">
-              <p className="text-sm uppercase tracking-[0.3em] text-white/60">Prototype renders</p>
+            <div className="mt-8 glass-panel p-6">
+              <p className="section-eyebrow text-white/60">Prototype renders</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 {["Front view", "Port layout", "Exploded view"].map((label) => (
                   <div key={label} className="rounded-2xl border border-dashed border-white/15 bg-[#050C1F] p-4 text-center text-xs text-white/60">
@@ -41,10 +47,13 @@ export const HardwareShowcaseSection = () => {
           </div>
           <div className="space-y-6">
             {hardware.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6">
+              <div key={item.title} className="glass-panel bg-gradient-to-br from-white/10 to-transparent p-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <span className="text-xs uppercase tracking-wide text-white/60">{item.confidence}</span>
+                  <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs uppercase tracking-wide ${confidenceStyles[item.confidence]}`}>
+                    <span className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden />
+                    {item.confidence}
+                  </span>
                 </div>
                 <ul className="mt-4 space-y-2 text-white/80">
                   {item.specs.map((spec) => (

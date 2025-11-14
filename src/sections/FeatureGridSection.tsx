@@ -57,18 +57,18 @@ const statusStyles: Record<FeatureStatus, { label: string; className: string }> 
 
 export const FeatureGridSection = () => {
   return (
-    <section id="features" className="bg-[#050C1F] py-24 text-white">
-      <div className="container mx-auto px-4">
+    <section id="features" className="section-padding bg-[#050C1F] text-white">
+      <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
-            <p className="text-sm uppercase tracking-[0.4em] text-white/60">All-in-one kit</p>
-            <h2 className="mt-4 text-3xl font-semibold">Everything needed for a modern classroom</h2>
-            <p className="mt-4 text-white/70">
+            <p className="section-eyebrow">All-in-one kit</p>
+            <h2 className="section-heading mt-4">Everything needed for a modern classroom</h2>
+            <p className="section-subtitle mt-4">
               Hardware, software, content, and teacher support engineered to work reliably in schools with intermittent power or network.
             </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {features.map((feature) => (
-                <div key={feature.category} className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div key={feature.category} className="glass-panel p-6">
                   <p className="text-sm uppercase tracking-wide text-white/60">{feature.category}</p>
                   <ul className="mt-4 space-y-3 text-white/80">
                     {feature.items.map((item) => (
@@ -87,8 +87,8 @@ export const FeatureGridSection = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-[32px] border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-8">
-            <p className="text-sm uppercase tracking-[0.3em] text-white/60">ClassNova OS</p>
+          <div className="glass-panel bg-gradient-to-b from-white/10 to-transparent p-8">
+            <p className="section-eyebrow text-white/60">ClassNova OS</p>
             <h3 className="mt-4 text-2xl font-semibold">Teacher OS built with DIDAC feedback</h3>
             <p className="mt-4 text-white/70">
               App-less interface powered by curated playlists, QR attendance, and AI-assisted prep. Usability tests with 25 teachers informed every interaction.

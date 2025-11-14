@@ -5,24 +5,24 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative isolate overflow-hidden bg-gradient-to-b from-[#050C1F] via-[#071334] to-[#0A1628] text-white"
+      className="relative isolate overflow-hidden section-padding bg-gradient-to-b from-[#050C1F] via-[#081736] to-[#0A1628] text-white"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-1/4 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-orange-500/30 blur-[160px]" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A1628] to-transparent" />
       </div>
 
-      <div className="container mx-auto flex min-h-screen flex-col gap-16 px-4 pb-24 pt-40 lg:flex-row lg:items-center lg:gap-12">
+      <div className="section-shell flex min-h-[70vh] flex-col gap-16 pt-20 lg:flex-row lg:items-center lg:gap-12">
         <div className="relative z-10 flex-1 space-y-10">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80">
+            <div className="pill">
               <span className="text-orange-300">Launching at DIDAC India · Dec 12-14</span>
-              <span className="opacity-70">Hall 7 · Booth E-24</span>
+              <span className="hidden text-white/60 sm:inline">Hall 7 · Booth E-24</span>
             </div>
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px]">
               Transform Any Projector Into A <span className="bg-gradient-to-r from-[#FF7A00] via-[#FF9A3C] to-[#FFD8A8] bg-clip-text text-transparent">Smart Classroom</span>
             </h1>
-            <p className="text-lg text-white/80 lg:text-xl">
+            <p className="section-subtitle text-lg lg:text-xl">
               ₹12,000 retrofit kit replacing ₹2–3 lakh smart boards. <strong className="font-semibold text-white">Launching February 2026.</strong> Reserve early access and see the prototype live.
             </p>
           </div>
@@ -35,7 +35,7 @@ export const HeroSection = () => {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 text-center shadow-[0_0_40px_rgba(255,122,0,0.15)]"
+                className="stat-card px-4 py-5"
               >
                 <div className="text-3xl" aria-hidden>
                   {stat.icon}
@@ -47,20 +47,20 @@ export const HeroSection = () => {
           </div>
 
           <div className="flex flex-col gap-4 text-base sm:flex-row">
-            <Button className="h-14 rounded-full bg-[#FF7A00] text-base font-semibold text-white shadow-lg shadow-[#FF7A00]/40 transition hover:scale-[1.02]">
+            <Button className="btn-primary-pill h-14 text-base">
               🎫 Reserve DIDAC Booth Visit
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="outline"
-              className="h-14 rounded-full border-white/30 bg-transparent text-base font-semibold text-white hover:bg-white/10"
+              className="btn-ghost-pill h-14 border-white/30 text-base"
             >
               📄 Download Concept Brief
               <Download className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
-              className="h-14 rounded-full text-base font-semibold text-white hover:bg-white/10"
+              className="btn-pill h-14 text-base text-white hover:bg-white/10"
             >
               <Play className="mr-2 h-4 w-4" /> Watch Vision Video
             </Button>

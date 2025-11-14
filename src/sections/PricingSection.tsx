@@ -25,12 +25,12 @@ const plans = [
 
 export const PricingSection = () => {
   return (
-    <section id="pricing" className="bg-[#030814] py-24 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/60">Access models</p>
-          <h2 className="mt-4 text-3xl font-semibold">What engaging with the prototype looks like</h2>
-          <p className="mt-4 text-white/70">
+    <section id="pricing" className="section-padding bg-[#030814] text-white">
+      <div className="section-shell">
+        <div className="text-center space-y-4">
+          <p className="section-eyebrow">Access models</p>
+          <h2 className="section-heading">What engaging with the prototype looks like</h2>
+          <p className="section-subtitle">
             We’re not selling thousands of kits yet. Instead, we open tightly scoped touchpoints with refundable deposits and shared milestones.
           </p>
         </div>
@@ -38,7 +38,7 @@ export const PricingSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-3xl border ${plan.featured ? "border-[#FF7A00] bg-[#120A02]" : "border-white/10 bg-white/5"} p-8`}
+              className={`rounded-3xl border p-8 shadow-soft transition-smooth hover:-translate-y-1 ${plan.featured ? "border-[#FF7A00] bg-[#120A02]" : "border-white/10 bg-white/5"}`}
             >
               <p className="text-sm uppercase tracking-[0.3em] text-white/60">{plan.name}</p>
               <div className="mt-4 text-4xl font-semibold text-white">{plan.price}</div>
@@ -55,7 +55,7 @@ export const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-              <button className="mt-8 w-full rounded-full border border-white/20 px-4 py-3 text-sm font-semibold text-white">
+              <button className="btn-ghost-pill mt-8 w-full justify-center border-white/30 text-sm">
                 {plan.status === "Open" ? "Book walkthrough" : plan.status === "Waitlist" ? "Join waitlist" : "Co-design charter"}
               </button>
             </div>

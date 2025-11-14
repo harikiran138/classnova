@@ -38,27 +38,27 @@ export const FloatingCtas = () => {
         href="https://wa.me/919876543210"
         target="_blank"
         rel="noreferrer"
-        className="rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold shadow-lg shadow-[#25D366]/50"
+        className="btn-pill bg-[#25D366] text-[#01040B] shadow-[0_8px_30px_rgba(37,211,102,0.35)]"
         aria-label="Chat with ClassNova team on WhatsApp"
       >
         Pilot desk (WA)
       </a>
       <a
         href="#timeline"
-        className="rounded-full bg-[#FF7A00] px-5 py-3 text-sm font-semibold shadow-lg shadow-[#FF7A00]/50"
+        className="btn-pill bg-gradient-to-r from-orange-400 via-orange-500 to-rose-500 text-white shadow-[0_8px_30px_rgba(249,115,22,0.35)]"
       >
         View build timeline
       </a>
       <a
         href="#transparency"
-        className="rounded-full bg-white/10 px-5 py-3 text-sm font-semibold backdrop-blur"
+        className="btn-pill border border-white/15 bg-white/10 text-white"
       >
         See transparency data
       </a>
       <button
         type="button"
         onClick={scrollToTop}
-        className="rounded-full bg-white/10 px-5 py-2 text-xs uppercase tracking-wide text-white backdrop-blur transition hover:bg-white/20"
+        className="btn-pill h-10 border border-white/10 bg-white/5 text-xs font-semibold uppercase tracking-[0.3em] text-white"
       >
         Back to top
       </button>
