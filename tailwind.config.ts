@@ -60,9 +60,14 @@ export default {
         },
       },
       borderRadius: {
+        none: "0px",
+        sm: "0.5rem",
+        DEFAULT: "0.75rem",
+        md: "0.75rem",
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        xl: "var(--radius)",
+        "2xl": "var(--radius)",
+        "3xl": "var(--radius)",
       },
       keyframes: {
         "accordion-down": {

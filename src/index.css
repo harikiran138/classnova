@@ -59,7 +59,8 @@ All colors MUST be HSL.
     --transition-smooth: all 0.3s cubic-bezier(0.45, 0.05, 0.25, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --max-content-width: 1200px;
+    --max-content-width: 1280px;
+    --section-horizontal: clamp(1.5rem, 6vw, 10rem);
   }
 
   .dark {
@@ -163,13 +164,13 @@ All colors MUST be HSL.
     max-width: var(--max-content-width);
     margin-left: auto;
     margin-right: auto;
-    padding-left: clamp(1rem, 4vw, 2.5rem);
-    padding-right: clamp(1rem, 4vw, 2.5rem);
+    padding-left: var(--section-horizontal);
+    padding-right: var(--section-horizontal);
   }
 
   .section-padding {
-    padding-top: clamp(4rem, 10vw, 6.5rem);
-    padding-bottom: clamp(4rem, 10vw, 6.5rem);
+    padding-top: clamp(3.75rem, 8vw, 7.5rem);
+    padding-bottom: clamp(3.75rem, 8vw, 7.5rem);
   }
 
   .section-eyebrow {
@@ -177,19 +178,23 @@ All colors MUST be HSL.
   }
 
   .section-heading {
-    @apply text-balance text-[clamp(2.25rem,4vw,3.5rem)] font-semibold leading-tight text-white;
+    @apply text-balance font-semibold leading-tight text-white;
+    font-size: clamp(3rem, 5vw, 4rem);
+    line-height: 1.2;
   }
 
   .section-subtitle {
-    @apply text-balance text-base text-white/70 sm:text-lg;
+    @apply text-balance text-white/70;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
   }
 
   .glass-panel {
-    @apply rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl;
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl;
   }
 
   .surface-panel {
-    @apply rounded-3xl border border-white/10 bg-[#030A1C]/80;
+    @apply rounded-2xl border border-white/10 bg-[#030A1C]/80;
   }
 
   .pill {
@@ -209,10 +214,17 @@ All colors MUST be HSL.
   }
 
   .media-frame {
-    @apply rounded-[32px] border border-dashed border-white/15 bg-white/5 p-4;
+    @apply rounded-2xl border border-dashed border-white/15 bg-white/5 p-4;
   }
 
   .stat-card {
-    @apply glass-panel p-6 text-center shadow-soft;
+    @apply glass-panel p-6 shadow-soft;
+  }
+
+  .grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.25rem, 2vw, 1.5rem);
+    row-gap: clamp(1.5rem, 3vw, 2rem);
   }
 }

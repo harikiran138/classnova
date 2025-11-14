@@ -30,11 +30,11 @@ export const ProblemSolutionSection = () => {
           <p className="section-subtitle mt-4">
             ClassNova brings digital teaching tools, content, and recording into one simple system designed for teachers.
           </p>
-          <div className="mt-10 space-y-3 text-base text-white/80">
+          <div className="mt-10 grid-12 text-sm text-white/80">
             {highlights.map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-full border border-white/10 px-5 py-3 text-sm uppercase tracking-wide">
-                <span className="h-2 w-2 rounded-full bg-[#FF7A00]" />
-                {item}
+              <div key={item} className="col-span-12 md:col-span-6 rounded-xl border border-white/10 px-5 py-4">
+                <p className="text-xs uppercase tracking-[0.3em] text-white/50">Highlight</p>
+                <p className="mt-2 text-base text-white">{item}</p>
               </div>
             ))}
           </div>

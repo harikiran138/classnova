@@ -12,7 +12,7 @@ export const HeroSection = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A1628] to-transparent" />
       </div>
 
-      <div className="section-shell flex min-h-[70vh] flex-col gap-16 pt-20 lg:flex-row lg:items-center lg:gap-12">
+  <div className="section-shell flex min-h-[70vh] flex-col gap-16 pt-20 lg:flex-row lg:items-center lg:gap-12">
         <div className="relative z-10 flex-1 space-y-10">
           <div className="space-y-6">
             <div className="pill">
@@ -72,7 +72,7 @@ export const HeroSection = () => {
 
         <div className="relative z-10 flex flex-1 items-center justify-center">
           <div className="relative h-[520px] w-full max-w-[520px]">
-            <div className="absolute inset-0 rounded-[48px] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-3xl" />
+            <div className="absolute inset-0 rounded-[24px] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-3xl" />
 
             <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-400/20 blur-3xl" />
 
