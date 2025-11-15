@@ -19,11 +19,11 @@ const tabs = [
 
 export const SoftwareInterfaceSection = () => {
   return (
-    <section id="software" className="section-padding bg-[#050C1F] text-white">
+    <section id="software" className="section-padding bg-slate-100">
       <div className="section-shell">
         <div className="mx-auto max-w-3xl text-center space-y-4">
           <p className="section-eyebrow">Software UI</p>
-          <h2 className="section-heading">A clean and simple teaching dashboard</h2>
+          <h2 className="section-heading text-slate-900">A clean and simple teaching dashboard</h2>
           <p className="section-subtitle">
             Everything a teacher needs is right where they expect it — no clutter, no extra clicks.
           </p>
@@ -31,17 +31,17 @@ export const SoftwareInterfaceSection = () => {
         <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
           <div className="space-y-4">
             {tabs.map((tab) => (
-              <div key={tab.title} className="glass-panel p-6 text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-white/60">{tab.title}</p>
-                <p className="mt-2 text-white/80">{tab.description}</p>
+              <div key={tab.title} className="rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm">
+                <p className="text-sm uppercase tracking-[0.3em] text-slate-500">{tab.title}</p>
+                <p className="mt-2 text-slate-700">{tab.description}</p>
               </div>
             ))}
           </div>
-          <div className="glass-panel rounded-[40px] bg-gradient-to-b from-white/10 to-transparent p-8">
-            <div className="media-frame flex h-72 items-center justify-center text-sm text-white/50">
+          <div className="rounded-[40px] border border-slate-200 bg-white p-8 shadow-xl">
+            <div className="media-frame flex h-72 items-center justify-center border-slate-200 bg-slate-50 text-sm text-slate-500">
               Showcase UI mockups or short clips here
             </div>
-            <p className="mt-4 text-xs text-white/60">
+            <p className="mt-4 text-xs text-slate-500">
               Highlight screens for whiteboard, recording, content, attendance, and settings. Let visuals do most of the storytelling.
             </p>
           </div>
@@ -54,10 +54,10 @@ export const SoftwareInterfaceSection = () => {
             { title: "Multilingual", description: "Switch languages in one tap." },
             { title: "Accessible", description: "High contrast, keyboard friendly." },
           ].map((principle) => (
-            <div key={principle.title} className="glass-panel p-5">
-              <p className="text-sm uppercase tracking-wide text-white/60">Principle</p>
-              <h3 className="mt-2 text-lg font-semibold">{principle.title}</h3>
-              <p className="mt-2 text-white/70">{principle.description}</p>
+            <div key={principle.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p className="text-sm uppercase tracking-wide text-slate-500">Principle</p>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">{principle.title}</h3>
+              <p className="mt-2 text-slate-600">{principle.description}</p>
             </div>
           ))}
         </div>

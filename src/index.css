@@ -164,53 +164,67 @@ All colors MUST be HSL.
     max-width: var(--max-content-width);
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--section-horizontal);
-    padding-right: var(--section-horizontal);
+    padding-left: clamp(1.5rem, 3vw, 2rem);
+    padding-right: clamp(1.5rem, 3vw, 2rem);
   }
 
   .section-padding {
-    padding-top: clamp(3.75rem, 8vw, 7.5rem);
-    padding-bottom: clamp(3.75rem, 8vw, 7.5rem);
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 7.5rem;
+      padding-bottom: 7.5rem;
+    }
   }
 
   .section-eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.35em] text-white/50;
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-slate-500;
   }
 
   .section-heading {
-    @apply text-balance font-semibold leading-tight text-white;
+    @apply text-balance font-semibold leading-tight text-slate-900;
     font-size: clamp(3rem, 5vw, 4rem);
     line-height: 1.2;
   }
 
   .section-subtitle {
-    @apply text-balance text-white/70;
+    @apply text-balance text-slate-600;
     font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: 1.6;
   }
 
   .glass-panel {
-    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl;
+    @apply rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-md shadow-[0_20px_60px_rgba(15,23,42,0.08)];
   }
 
   .surface-panel {
-    @apply rounded-2xl border border-white/10 bg-[#030A1C]/80;
+    @apply rounded-2xl border border-white/10 bg-slate-900/80 backdrop-blur-lg;
   }
 
   .pill {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white/70;
+    @apply inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-600;
   }
 
   .btn-pill {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-smooth;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold transition-smooth;
   }
 
   .btn-primary-pill {
-    @apply btn-pill bg-[#FF7A00] text-white shadow-glow hover:-translate-y-0.5;
+    @apply btn-pill bg-[#FF7A00] text-white shadow-[0_20px_40px_rgba(249,115,22,0.35)] hover:-translate-y-0.5;
   }
 
   .btn-ghost-pill {
-    @apply btn-pill border border-white/20 text-white hover:bg-white/10;
+    @apply btn-pill border border-slate-300 text-slate-900 hover:bg-slate-50;
   }
 
   .media-frame {

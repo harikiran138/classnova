@@ -1,57 +1,71 @@
 const highlights = [
-  "Works with any projector or TV",
-  "No training or IT team needed",
-  "Offline-first, syncs when online",
-  "Built for government, private, NGO schools",
+  {
+    label: "Works without internet",
+    detail: "Offline-first, syncs when online",
+  },
+  {
+    label: "3-click setup",
+    detail: "HDMI + power + remote",
+  },
+  {
+    label: "Teacher-ready UI",
+    detail: "No training decks required",
+  },
+  {
+    label: "Budget friendly",
+    detail: "Starts at ₹12,000",
+  },
 ];
 
-const miniCards = [
+const essentials = [
   {
-    title: "Plug-and-play core",
-    body: "Connect via HDMI, power on, and the teaching OS appears instantly.",
+    title: "Smart core",
+    body: "Mini PC with ClassNova OS, HDMI input, and classroom-safe controls.",
   },
   {
-    title: "All tools included",
-    body: "Whiteboard, content library, lesson recording, sharing — all built in.",
+    title: "Teaching tools",
+    body: "Whiteboard, content playlists, annotation, lesson recording, sharing.",
   },
   {
-    title: "Trusted rollout",
-    body: "Pilot-ready hardware with transparent timelines and support.",
+    title: "Support kit",
+    body: "Digital pen, wireless remote, microphone, WhatsApp support team.",
   },
 ];
 
 export const ProblemSolutionSection = () => {
   return (
-    <section id="problem" className="section-padding bg-[#050C1F] text-white">
-      <div className="section-shell grid gap-16 lg:grid-cols-[1.2fr_1fr]">
+    <section id="what-is-classnova" className="section-padding bg-white">
+      <div className="section-shell grid gap-12 lg:grid-cols-[1.15fr_1fr]">
         <div>
-          <p className="section-eyebrow text-[#FFB36D]">What is ClassNova?</p>
-          <h2 className="section-heading mt-4">A compact device that modernizes any classroom</h2>
-          <p className="section-subtitle mt-4">
-            ClassNova brings digital teaching tools, content, and recording into one simple system designed for teachers.
+          <p className="section-eyebrow text-slate-500">What is ClassNova?</p>
+          <h2 className="text-balance text-4xl font-semibold leading-tight text-slate-900">
+            A portable teaching kit for every classroom
+          </h2>
+          <p className="mt-4 text-lg text-slate-600">
+            One device + accessories that turn existing TVs or projectors into interactive, trackable classrooms in minutes.
           </p>
-          <div className="mt-10 grid-12 text-sm text-white/80">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {highlights.map((item) => (
-              <div key={item} className="col-span-12 md:col-span-6 rounded-xl border border-white/10 px-5 py-4">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/50">Highlight</p>
-                <p className="mt-2 text-base text-white">{item}</p>
+              <div key={item.label} className="rounded-2xl border border-slate-200 bg-slate-50/80 px-5 py-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{item.label}</p>
+                <p className="mt-2 text-base font-medium text-slate-900">{item.detail}</p>
               </div>
             ))}
           </div>
         </div>
         <div>
-          <p className="section-eyebrow text-emerald-300">How it fits</p>
-          <h2 className="section-heading mt-4">All essentials inside one kit</h2>
-          <div className="mt-10 space-y-4">
-            {miniCards.map((card) => (
-              <div key={card.title} className="glass-panel p-6">
-                <h3 className="text-xl font-semibold text-white">{card.title}</h3>
-                <p className="mt-2 text-white/70">{card.body}</p>
+          <p className="section-eyebrow text-slate-500">What’s inside</p>
+          <h3 className="text-2xl font-semibold text-slate-900">All essentials, pre-configured</h3>
+          <div className="mt-8 space-y-4">
+            {essentials.map((card) => (
+              <div key={card.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <h4 className="text-lg font-semibold text-slate-900">{card.title}</h4>
+                <p className="mt-2 text-sm text-slate-600">{card.body}</p>
               </div>
             ))}
           </div>
-          <div className="mt-8 rounded-[28px] border border-white/15 bg-white/5 p-5 text-sm text-white/70">
-            Built for busy teachers: no training decks, no external technicians, no waiting for network.
+          <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50/80 p-4 text-sm text-emerald-900">
+            No installation fee • No maintenance contract • Pilot-ready within 2 weeks
           </div>
         </div>
       </div>

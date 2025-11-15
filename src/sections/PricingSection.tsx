@@ -25,24 +25,24 @@ const plans = [
 
 export const PricingSection = () => {
   return (
-    <section id="pricing" className="section-padding bg-[#030814] text-white">
+    <section id="pricing" className="section-padding bg-slate-50">
       <div className="section-shell">
         <div className="text-center space-y-4">
           <p className="section-eyebrow">Pricing</p>
-          <h2 className="section-heading">Simple pricing for every institution</h2>
+          <h2 className="section-heading text-slate-900">Simple pricing for every institution</h2>
           <p className="section-subtitle">Flexible for schools, NGOs, and districts. Bulk discounts available.</p>
         </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-3xl border p-8 shadow-soft transition-smooth hover:-translate-y-1 ${plan.featured ? "border-[#FF7A00] bg-[#120A02]" : "border-white/10 bg-white/5"}`}
+              className={`rounded-3xl border p-8 transition-smooth hover:-translate-y-1 ${plan.featured ? "border-[#FF7A00] bg-white shadow-[0_25px_60px_rgba(249,115,22,0.2)]" : "border-slate-200 bg-white shadow-sm"}`}
             >
-              <p className="text-sm uppercase tracking-[0.3em] text-white/60">{plan.name}</p>
-              <div className="mt-4 text-4xl font-semibold text-white">{plan.price}</div>
-              <p className="text-sm text-white/60">{plan.cadence}</p>
-              <p className="mt-3 text-sm text-white/70">{plan.blurb}</p>
-              <ul className="mt-8 space-y-3 text-white/80">
+              <p className="text-sm uppercase tracking-[0.3em] text-slate-500">{plan.name}</p>
+              <div className="mt-4 text-4xl font-semibold text-slate-900">{plan.price}</div>
+              <p className="text-sm text-slate-500">{plan.cadence}</p>
+              <p className="mt-3 text-sm text-slate-600">{plan.blurb}</p>
+              <ul className="mt-8 space-y-3 text-slate-700">
                 {plan.highlights.map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <span className="h-2 w-2 rounded-full bg-[#FF7A00]" />
@@ -50,13 +50,15 @@ export const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-              <button className="btn-ghost-pill mt-8 w-full justify-center border-white/30 text-sm">
+              <button
+                className={`btn-pill mt-8 w-full justify-center ${plan.featured ? "bg-[#FF7A00] text-white" : "border border-slate-300 text-slate-900"}`}
+              >
                 {plan.featured ? "Start pilot" : "Talk to us"}
               </button>
             </div>
           ))}
         </div>
-        <div className="mt-8 rounded-3xl border border-white/10 bg-[#050C1F] p-6 text-center text-sm text-white/70">
+        <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 text-center text-sm text-slate-600">
           All pricing discussions come with transparent milestones, shared documentation, and 100% refundable deposits until hardware ships.
         </div>
       </div>

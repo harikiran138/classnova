@@ -12,35 +12,35 @@ const features = [
 
 export const FeatureGridSection = () => {
   return (
-    <section id="features" className="section-padding bg-[#050C1F] text-white">
+    <section id="features" className="section-padding bg-slate-50">
       <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
           <div>
             <p className="section-eyebrow">Key features</p>
-            <h2 className="section-heading mt-4">Clean, modern tools teachers actually use</h2>
+            <h2 className="section-heading mt-4 text-slate-900">Built for everyday lessons</h2>
             <p className="section-subtitle mt-4">
-              Use a tidy grid of cards or icons to showcase the top capabilities.
+              Shortcuts teachers love, presented in a simple, consistent dashboard.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {features.map((feature) => (
-                <div key={feature.title} className="glass-panel p-5 text-white">
-                  <p className="text-lg font-semibold">{feature.title}</p>
-                  <p className="mt-2 text-sm text-white/70">{feature.description}</p>
+                <div key={feature.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <p className="text-lg font-semibold text-slate-900">{feature.title}</p>
+                  <p className="mt-2 text-sm text-slate-600">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="glass-panel bg-gradient-to-b from-white/10 to-transparent p-8">
-            <p className="section-eyebrow text-white/60">Software UI</p>
-            <h3 className="mt-4 text-2xl font-semibold">A clean, simple teaching dashboard</h3>
-            <p className="mt-4 text-white/70">
-              Highlight screens for whiteboard, recording, content, attendance, and settings. Let visuals explain the flow with minimum text.
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl">
+            <p className="section-eyebrow text-slate-500">Software UI</p>
+            <h3 className="mt-4 text-2xl font-semibold text-slate-900">A clean, teacher-first dashboard</h3>
+            <p className="mt-4 text-slate-600">
+              Whiteboard, content, recording, attendance, and settings live in one row. No hidden menus, no distractions.
             </p>
-            <div className="mt-10 space-y-4 text-sm text-white/70">
-              <div className="rounded-2xl border border-dashed border-white/15 bg-[#02060F] p-5 text-center">
-                Showcase UI mockups or embed real screenshots in this frame.
+            <div className="mt-10 space-y-4 text-sm text-slate-600">
+              <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-5 text-center">
+                Drop in product shots or short clips to show the flow.
               </div>
-              <div className="rounded-2xl bg-white/5 p-4 text-center text-white/80">
+              <div className="rounded-2xl bg-slate-900/90 p-4 text-center text-white/90">
                 Whiteboard · File manager · Recording · Content library
               </div>
             </div>

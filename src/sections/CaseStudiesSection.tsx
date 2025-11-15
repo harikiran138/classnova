@@ -15,31 +15,31 @@ const scenarios = [
 
 export const CaseStudiesSection = () => {
   return (
-    <section id="impact" className="section-padding bg-[#050C1F] text-white">
+    <section id="impact" className="section-padding bg-white">
       <div className="section-shell">
         <div className="text-center space-y-4">
           <p className="section-eyebrow">Impact scenarios</p>
-          <h2 className="section-heading">What we still need to validate with real pilots</h2>
-          <p className="section-subtitle">Instead of recycling old success stories, we’re publishing the hypotheses we will test with partner schools.</p>
+          <h2 className="section-heading text-slate-900">What we’re validating with pilots</h2>
+          <p className="section-subtitle">We publish real hypotheses up front so partners know exactly what’s being measured.</p>
         </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {scenarios.map((scenario) => (
-            <div key={scenario.org} className="glass-panel p-8">
-              <div className="flex items-center justify-between text-sm uppercase tracking-wide text-white/60">
+            <div key={scenario.org} className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+              <div className="flex items-center justify-between text-sm uppercase tracking-wide text-slate-500">
                 <span>{scenario.org}</span>
-                <span className="rounded-full border border-white/20 px-3 py-1 text-xs text-white/60">{scenario.status}</span>
+                <span className="rounded-full border border-slate-200 px-3 py-1 text-xs text-slate-600">{scenario.status}</span>
               </div>
               <div className="mt-4 space-y-4">
-                <div className="rounded-2xl bg-[#160B02] p-4">
-                  <p className="text-xs uppercase tracking-wide text-[#FF9A3C]">Hypothesis</p>
-                  <p className="mt-2 text-white/80">{scenario.hypothesis}</p>
+                <div className="rounded-2xl bg-white p-4 shadow-sm">
+                  <p className="text-xs uppercase tracking-wide text-[#FF7A00]">Hypothesis</p>
+                  <p className="mt-2 text-slate-700">{scenario.hypothesis}</p>
                 </div>
-                <div className="rounded-2xl bg-[#071334] p-4">
-                  <p className="text-xs uppercase tracking-wide text-emerald-300">What we need to measure</p>
-                  <p className="mt-2 text-white/80">{scenario.proofNeeded}</p>
+                <div className="rounded-2xl bg-slate-900 p-4 text-white">
+                  <p className="text-xs uppercase tracking-wide text-emerald-200">What we need to measure</p>
+                  <p className="mt-2 text-white/90">{scenario.proofNeeded}</p>
                 </div>
               </div>
-              <button className="mt-6 rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-wide text-white">
+              <button className="mt-6 btn-pill border border-slate-300 bg-white text-slate-900">
                 Follow progress email
               </button>
             </div>

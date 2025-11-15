@@ -9,33 +9,33 @@ const benefits = [
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="section-padding bg-[#050C1F] text-white">
+    <section id="benefits" className="section-padding bg-white">
       <div className="section-shell">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="section-eyebrow">Benefits</p>
-            <h2 className="section-heading mt-4">Why schools choose ClassNova</h2>
-            <p className="section-subtitle mt-4">Short, direct reasons any principal can scan quickly.</p>
+            <h2 className="section-heading mt-4 text-slate-900">Why schools pick ClassNova</h2>
+            <p className="section-subtitle mt-4">Quick wins principals care about, explained in a single line.</p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {benefits.map((benefit) => (
-                <div key={benefit.title} className="glass-panel p-5">
-                  <h3 className="text-lg font-semibold text-white">{benefit.title}</h3>
-                  <p className="mt-2 text-sm text-white/70">{benefit.detail}</p>
+                <div key={benefit.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="text-lg font-semibold text-slate-900">{benefit.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600">{benefit.detail}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="glass-panel bg-gradient-to-b from-white/10 to-transparent p-8">
-            <p className="text-sm uppercase tracking-[0.3em] text-white/60">Impact snapshot</p>
-            <ul className="mt-6 space-y-4 text-white">
-              {["Modern classrooms in minutes", "Works with existing budgets", "Trusted by teachers before scale", "Built for low-bandwidth India"].map((item) => (
+          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+            <p className="text-sm uppercase tracking-[0.3em] text-slate-500">Impact snapshot</p>
+            <ul className="mt-6 space-y-4 text-slate-900">
+              {["Works without internet", "3-click setup", "Rural-school friendly", "Budget-ready: starts at ₹12,000"].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-base">
                   <span className="h-2 w-2 rounded-full bg-[#FF7A00]" />
-                  <span className="text-white/80">{item}</span>
+                  <span className="text-slate-700">{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-sm text-white/60">Ask for detailed ROI numbers, pilot dashboards, and playbooks during the demo.</p>
+            <p className="mt-6 text-sm text-slate-500">Ask for ROI dashboards, pilot playbooks, and procurement docs during the demo.</p>
           </div>
         </div>
       </div>
