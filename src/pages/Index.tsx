@@ -14,12 +14,11 @@ import TransparencySection from "@/sections/TransparencySection";
 import DidacBannerSection from "@/sections/DidacBannerSection";
 import DemoRequestSection from "@/sections/DemoRequestSection";
 import FooterSection from "@/sections/FooterSection";
-import FloatingCtas from "@/sections/FloatingCtas";
 import MidCtaSection from "@/sections/MidCtaSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Navigation />
       <HeroSection />
       <ProblemSolutionSection />
@@ -37,7 +36,6 @@ const Index = () => {
       <DidacBannerSection />
       <DemoRequestSection />
       <FooterSection />
-      <FloatingCtas />
     </div>
   );
 };

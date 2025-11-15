@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useTheme } from "@/lib/theme-provider";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
 
   const navItems = [
     { label: "What", href: "#what-is-classnova" },
@@ -17,24 +20,24 @@ const Navigation = () => {
   ];
 
   return (
-  <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/90 shadow-[0_10px_40px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+  <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 shadow-[0_10px_40px_rgba(15,23,42,0.12)] backdrop-blur-xl">
       <div className="section-shell">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-warm flex items-center justify-center shadow-soft">
-              <span className="text-white font-bold text-xl">C</span>
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-warm shadow-soft">
+              <span className="text-white text-xl font-bold">C</span>
             </div>
-            <span className="text-xl font-bold text-slate-900">ClassNova</span>
+            <span className="text-xl font-bold text-foreground">ClassNova</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-slate-700 hover:text-[#FF7A00] transition-smooth font-medium"
+                className="text-sm font-medium text-foreground/70 transition-smooth hover:text-[#FF7A00]"
               >
                 {item.label}
               </a>
@@ -42,7 +45,15 @@ const Navigation = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label="Toggle color theme"
+              className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-background text-foreground shadow-[0_5px_15px_rgba(15,23,42,0.08)] transition-smooth hover:-translate-y-0.5"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
             <Button variant="outline" className="btn-ghost-pill h-11 text-sm">
               Download brochure
             </Button>
@@ -52,35 +63,63 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="rounded-lg p-2 transition-smooth hover:bg-slate-100 md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label="Toggle color theme"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background text-foreground"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
+            <button
+              className="rounded-lg p-2 transition-smooth hover:bg-foreground/10"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle navigation menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200 bg-white animate-fade-in">
+          <div className="animate-fade-in border-t border-border bg-background py-4 text-foreground md:hidden">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-slate-700 hover:text-[#FF7A00] transition-smooth font-medium py-2"
+                  className="py-2 text-sm font-medium text-foreground/80 transition-smooth hover:text-[#FF7A00]"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-3 border-t border-slate-200 pt-4">
+              <div className="flex flex-col gap-3 border-t border-border pt-4">
                 <Button variant="outline" className="btn-ghost-pill w-full">
                   Download brochure
                 </Button>
                 <Button className="btn-primary-pill w-full">
                   Book a demo
                 </Button>
+                <button
+                  type="button"
+                  onClick={toggleTheme}
+                  className="btn-ghost-pill w-full bg-background/40"
+                >
+                  <span className="flex items-center justify-center gap-2 text-sm font-semibold">
+                    {isDark ? (
+                      <>
+                        <Sun className="h-4 w-4" /> Light mode
+                      </>
+                    ) : (
+                      <>
+                        <Moon className="h-4 w-4" /> Dark mode
+                      </>
+                    )}
+                  </span>
+                </button>
               </div>
             </div>
           </div>
