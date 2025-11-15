@@ -21,7 +21,7 @@ export const TransparencySection = () => {
     <section id="transparency" className="bg-slate-100 py-24">
       <div className="section-shell">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow">Transparency</p>
+          <p className="section-eyebrow text-slate-500">Transparency</p>
           <h2 className="text-balance text-4xl font-semibold tracking-tight text-slate-900">
             Live dashboard — same numbers we share with pilot partners
           </h2>

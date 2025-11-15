@@ -9,12 +9,20 @@ const Navigation = () => {
   const isDark = theme === "dark";
 
   const navItems = [
+    { label: "Home", href: "#hero" },
     { label: "What", href: "#what-is-classnova" },
+    { label: "Deployment", href: "#deployment" },
     { label: "Features", href: "#features" },
     { label: "Hardware", href: "#hardware" },
     { label: "Software", href: "#software" },
     { label: "Benefits", href: "#benefits" },
     { label: "Pricing", href: "#pricing" },
+    { label: "Cases", href: "#impact" },
+    { label: "Timeline", href: "#timeline" },
+    { label: "Team", href: "#team" },
+    { label: "Comparison", href: "#comparison" },
+    { label: "Resources", href: "#resources" },
+    { label: "FAQ", href: "#faq" },
     { label: "Trust", href: "#backed-by" },
     { label: "Demo", href: "#demo" },
   ];
@@ -24,20 +32,20 @@ const Navigation = () => {
       <div className="section-shell">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <a href="#hero" className="flex items-center gap-2" aria-label="Scroll to top">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-warm shadow-soft">
               <span className="text-white text-xl font-bold">C</span>
             </div>
             <span className="text-xl font-bold text-foreground">ClassNova</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden flex-1 items-center justify-center gap-6 text-sm md:flex md:flex-wrap">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-foreground/70 transition-smooth hover:text-[#FF7A00]"
+                className="font-medium text-foreground/70 transition-smooth hover:text-[#FF7A00]"
               >
                 {item.label}
               </a>
