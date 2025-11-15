@@ -1,5 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
+import { Moon, Sun, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useTheme } from "@/lib/theme-provider";
 
@@ -8,23 +16,41 @@ const Navigation = () => {
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === "dark";
 
-  const navItems = [
+  const primaryNav = [
     { label: "Home", href: "#hero" },
     { label: "What", href: "#what-is-classnova" },
-    { label: "Deployment", href: "#deployment" },
     { label: "Features", href: "#features" },
     { label: "Hardware", href: "#hardware" },
-    { label: "Software", href: "#software" },
-    { label: "Benefits", href: "#benefits" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Cases", href: "#impact" },
-    { label: "Timeline", href: "#timeline" },
-    { label: "Team", href: "#team" },
-    { label: "Comparison", href: "#comparison" },
-    { label: "Resources", href: "#resources" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Trust", href: "#backed-by" },
     { label: "Demo", href: "#demo" },
+  ];
+
+  const secondaryNav = [
+    {
+      label: "Rollout",
+      links: [
+        { label: "Deployment", href: "#deployment" },
+        { label: "Timeline", href: "#timeline" },
+        { label: "Team", href: "#team" },
+      ],
+    },
+    {
+      label: "Proof",
+      links: [
+        { label: "Cases", href: "#impact" },
+        { label: "Comparison", href: "#comparison" },
+        { label: "Trust", href: "#backed-by" },
+      ],
+    },
+    {
+      label: "Resources",
+      links: [
+        { label: "Software", href: "#software" },
+        { label: "Benefits", href: "#benefits" },
+        { label: "Resources", href: "#resources" },
+        { label: "FAQ", href: "#faq" },
+      ],
+    },
   ];
 
   return (
@@ -40,8 +66,8 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden flex-1 items-center justify-center gap-6 text-sm md:flex md:flex-wrap">
-            {navItems.map((item) => (
+          <div className="hidden flex-1 items-center justify-center gap-5 text-sm md:flex">
+            {primaryNav.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -50,6 +76,33 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground/80 transition-smooth hover:text-[#FF7A00]">
+                  More <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-64">
+                {secondaryNav.map((group, index) => (
+                  <div key={group.label}>
+                    {index > 0 && <DropdownMenuSeparator />}
+                    <DropdownMenuLabel className="text-[11px] uppercase tracking-[0.35em] text-foreground/60">
+                      {group.label}
+                    </DropdownMenuLabel>
+                    {group.links.map((link) => (
+                      <DropdownMenuItem asChild key={link.label}>
+                        <a
+                          href={link.href}
+                          className="w-full rounded-md px-2 py-1.5 text-sm font-medium text-foreground/80 hover:text-[#FF7A00]"
+                        >
+                          {link.label}
+                        </a>
+                      </DropdownMenuItem>
+                    ))}
+                  </div>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* CTA Buttons */}
@@ -93,16 +146,34 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="animate-fade-in border-t border-border bg-background py-4 text-foreground md:hidden">
-            <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="py-2 text-sm font-medium text-foreground/80 transition-smooth hover:text-[#FF7A00]"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
+            <div className="flex flex-col gap-6">
+              <div className="grid gap-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/50">Primary</p>
+                {primaryNav.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="rounded-lg border border-border/70 px-3 py-2 text-sm font-medium text-foreground/80 transition-smooth hover:text-[#FF7A00]"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+              {secondaryNav.map((group) => (
+                <div key={group.label} className="flex flex-col gap-2 border-t border-border pt-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground/50">{group.label}</p>
+                  {group.links.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="rounded-lg px-2 py-2 text-sm font-medium text-foreground/80 transition-smooth hover:text-[#FF7A00]"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               ))}
               <div className="flex flex-col gap-3 border-t border-border pt-4">
                 <Button variant="outline" className="btn-ghost-pill w-full">
