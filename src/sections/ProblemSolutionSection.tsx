@@ -39,10 +39,10 @@ export const ProblemSolutionSection = () => {
         <div>
           <p className="section-eyebrow text-slate-500">What is ClassNova?</p>
           <h2 className="text-balance text-4xl font-semibold leading-tight text-slate-900">
-            A portable teaching kit for every classroom
+            The classroom upgrade—no hassle, no learning curve
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            One device + accessories that turn existing TVs or projectors into interactive, trackable classrooms in minutes.
+            Instantly make any TV or projector interactive. Track lessons. Engage every student. All with one simple kit.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {highlights.map((item) => (
@@ -55,7 +55,7 @@ export const ProblemSolutionSection = () => {
         </div>
         <div>
           <p className="section-eyebrow text-slate-500">What’s inside</p>
-          <h3 className="text-2xl font-semibold text-slate-900">All essentials, pre-configured</h3>
+          <h3 className="text-2xl font-semibold text-slate-900">Everything you need, ready to teach</h3>
           <div className="mt-8 space-y-4">
             {essentials.map((card) => (
               <div key={card.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -65,7 +65,7 @@ export const ProblemSolutionSection = () => {
             ))}
           </div>
           <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50/80 p-4 text-sm text-emerald-900">
-            No installation fee • No maintenance contract • Pilot-ready within 2 weeks
+            No installation fees. No maintenance contracts. Ready to pilot in 2 weeks.
           </div>
         </div>
       </div>

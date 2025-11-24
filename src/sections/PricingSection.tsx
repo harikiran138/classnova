@@ -3,14 +3,14 @@ const plans = [
     name: "Basic",
     price: "₹0",
     cadence: "Single classroom",
-    blurb: "Essential features for smaller setups.",
+  blurb: "Perfect for small classrooms. Get started with interactive teaching at no cost.",
     highlights: ["Smart whiteboard", "Offline content", "Lesson recording"],
   },
   {
     name: "Standard",
     price: "₹25,000",
     cadence: "Refundable pilot kit",
-    blurb: "Best value for schools ready to modernize.",
+  blurb: "Upgrade your school with our pilot kit. Easy setup, full support, and risk-free trial.",
     featured: true,
     highlights: ["Recording + sharing", "Teacher training", "Priority support"],
   },
@@ -18,7 +18,7 @@ const plans = [
     name: "Premium",
     price: "Custom",
     cadence: "Multi-campus",
-    blurb: "4GB RAM · 64GB storage · Pen, mouse, mic included.",
+  blurb: "Custom solutions for large campuses. Includes all hardware, training, and ongoing support.",
     highlights: ["Bulk deployment", "Data governance", "Co-design roadmap"],
   },
 ];
@@ -53,13 +53,13 @@ export const PricingSection = () => {
               <button
                 className={`btn-pill mt-8 w-full justify-center ${plan.featured ? "bg-[#FF7A00] text-white" : "border border-slate-300 text-slate-900"}`}
               >
-                {plan.featured ? "Start pilot" : "Talk to us"}
+                {plan.featured ? "Start Pilot" : "Contact Sales"}
               </button>
             </div>
           ))}
         </div>
         <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 text-center text-sm text-slate-600">
-          All pricing discussions come with transparent milestones, shared documentation, and 100% refundable deposits until hardware ships.
+          Every plan includes clear milestones, easy documentation, and a 100% refundable deposit until your hardware ships. No hidden fees.
         </div>
       </div>
     </section>

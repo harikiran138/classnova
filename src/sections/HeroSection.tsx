@@ -20,11 +20,11 @@ export const HeroSection = () => {
               <span className="hidden text-white/60 sm:inline">Meet us at DIDAC India</span>
             </div>
             <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px]">
-              Transform any classroom into a <span className="bg-gradient-to-r from-[#FF7A00] via-[#FF9A3C] to-[#FFD8A8] bg-clip-text text-transparent">smart classroom</span>
+                Unlock smarter learning in every classroom <span className="bg-gradient-to-r from-[#FF7A00] via-[#FF9A3C] to-[#FFD8A8] bg-clip-text text-transparent">— instantly</span>
             </h1>
-            <p className="text-balance text-lg text-white/80 lg:text-xl">
-              A powerful, portable device that turns projectors and TVs into interactive teaching hubs.
-            </p>
+              <p className="text-balance text-lg text-white/80 lg:text-xl">
+                The premium, portable device that transforms any projector or TV into an interactive teaching hub. Simple. Fast. No training required.
+              </p>
           </div>
 
           <div className="grid gap-4 text-white/80 sm:grid-cols-3">
@@ -42,21 +42,21 @@ export const HeroSection = () => {
 
           <div className="flex flex-col gap-4 text-base sm:flex-row">
             <Button className="btn-primary-pill h-14 text-base">
-              Book a demo
+              Book Demo
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="outline"
               className="btn-ghost-pill h-14 border-white/30 text-base"
             >
-              Download brochure
+              Download Brochure
               <Download className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="ghost"
               className="btn-pill h-14 text-base text-white hover:bg-white/10"
             >
-              <Play className="mr-2 h-4 w-4" /> Watch product tour
+              <Play className="mr-2 h-4 w-4" /> Watch Video
             </Button>
           </div>
 

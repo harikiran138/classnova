@@ -1,18 +1,18 @@
 const feedback = [
   {
-    quote: "Teaching feels easier and faster.",
+    quote: "Before ClassNova, I struggled to keep students engaged. With the kit, lessons are interactive and my workload is lighter. My class is more focused than ever.",
     author: "Shalini Rao",
     role: "Govt. Hindi teacher",
     context: "Bengaluru pilot",
   },
   {
-    quote: "Our classrooms became digital in minutes.",
+    quote: "We had no digital tools and felt left behind. After installing ClassNova, our classrooms went digital in minutes. Now, students participate more and I save time every day.",
     author: "Arif Sheikh",
     role: "Science teacher, Pune",
     context: "Prototype dry run",
   },
   {
-    quote: "Perfect for schools with tight budgets.",
+    quote: "Budget constraints made upgrades impossible. ClassNova fit our needs perfectly—affordable, easy, and effective. Our teachers are happier and students are learning better.",
     author: "Meera Iyer",
     role: "School principal, Mumbai",
     context: "Demo feedback",

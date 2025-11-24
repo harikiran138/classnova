@@ -1,14 +1,14 @@
 const scenarios = [
   {
     org: "Rural Karnataka govt. cluster",
-    hypothesis: "Rotate 2 kits across 8 classrooms without additional staff.",
-    proofNeeded: "Measure setup time + lesson completion rate over 4 weeks.",
+    hypothesis: "Before: 8 classrooms shared 1 outdated smart board, causing delays and missed lessons. After: 2 portable kits rotate easily, no extra staff needed, every class gets interactive lessons on time.",
+    proofNeeded: "Measure setup time and lesson completion rate before and after kit deployment over 4 weeks.",
     status: "Scheduled Jan 2026",
   },
   {
     org: "CSR-funded city schools",
-    hypothesis: "Swap outdated smart boards with portable kits to unlock unused ICT rooms.",
-    proofNeeded: "Track energy + maintenance savings with facility teams.",
+    hypothesis: "Before: ICT rooms sat unused due to broken smart boards and high maintenance. After: Portable kits replace old boards, rooms are used daily, and maintenance costs drop.",
+    proofNeeded: "Track energy and maintenance savings, and room usage, before and after kit installation with facility teams.",
     status: "Scoping",
   },
 ];
@@ -40,7 +40,7 @@ export const CaseStudiesSection = () => {
                 </div>
               </div>
               <button className="mt-6 btn-pill border border-slate-300 bg-white text-slate-900">
-                Follow progress email
+                Get Updates
               </button>
             </div>
           ))}
