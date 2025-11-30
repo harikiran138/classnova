@@ -79,9 +79,15 @@ const Investor = () => {
                 </div>
             </section>
 
-            {/* 3. BUSINESS MODEL (Page 10 Style) */}
-            <section className="section-padding bg-white">
-                <div className="section-shell">
+            {/* 3. BUSINESS MODEL (Page 10 Style - Glassmorphism) */}
+            <section className="section-padding bg-slate-50 relative overflow-hidden">
+                {/* Background Mesh for Glass Effect */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-3xl" />
+                    <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-orange-100/50 rounded-full blur-3xl" />
+                </div>
+
+                <div className="section-shell relative z-10">
                     <div className="text-center mb-16">
                         <p className="section-eyebrow text-[#2563EB]">BUSINESS MODEL</p>
                         <h2 className="section-heading text-[#0F172A] uppercase">How We Make Money</h2>
@@ -110,7 +116,7 @@ const Investor = () => {
                                 color: "bg-slate-50 text-slate-600"
                             }
                         ].map((model, i) => (
-                            <div key={i} className="p-8 rounded-[32px] border border-slate-200 text-center hover:shadow-xl transition-all duration-300 group">
+                            <div key={i} className="glass-panel p-8 text-center hover:translate-y-[-5px] transition-transform duration-300 group">
                                 <div className={`h-16 w-16 rounded-2xl ${model.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
                                     <model.icon className="h-8 w-8" />
                                 </div>

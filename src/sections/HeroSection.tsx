@@ -47,13 +47,15 @@ export const HeroSection = () => {
               </Button>
             </div>
 
-            <div className="pt-8 flex items-center justify-center lg:justify-start gap-8 text-[#64748B] animate-fade-in-up delay-300">
-              {["Plug & Play", "Zero Training", "Budget Friendly"].map((item) => (
-                <div key={item} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-[#2563EB]" />
-                  <span className="text-sm font-bold uppercase tracking-wide">{item}</span>
-                </div>
-              ))}
+            <div className="pt-10 animate-fade-in-up delay-300">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#64748B] mb-4">Trusted by Leading Institutions</p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                {/* Placeholder Logos - In a real app, use SVGs */}
+                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse" />
+                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse delay-75" />
+                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse delay-150" />
+                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse delay-200" />
+              </div>
             </div>
           </div >
 

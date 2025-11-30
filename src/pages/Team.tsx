@@ -48,20 +48,22 @@ const Team = () => {
                 </div>
 
                 {/* FOUNDERS */}
-                <div className="grid md:grid-cols-3 gap-8 mb-24">
+                {/* FOUNDERS - COMPACT HORIZONTAL */}
+                <div className="grid lg:grid-cols-3 gap-6 mb-24">
                     {team.map((member) => (
-                        <div key={member.name} className="group text-center">
-                            <div className={`w-48 h-48 mx-auto rounded-full ${member.image} mb-6 border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300`} />
-                            <h3 className="text-2xl font-bold text-[#0F172A]">{member.name}</h3>
-                            <p className="text-[#2563EB] font-bold uppercase tracking-wide text-sm mb-4">{member.role}</p>
-                            <p className="text-[#64748B] leading-relaxed mb-6">{member.bio}</p>
-                            <div className="flex justify-center gap-4">
-                                <Button variant="ghost" size="icon" className="rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
-                                    <Linkedin className="h-5 w-5" />
-                                </Button>
-                                <Button variant="ghost" size="icon" className="rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
-                                    <Twitter className="h-5 w-5" />
-                                </Button>
+                        <div key={member.name} className="group flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
+                            <div className={`w-20 h-20 rounded-full ${member.image} flex-shrink-0 border-2 border-white shadow-md`} />
+                            <div className="text-left">
+                                <h3 className="text-lg font-bold text-[#0F172A]">{member.name}</h3>
+                                <p className="text-[#2563EB] text-xs font-bold uppercase tracking-wide mb-1">{member.role}</p>
+                                <div className="flex gap-2">
+                                    <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
+                                        <Linkedin className="h-4 w-4" />
+                                    </Button>
+                                    <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
+                                        <Twitter className="h-4 w-4" />
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     ))}

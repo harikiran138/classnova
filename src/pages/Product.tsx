@@ -77,7 +77,7 @@ const Product = () => {
                 </div>
             </section>
 
-            {/* 3. FEATURES GRID (Page 4 Style) */}
+            {/* 3. FEATURES BENTO GRID (Page 4 Style - Refined) */}
             <section className="section-padding bg-white">
                 <div className="section-shell">
                     <div className="text-center max-w-3xl mx-auto mb-16">
@@ -86,25 +86,48 @@ const Product = () => {
                         <p className="section-subtitle text-[#64748B]">Built for the Indian classroom environment.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { icon: Wifi, title: "Offline First", desc: "Works without internet. Content syncs when online." },
-                            { icon: Layout, title: "Smart Whiteboard", desc: "Write, draw, and annotate over any content." },
-                            { icon: Zap, title: "AI Tutor Assistant", desc: "Auto-generate quizzes and lesson summaries." },
-                            { icon: Monitor, title: "Wireless Casting", desc: "Cast from any phone or laptop instantly." },
-                            { icon: Shield, title: "Secure System", desc: "Enterprise-grade data protection and privacy." },
-                            { icon: Cloud, title: "Cloud Sync", desc: "Auto-backup lesson notes to the cloud." },
-                            { icon: Smartphone, title: "Mobile Control", desc: "Control the board from your smartphone." },
-                            { icon: Server, title: "LMS Integration", desc: "Connects with existing school software." },
-                        ].map((feature, i) => (
-                            <div key={i} className="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-blue-200 hover:shadow-lg transition-all duration-300">
-                                <div className="h-12 w-12 rounded-xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <feature.icon className="h-6 w-6" />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
+                        {/* Large Card 1 */}
+                        <div className="md:col-span-2 p-8 rounded-[32px] bg-blue-50 border border-blue-100 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                            <div className="relative z-10">
+                                <div className="h-12 w-12 rounded-xl bg-white text-[#2563EB] flex items-center justify-center mb-4 shadow-sm">
+                                    <Wifi className="h-6 w-6" />
                                 </div>
-                                <h3 className="text-lg font-bold text-[#0F172A] mb-2">{feature.title}</h3>
-                                <p className="text-sm text-[#64748B] leading-relaxed">{feature.desc}</p>
+                                <h3 className="text-2xl font-bold text-[#0F172A] mb-2">Offline First Architecture</h3>
+                                <p className="text-[#64748B] max-w-md">Works completely without internet. Content syncs automatically when connectivity is available.</p>
                             </div>
-                        ))}
+                            <div className="absolute right-0 bottom-0 w-64 h-64 bg-blue-100 rounded-tl-[100px] opacity-50 group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group">
+                            <div className="h-12 w-12 rounded-xl bg-orange-50 text-[#FF7A00] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <Zap className="h-6 w-6" />
+                            </div>
+                            <h3 className="text-xl font-bold text-[#0F172A] mb-2">AI Tutor</h3>
+                            <p className="text-sm text-[#64748B]">Auto-generate quizzes and summaries instantly.</p>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group">
+                            <div className="h-12 w-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <Layout className="h-6 w-6" />
+                            </div>
+                            <h3 className="text-xl font-bold text-[#0F172A] mb-2">Smart Whiteboard</h3>
+                            <p className="text-sm text-[#64748B]">Infinite canvas for writing and drawing.</p>
+                        </div>
+
+                        {/* Large Card 4 */}
+                        <div className="md:col-span-2 p-8 rounded-[32px] bg-[#0F172A] text-white relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                            <div className="relative z-10">
+                                <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+                                    <Shield className="h-6 w-6 text-blue-400" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-2">Enterprise Security</h3>
+                                <p className="text-slate-400 max-w-md">Bank-grade encryption for all student data and lesson plans.</p>
+                            </div>
+                            <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl group-hover:bg-blue-500/30 transition-colors" />
+                        </div>
                     </div>
                 </div>
             </section>
