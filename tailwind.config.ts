@@ -15,7 +15,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,12 +52,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        warm: {
-          glow: "hsl(var(--warm-glow))",
-        },
-        soft: {
-          blue: "hsl(var(--soft-blue))",
-          purple: "hsl(var(--soft-purple))",
+        glass: {
+          base: "hsl(var(--glass-base))",
+          border: "hsl(var(--glass-border))",
         },
       },
       borderRadius: {

@@ -3,138 +3,94 @@ import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuLabel,
   DropdownMenuItem,
-  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { Moon, Sun, Menu, X, ChevronDown } from "lucide-react";
-import { useState } from "react";
-import { useTheme } from "@/lib/theme-provider";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
-  const isDark = theme === "dark";
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
-  const primaryNav = [
-    { label: "Home", href: "#hero" },
-    { label: "What", href: "#what-is-classnova" },
-    { label: "Features", href: "#features" },
-    { label: "Hardware", href: "#hardware" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Demo", href: "#demo" },
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Product", href: "/product" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "About", href: "/about" },
+    { label: "Resources", href: "/resources" },
+    { label: "Contact", href: "/contact" },
   ];
 
-  const secondaryNav = [
-    {
-      label: "Rollout",
-      links: [
-        { label: "Deployment", href: "#deployment" },
-        { label: "Timeline", href: "#timeline" },
-        { label: "Team", href: "#team" },
-      ],
-    },
-    {
-      label: "Proof",
-      links: [
-        { label: "Cases", href: "#impact" },
-        { label: "Comparison", href: "#comparison" },
-        { label: "Trust", href: "#backed-by" },
-      ],
-    },
-    {
-      label: "Resources",
-      links: [
-        { label: "Software", href: "#software" },
-        { label: "Benefits", href: "#benefits" },
-        { label: "Resources", href: "#resources" },
-        { label: "FAQ", href: "#faq" },
-      ],
-    },
-  ];
+  const isActive = (path: string) => {
+    if (path === "/" && location.pathname !== "/") return false;
+    return location.pathname.startsWith(path);
+  };
 
   return (
-  <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 shadow-[0_10px_40px_rgba(15,23,42,0.12)] backdrop-blur-xl">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-[#0F172A]/80 backdrop-blur-xl border-b border-white/10 py-3"
+          : "bg-transparent py-5"
+        }`}
+    >
       <div className="section-shell">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2" aria-label="Scroll to top">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-warm shadow-soft">
-              <span className="text-white text-xl font-bold">C</span>
+          <Link to="/" className="flex items-center gap-3 group" aria-label="Go to homepage">
+            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 shadow-lg shadow-blue-500/20 transition-transform duration-300 group-hover:scale-105">
+              <span className="text-white text-xl font-bold font-heading">C</span>
+              <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <span className="text-xl font-bold text-foreground">ClassNova</span>
-          </a>
+            <span className="text-xl font-bold text-white font-heading tracking-tight">ClassNova</span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden flex-1 items-center justify-center gap-5 text-sm md:flex">
-            {primaryNav.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="font-medium text-foreground/70 transition-smooth hover:text-[#FF7A00]"
-              >
-                {item.label}
-              </a>
-            ))}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground/80 transition-smooth hover:text-[#FF7A00]">
-                  More <ChevronDown className="h-4 w-4" />
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64">
-                {secondaryNav.map((group, index) => (
-                  <div key={group.label}>
-                    {index > 0 && <DropdownMenuSeparator />}
-                    <DropdownMenuLabel className="text-[11px] uppercase tracking-[0.35em] text-foreground/60">
-                      {group.label}
-                    </DropdownMenuLabel>
-                    {group.links.map((link) => (
-                      <DropdownMenuItem asChild key={link.label}>
-                        <a
-                          href={link.href}
-                          className="w-full rounded-md px-2 py-1.5 text-sm font-medium text-foreground/80 hover:text-[#FF7A00]"
-                        >
-                          {link.label}
-                        </a>
-                      </DropdownMenuItem>
-                    ))}
-                  </div>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+          <div className="hidden flex-1 items-center justify-center gap-1 text-sm md:flex">
+            <div className="flex items-center gap-1 rounded-full border border-white/5 bg-white/5 p-1 backdrop-blur-md">
+              {navLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className={`relative rounded-full px-5 py-2 font-medium transition-all duration-300 ${isActive(item.href)
+                      ? "text-white"
+                      : "text-slate-400 hover:text-white hover:bg-white/5"
+                    }`}
+                >
+                  {isActive(item.href) && (
+                    <div className="absolute inset-0 rounded-full bg-white/10 border border-white/5 shadow-sm" />
+                  )}
+                  <span className="relative z-10">{item.label}</span>
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden items-center gap-3 md:flex">
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label="Toggle color theme"
-              className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-background text-foreground shadow-[0_5px_15px_rgba(15,23,42,0.08)] transition-smooth hover:-translate-y-0.5"
-            >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </button>
-            <Button variant="outline" className="btn-ghost-pill h-11 text-sm">
-              Download brochure
+          <div className="hidden items-center gap-4 md:flex">
+            <Button variant="ghost" className="text-slate-300 hover:text-white">
+              Log in
             </Button>
-            <Button className="btn-primary-pill h-11 text-sm">
-              Book a demo
-            </Button>
+            <Link to="/contact">
+              <Button className="font-semibold shadow-glow">
+                Book Demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
             <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label="Toggle color theme"
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background text-foreground"
-            >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </button>
-            <button
-              className="rounded-lg p-2 transition-smooth hover:bg-foreground/10"
+              className="rounded-full p-2 text-white transition-colors hover:bg-white/10"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle navigation menu"
             >
@@ -145,60 +101,30 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="animate-fade-in border-t border-border bg-background py-4 text-foreground md:hidden">
-            <div className="flex flex-col gap-6">
-              <div className="grid gap-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-foreground/50">Primary</p>
-                {primaryNav.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="rounded-lg border border-border/70 px-3 py-2 text-sm font-medium text-foreground/80 transition-smooth hover:text-[#FF7A00]"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </div>
-              {secondaryNav.map((group) => (
-                <div key={group.label} className="flex flex-col gap-2 border-t border-border pt-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground/50">{group.label}</p>
-                  {group.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="rounded-lg px-2 py-2 text-sm font-medium text-foreground/80 transition-smooth hover:text-[#FF7A00]"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-              ))}
-              <div className="flex flex-col gap-3 border-t border-border pt-4">
-                <Button variant="outline" className="btn-ghost-pill w-full">
-                  Download brochure
-                </Button>
-                <Button className="btn-primary-pill w-full">
-                  Book a demo
-                </Button>
-                <button
-                  type="button"
-                  onClick={toggleTheme}
-                  className="btn-ghost-pill w-full bg-background/40"
+          <div className="absolute top-full left-0 right-0 animate-fade-in border-b border-white/10 bg-[#0F172A]/95 backdrop-blur-xl p-4 md:hidden">
+            <div className="flex flex-col gap-2">
+              {navLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${isActive(item.href)
+                      ? "bg-blue-500/10 text-blue-400"
+                      : "text-slate-400 hover:bg-white/5 hover:text-white"
+                    }`}
+                  onClick={() => setIsOpen(false)}
                 >
-                  <span className="flex items-center justify-center gap-2 text-sm font-semibold">
-                    {isDark ? (
-                      <>
-                        <Sun className="h-4 w-4" /> Light mode
-                      </>
-                    ) : (
-                      <>
-                        <Moon className="h-4 w-4" /> Dark mode
-                      </>
-                    )}
-                  </span>
-                </button>
+                  {item.label}
+                </Link>
+              ))}
+              <div className="flex flex-col gap-3 border-t border-white/10 pt-4 mt-2">
+                <Button variant="outline" className="w-full justify-center">
+                  Log in
+                </Button>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full justify-center shadow-glow">
+                    Book a demo
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

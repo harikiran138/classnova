@@ -8,89 +8,87 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* ClassNova bright system */
-    --background: 215 33% 97%;
-    --foreground: 224 40% 12%;
+    /* ClassNova Luminous Glass System */
+    /* Deep Blue Background */
+    --background: 222 47% 11%; /* #0F172A */
+    --foreground: 210 40% 98%; /* #F8FAFC */
 
-    --card: 0 0% 100%;
-    --card-foreground: 224 40% 12%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 40% 12%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Warm orange primary */
-    --primary: 24 95% 55%;
-    --primary-foreground: 0 0% 100%;
+    /* Bright Blue Primary */
+    --primary: 217 91% 60%; /* #3B82F6 */
+    --primary-foreground: 222 47% 11%;
+
+    /* Slate Secondary */
+    --secondary: 217 33% 17%; /* #1E293B */
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted Text */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%; /* #94A3B8 */
+
+    /* Cyan Accent */
+    --accent: 189 94% 43%; /* #06B6D4 */
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 20%; /* #334155 */
+    --input: 217 33% 20%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Glass Tokens */
+    --glass-base: 222 47% 11%;
+    --glass-border: 210 40% 98%;
     
-    /* Cool navy secondary */
-    --secondary: 215 22% 90%;
-    --secondary-foreground: 224 40% 12%;
-
-    /* Muted supportive tones */
-    --muted: 215 18% 86%;
-    --muted-foreground: 222 14% 35%;
-
-    /* Light golden accent */
-    --accent: 205 88% 45%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 215 24% 85%;
-    --input: 215 24% 85%;
-    --ring: 24 95% 55%;
-
-    --radius: 0.85rem;
-    
-    /* Custom ClassNova tokens */
-    --warm-glow: 35 100% 63%;
-    --soft-blue: 210 70% 82%;
-    --soft-purple: 270 55% 74%;
-    --hero-gradient-start: 24 95% 60%;
-    --hero-gradient-end: 45 90% 68%;
-    --surface-glass: hsla(0, 0%, 100%, 0.7);
+    /* Custom Gradients */
+    --hero-gradient-start: 222 47% 11%;
+    --hero-gradient-end: 217 33% 17%;
     
     /* Shadows */
-    --shadow-soft: 0 25px 55px -30px hsl(221 35% 20% / 0.35);
-    --shadow-glow: 0 20px 45px -20px hsl(24 95% 55% / 0.35);
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.5);
     
     /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.45, 0.05, 0.25, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --max-content-width: 1280px;
-    --section-horizontal: clamp(1.5rem, 6vw, 10rem);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 220 20% 12%;
-    --foreground: 35 100% 98%;
+    /* Same as root since we are enforcing dark mode aesthetic */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 220 18% 15%;
-    --card-foreground: 35 100% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 18% 15%;
-    --popover-foreground: 35 100% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 24 100% 63%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 220 15% 22%;
-    --secondary-foreground: 35 100% 98%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 15% 22%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 220 15% 25%;
-    --accent-foreground: 35 100% 98%;
+    --accent: 189 94% 43%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --ring: 24 100% 63%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 217 91% 60%;
   }
 }
 
