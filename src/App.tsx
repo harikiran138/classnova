@@ -18,33 +18,59 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <div className="flex min-h-screen flex-col">
-          <Navigation />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/product" element={<Product />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/investors" element={<Investor />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <FooterSection />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+
+const App = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="flex min-h-screen flex-col">
+            <Navigation />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/product" element={<Product />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/investors" element={<Investor />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <FooterSection />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

@@ -1,4 +1,4 @@
-import { BookOpen, Wifi, DollarSign, Zap } from "lucide-react";
+import { BookOpen, Wifi, DollarSign, Zap, Lightbulb, Heart } from "lucide-react";
 
 const problems = [
   { icon: BookOpen, text: "Outdated teaching tools limit learning" },
@@ -40,7 +40,7 @@ const StorySection = () => {
             <div className="relative bg-card p-12 rounded-3xl shadow-glow border border-primary/20">
               <div className="text-center space-y-6">
                 <div className="inline-block p-4 bg-gradient-warm rounded-2xl shadow-soft">
-                  <span className="text-5xl">💡</span>
+                  <Lightbulb className="w-12 h-12 text-white" />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold">
                   Meet <span className="text-gradient">ClassNova</span>
@@ -50,15 +50,15 @@ const StorySection = () => {
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 pt-8">
                   {[
-                    { emoji: "💰", title: "Affordable", desc: "Up to 70% cost savings" },
-                    { emoji: "📡", title: "Offline-First", desc: "Works without internet" },
-                    { emoji: "⚡", title: "Instant Setup", desc: "Ready in 5 minutes" },
+                    { icon: DollarSign, title: "Affordable", desc: "Up to 70% cost savings" },
+                    { icon: Wifi, title: "Offline-First", desc: "Works without internet" },
+                    { icon: Zap, title: "Instant Setup", desc: "Ready in 5 minutes" },
                   ].map((feature, index) => (
                     <div
                       key={index}
                       className="space-y-3 p-6 rounded-2xl bg-secondary/50 hover:bg-secondary transition-smooth"
                     >
-                      <span className="text-4xl">{feature.emoji}</span>
+                      <feature.icon className="w-10 h-10 text-primary" />
                       <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
                       <p className="text-muted-foreground">{feature.desc}</p>
                     </div>
@@ -71,7 +71,7 @@ const StorySection = () => {
           {/* Teacher Connection */}
           <div className="text-center space-y-6 animate-fade-in">
             <div className="inline-flex items-center gap-2 text-primary text-lg font-medium">
-              <span>❤️</span>
+              <Heart className="w-6 h-6 fill-current" />
               <span>Built with teachers in mind</span>
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

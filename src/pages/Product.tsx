@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, XCircle, Wifi, Shield, Zap, Layout, Monitor, Database, CloudOff, Server, Cpu } from "lucide-react";
+import { CheckCircle2, XCircle, Wifi, Shield, Zap, Layout, Monitor, Database, CloudOff, Server, Cpu, Banknote, Cable, Star } from "lucide-react";
 
 const Product = () => {
     return (
@@ -8,21 +8,21 @@ const Product = () => {
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
                 <div className="section-shell relative z-10">
                     <div className="text-center max-w-4xl mx-auto space-y-8">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 animate-fade-in">
-                            <span className="text-sm font-bold uppercase tracking-wide text-[#2563EB]">Smart Plug-and-Play Classroom Device</span>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue-50 border border-brand-blue-100 animate-fade-in">
+                            <span className="text-sm font-bold uppercase tracking-wide text-brand-blue-600">Smart Plug-and-Play Classroom Device</span>
                         </div>
-                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#0F172A] font-heading uppercase leading-tight">
+                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 font-heading uppercase leading-tight">
                             The All-In-One <br />
-                            <span className="text-[#2563EB]">Digital Classroom Kit</span>
+                            <span className="text-brand-blue-600">Digital Classroom Kit</span>
                         </h1>
-                        <p className="text-xl text-[#64748B] max-w-2xl mx-auto leading-relaxed font-medium">
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-medium">
                             A single device that replaces the PC, Smart TV, and UPS. Connects to any projector and turns it smart instantly.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                            <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-orange-500/20 bg-[#FF7A00] hover:bg-[#E66E00] text-white rounded-2xl">
+                            <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-brand-orange-500/20 bg-brand-orange-500 hover:bg-brand-orange-600 text-white rounded-2xl">
                                 REQUEST DEMO
                             </Button>
-                            <Button variant="outline" size="lg" className="h-14 px-10 text-lg rounded-2xl">
+                            <Button variant="outline" size="lg" className="h-14 px-10 text-lg rounded-2xl border-2 border-slate-200 hover:border-brand-blue-200 hover:bg-brand-blue-50 text-slate-900">
                                 VIEW SPECS
                             </Button>
                         </div>
@@ -35,10 +35,10 @@ const Product = () => {
                 <div className="section-shell">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-6">
-                            <p className="section-eyebrow text-[#FF7A00]">THE PROBLEM</p>
-                            <h2 className="section-heading text-[#0F172A] uppercase">Smart Classrooms Are Too Complex</h2>
-                            <p className="text-lg text-[#64748B] leading-relaxed">
-                                Schools struggle with <span className="font-bold text-[#0F172A]">expensive Smart TVs</span>, complex wiring, and software that requires internet. Teachers end up avoiding the tech altogether.
+                            <p className="section-eyebrow text-brand-orange-600">THE PROBLEM</p>
+                            <h2 className="section-heading text-slate-900 uppercase">Smart Classrooms Are Too Complex</h2>
+                            <p className="text-lg text-slate-600 leading-relaxed">
+                                Schools struggle with <span className="font-bold text-slate-900">expensive Smart TVs</span>, complex wiring, and software that requires internet. Teachers end up avoiding the tech altogether.
                             </p>
                             <ul className="space-y-4 pt-4">
                                 {[
@@ -47,7 +47,7 @@ const Product = () => {
                                     "Complex training needed",
                                     "Fragile hardware"
                                 ].map((item) => (
-                                    <li key={item} className="flex items-center gap-3 text-[#64748B] font-medium">
+                                    <li key={item} className="flex items-center gap-3 text-slate-600 font-medium">
                                         <XCircle className="h-6 w-6 text-red-500 flex-shrink-0" />
                                         {item}
                                     </li>
@@ -55,19 +55,23 @@ const Product = () => {
                             </ul>
                         </div>
                         <div className="relative rounded-[32px] bg-white p-8 shadow-xl border border-slate-200">
-                            <div className="absolute -top-6 -right-6 w-24 h-24 bg-orange-100 rounded-full blur-2xl" />
+                            <div className="absolute -top-6 -right-6 w-24 h-24 bg-brand-orange-100 rounded-full blur-2xl" />
                             <div className="space-y-6">
                                 <div className="flex items-center gap-4 p-4 rounded-xl bg-red-50 border border-red-100">
-                                    <div className="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center text-2xl">💸</div>
+                                    <div className="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                                        <Banknote className="w-6 h-6" />
+                                    </div>
                                     <div>
-                                        <p className="font-bold text-[#0F172A]">Expensive</p>
+                                        <p className="font-bold text-slate-900">Expensive</p>
                                         <p className="text-sm text-red-600">₹2L+ per classroom setup</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4 p-4 rounded-xl bg-red-50 border border-red-100">
-                                    <div className="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center text-2xl">🕸️</div>
+                                    <div className="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                                        <Cable className="w-6 h-6" />
+                                    </div>
                                     <div>
-                                        <p className="font-bold text-[#0F172A]">Complex Wiring</p>
+                                        <p className="font-bold text-slate-900">Complex Wiring</p>
                                         <p className="text-sm text-red-600">PC + UPS + Speakers + Cabling</p>
                                     </div>
                                 </div>
@@ -81,44 +85,44 @@ const Product = () => {
             <section className="section-padding bg-white">
                 <div className="section-shell">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <p className="section-eyebrow text-[#2563EB]">KEY FEATURES</p>
-                        <h2 className="section-heading text-[#0F172A] uppercase">Everything a Teacher Needs</h2>
-                        <p className="section-subtitle text-[#64748B]">Built for the Indian classroom environment.</p>
+                        <p className="section-eyebrow text-brand-blue-600">KEY FEATURES</p>
+                        <h2 className="section-heading text-slate-900 uppercase">Everything a Teacher Needs</h2>
+                        <p className="section-subtitle text-slate-600">Built for the Indian classroom environment.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
                         {/* Large Card 1 */}
-                        <div className="md:col-span-2 p-8 rounded-[32px] bg-blue-50 border border-blue-100 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div className="md:col-span-2 p-8 rounded-[32px] bg-brand-blue-50 border border-brand-blue-100 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
                             <div className="relative z-10">
-                                <div className="h-12 w-12 rounded-xl bg-white text-[#2563EB] flex items-center justify-center mb-4 shadow-sm">
+                                <div className="h-12 w-12 rounded-xl bg-white text-brand-blue-600 flex items-center justify-center mb-4 shadow-sm">
                                     <Wifi className="h-6 w-6" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-[#0F172A] mb-2">Offline First Architecture</h3>
-                                <p className="text-[#64748B] max-w-md">Works completely without internet. Content syncs automatically when connectivity is available.</p>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-2">Offline First Architecture</h3>
+                                <p className="text-slate-600 max-w-md">Works completely without internet. Content syncs automatically when connectivity is available.</p>
                             </div>
-                            <div className="absolute right-0 bottom-0 w-64 h-64 bg-blue-100 rounded-tl-[100px] opacity-50 group-hover:scale-110 transition-transform duration-500" />
+                            <div className="absolute right-0 bottom-0 w-64 h-64 bg-brand-blue-100 rounded-tl-[100px] opacity-50 group-hover:scale-110 transition-transform duration-500" />
                         </div>
 
                         {/* Card 2 */}
-                        <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group">
-                            <div className="h-12 w-12 rounded-xl bg-orange-50 text-[#FF7A00] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-brand-blue-200 hover:shadow-lg transition-all duration-300 group">
+                            <div className="h-12 w-12 rounded-xl bg-brand-orange-50 text-brand-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                 <Zap className="h-6 w-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#0F172A] mb-2">AI Tutor</h3>
-                            <p className="text-sm text-[#64748B]">Auto-generate quizzes and summaries instantly.</p>
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">AI Tutor</h3>
+                            <p className="text-sm text-slate-600">Auto-generate quizzes and summaries instantly.</p>
                         </div>
 
                         {/* Card 3 */}
-                        <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group">
+                        <div className="p-8 rounded-[32px] bg-white border border-slate-100 hover:border-brand-blue-200 hover:shadow-lg transition-all duration-300 group">
                             <div className="h-12 w-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                 <Layout className="h-6 w-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#0F172A] mb-2">Smart Whiteboard</h3>
-                            <p className="text-sm text-[#64748B]">Infinite canvas for writing and drawing.</p>
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Smart Whiteboard</h3>
+                            <p className="text-sm text-slate-600">Infinite canvas for writing and drawing.</p>
                         </div>
 
                         {/* Large Card 4 */}
-                        <div className="md:col-span-2 p-8 rounded-[32px] bg-[#0F172A] text-white relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                        <div className="md:col-span-2 p-8 rounded-[32px] bg-slate-900 text-white relative overflow-hidden group hover:shadow-xl transition-all duration-300">
                             <div className="relative z-10">
                                 <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center mb-4">
                                     <Shield className="h-6 w-6 text-blue-400" />
@@ -126,17 +130,17 @@ const Product = () => {
                                 <h3 className="text-2xl font-bold text-white mb-2">Enterprise Security</h3>
                                 <p className="text-slate-400 max-w-md">Bank-grade encryption for all student data and lesson plans.</p>
                             </div>
-                            <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl group-hover:bg-blue-500/30 transition-colors" />
+                            <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-brand-blue-500/20 rounded-full blur-3xl group-hover:bg-brand-blue-500/30 transition-colors" />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* 4. TECH STACK & SPECS (Framework Laptop Style) */}
-            <section className="section-padding bg-[#0F172A] text-white">
+            <section className="section-padding bg-slate-900 text-white">
                 <div className="section-shell">
                     <div className="text-center mb-16">
-                        <p className="section-eyebrow text-[#FF7A00]">SPECIFICATIONS</p>
+                        <p className="section-eyebrow text-brand-orange-600">SPECIFICATIONS</p>
                         <h2 className="section-heading text-white uppercase">Built for Performance</h2>
                     </div>
 
@@ -144,8 +148,8 @@ const Product = () => {
                         {/* Visual Spec */}
                         <div className="relative rounded-[32px] bg-white/5 border border-white/10 p-8 flex items-center justify-center min-h-[400px]">
                             <div className="text-center">
-                                <div className="w-48 h-64 mx-auto bg-[#1E293B] rounded-[24px] border-4 border-[#334155] shadow-2xl relative mb-8">
-                                    <div className="absolute inset-2 bg-slate-900 rounded-[18px]" />
+                                <div className="w-48 h-64 mx-auto bg-slate-800 rounded-[24px] border-4 border-slate-700 shadow-2xl relative mb-8">
+                                    <div className="absolute inset-2 bg-slate-950 rounded-[18px]" />
                                 </div>
                                 <p className="text-slate-400 text-sm font-mono">ClassNova Device v1.0</p>
                             </div>
@@ -173,10 +177,10 @@ const Product = () => {
             </section>
 
             {/* 5. TESTIMONIALS (Teachmint Style) */}
-            <section className="section-padding bg-blue-50">
+            <section className="section-padding bg-brand-blue-50">
                 <div className="section-shell">
                     <div className="text-center mb-16">
-                        <h2 className="section-heading text-[#0F172A] uppercase">Loved by Teachers</h2>
+                        <h2 className="section-heading text-slate-900 uppercase">Loved by Teachers</h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
@@ -196,10 +200,10 @@ const Product = () => {
                                 role: "Senior Teacher, DPS"
                             }
                         ].map((t, i) => (
-                            <div key={i} className="p-8 rounded-[32px] bg-white border border-blue-100 shadow-xl shadow-blue-900/5">
+                            <div key={i} className="p-8 rounded-[32px] bg-white border border-brand-blue-100 shadow-xl shadow-brand-blue-900/5">
                                 <div className="flex gap-1 mb-4">
                                     {[1, 2, 3, 4, 5].map((star) => (
-                                        <div key={star} className="text-[#FF7A00]">★</div>
+                                        <Star key={star} className="w-5 h-5 text-brand-orange-500 fill-current" />
                                     ))}
                                 </div>
                                 <p className="text-lg text-slate-700 mb-6 italic">"{t.quote}"</p>

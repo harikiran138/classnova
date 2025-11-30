@@ -1,3 +1,5 @@
+import { School } from "lucide-react";
+
 const brands = [
   "Kendriya Vidyalaya",
   "Delhi Public School",
@@ -32,7 +34,10 @@ export const TrustBanner = () => {
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-4 rounded-[32px] border border-blue-100 bg-blue-50 px-6 py-8 text-center shadow-sm">
-          <p className="text-lg font-bold text-[#2563EB]">🔬 PARTNER SCHOOLS PROGRAM (ADMISSIONS OPEN)</p>
+          <p className="text-lg font-bold text-[#2563EB] flex items-center gap-2">
+            <School className="w-6 h-6" />
+            PARTNER SCHOOLS PROGRAM (ADMISSIONS OPEN)
+          </p>
           <p className="max-w-2xl text-sm text-[#475569] font-medium">
             We are selecting 10 schools for the first deployment cycle. Get priority onboarding, dedicated success team, and lifetime pricing protection.
           </p>

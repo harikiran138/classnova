@@ -1,3 +1,5 @@
+import { MapPin, Phone, Mail, Calendar } from "lucide-react";
+
 export const DemoRequestSection = () => {
   return (
     <section id="demo" className="section-padding bg-slate-900 text-white">
@@ -10,10 +12,10 @@ export const DemoRequestSection = () => {
               We onboard two institutions per month so every pilot gets full attention.
             </p>
             <div className="mt-8 space-y-3 text-white/80 text-base">
-              <p>📍 Bengaluru · Mumbai · Delhi</p>
-              <p>📞 +91 98765 43210</p>
-              <p>✉️ hello@classnova.com</p>
-              <p>🗓️ Current wait time: 10 days</p>
+              <p className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Bengaluru · Mumbai · Delhi</p>
+              <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 98765 43210</p>
+              <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> hello@classnova.com</p>
+              <p className="flex items-center gap-2"><Calendar className="w-4 h-4" /> Current wait time: 10 days</p>
             </div>
             <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white/70">
               No installation fee. No maintenance cost. Cancel the pilot anytime before hardware ships.

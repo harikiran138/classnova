@@ -1,21 +1,23 @@
+import { Heart, User, GraduationCap, Microscope } from "lucide-react";
+
 const testimonials = [
   {
     name: "Priya Sharma",
     role: "Primary Teacher, Delhi",
     quote: "ClassNova has transformed how I teach. My students are more engaged, and I can finally use digital content without struggling with technology.",
-    emoji: "👩‍🏫",
+    icon: User,
   },
   {
     name: "Rajesh Kumar",
     role: "Principal, Government School, Bihar",
     quote: "We couldn't afford smart boards, but ClassNova gave us everything we needed at a fraction of the cost. Our teachers love it!",
-    emoji: "🎓",
+    icon: GraduationCap,
   },
   {
     name: "Anjali Verma",
     role: "Science Teacher, Maharashtra",
     quote: "The offline mode is a game-changer for us. No more worrying about internet connectivity during important lessons.",
-    emoji: "🔬",
+    icon: Microscope,
   },
 ];
 
@@ -27,7 +29,7 @@ const TestimonialsSection = () => {
           {/* Header */}
           <div className="text-center space-y-4 animate-fade-in">
             <div className="inline-flex items-center gap-2 text-primary text-xl font-medium mb-4">
-              <span>❤️</span>
+              <Heart className="w-6 h-6 fill-current" />
               <span>Loved by Teachers</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">
@@ -54,8 +56,8 @@ const TestimonialsSection = () => {
 
                   {/* Author */}
                   <div className="flex items-center gap-4 pt-4 border-t border-border">
-                    <div className="w-12 h-12 rounded-full bg-gradient-warm flex items-center justify-center shadow-soft">
-                      <span className="text-2xl">{testimonial.emoji}</span>
+                    <div className="w-12 h-12 rounded-full bg-gradient-warm flex items-center justify-center shadow-soft text-white">
+                      <testimonial.icon className="w-6 h-6" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
