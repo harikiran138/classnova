@@ -38,7 +38,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || location.pathname !== "/"
           ? "bg-white/90 backdrop-blur-xl border-b border-slate-200 py-3 shadow-sm"
           : "bg-transparent py-5"
         }`}
@@ -60,8 +60,8 @@ const Navigation = () => {
                 key={item.label}
                 to={item.href}
                 className={`relative font-semibold uppercase tracking-wide transition-colors duration-200 ${isActive(item.href)
-                    ? "text-[#2563EB]"
-                    : "text-[#64748B] hover:text-[#FF7A00]"
+                  ? "text-[#2563EB]"
+                  : "text-[#64748B] hover:text-[#FF7A00]"
                   }`}
               >
                 {item.label}
@@ -105,8 +105,8 @@ const Navigation = () => {
                   key={item.label}
                   to={item.href}
                   className={`rounded-lg px-4 py-3 text-sm font-bold uppercase tracking-wide transition-colors ${isActive(item.href)
-                      ? "bg-blue-50 text-[#2563EB]"
-                      : "text-[#64748B] hover:bg-slate-50 hover:text-[#0F172A]"
+                    ? "bg-blue-50 text-[#2563EB]"
+                    : "text-[#64748B] hover:bg-slate-50 hover:text-[#0F172A]"
                     }`}
                   onClick={() => setIsOpen(false)}
                 >
