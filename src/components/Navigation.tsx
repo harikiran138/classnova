@@ -26,6 +26,8 @@ const Navigation = () => {
     { label: "Home", href: "/" },
     { label: "Product", href: "/product" },
     { label: "Projects", href: "/projects" },
+    { label: "Investors", href: "/investors" },
+    { label: "Team", href: "/team" },
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
     { label: "Resources", href: "/resources" },

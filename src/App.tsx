@@ -11,6 +11,8 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Resources from "./pages/Resources";
 import Projects from "./pages/Projects";
+import Investor from "./pages/Investor";
+import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +31,8 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/product" element={<Product />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/investors" element={<Investor />} />
+              <Route path="/team" element={<Team />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
               <Route path="/resources" element={<Resources />} />
