@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Play, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -26,81 +26,102 @@ export const HeroSection = () => {
               <span className="text-sm font-bold uppercase tracking-wide text-[#2563EB]">Invest in the Future of Education</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#0F172A] font-heading leading-[1.1] animate-fade-in-up uppercase">
-              Building the <br />
-              <span className="text-[#2563EB]">OS for Smart Schools</span>
+            {/* H1: 7-10 Words, Big Bold */}
+            <h1 className="h1 text-[#0F172A] animate-fade-in-up">
+              Democratizing Smart Education <br />
+              <span className="text-[#2563EB]">For The Next Billion Students</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-[#64748B] max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up delay-100 font-medium">
-              ClassNova is a plug-and-play operating system that upgrades any classroom in 10 minutes.
-              <span className="text-[#FF7A00] font-bold"> A $5B opportunity to digitize 1.5M schools.</span>
-            </p >
+            {/* Subheadline: One Sentence */}
+            <p className="body-text text-xl text-[#64748B] max-w-2xl mx-auto lg:mx-0 font-medium animate-fade-in-up delay-100">
+              ClassNova is the operating system for affordable digital classrooms.
+              <span className="text-[#FF7A00] font-bold"> A $5B opportunity to upgrade 1.5M schools.</span>
+            </p>
 
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in-up delay-200">
-              <Button size="lg" className="h-14 px-8 text-lg shadow-xl shadow-orange-500/20 w-full sm:w-auto">
-                INVEST IN CLASSNOVA
+              <Button size="lg" className="h-14 px-8 text-lg shadow-xl shadow-orange-500/20 w-full sm:w-auto bg-[#FF7A00] hover:bg-[#E66E00] text-white rounded-2xl">
+                TALK TO FOUNDER
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="h-14 px-8 text-lg w-full sm:w-auto">
-                VIEW PITCH DECK
-                <Download className="ml-2 h-5 w-5" />
+              <Button variant="outline" size="lg" className="h-14 px-8 text-lg w-full sm:w-auto border-2 border-slate-200 hover:border-blue-200 hover:bg-blue-50 text-[#0F172A] rounded-2xl">
+                SEE HOW IT WORKS
+                <Play className="ml-2 h-5 w-5 fill-current" />
               </Button>
             </div>
 
+            {/* Social Proof - Teachmint Style */}
             <div className="pt-10 animate-fade-in-up delay-300">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#64748B] mb-4">Trusted by Leading Institutions</p>
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                {/* Placeholder Logos - In a real app, use SVGs */}
-                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse" />
-                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse delay-75" />
-                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse delay-150" />
-                <div className="h-8 w-24 bg-slate-200 rounded animate-pulse delay-200" />
+              <p className="text-xs font-bold uppercase tracking-widest text-[#94A3B8] mb-6">Trusted by 50+ Pilot Schools</p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                {["Delhi Public School", "Kendriya Vidyalaya", "Ryan International", "Narayana Group"].map((school) => (
+                  <span key={school} className="text-sm font-bold text-slate-400 hover:text-[#2563EB] transition-colors cursor-default">
+                    {school}
+                  </span>
+                ))}
               </div>
             </div>
-          </div >
+          </div>
 
-          {/* Visual Content - Device Mockup Placeholder */}
-          < div className="flex-1 relative w-full max-w-[600px] lg:max-w-none animate-float" >
-            <div className="relative aspect-[4/3] rounded-[32px] bg-white shadow-2xl shadow-blue-900/10 border border-slate-100 overflow-hidden group">
+          {/* Visual Content - Device Mockup (Solana Saga / Rabbit R1 Style) */}
+          <div className="flex-1 relative w-full max-w-[500px] lg:max-w-none animate-float mx-auto">
+            {/* Device Frame */}
+            <div className="relative aspect-[9/16] w-[300px] mx-auto rounded-[40px] bg-[#0F172A] shadow-2xl shadow-blue-900/20 border-[8px] border-[#1E293B] overflow-hidden ring-1 ring-white/10">
+              {/* Camera Punch Hole */}
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20 flex items-center justify-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-[#1E293B]" />
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-900/50" />
+              </div>
+
+              {/* Side Buttons */}
+              <div className="absolute -right-[10px] top-24 w-[10px] h-12 bg-[#1E293B] rounded-r-md" />
+              <div className="absolute -right-[10px] top-40 w-[10px] h-20 bg-[#1E293B] rounded-r-md" />
+
               {/* Screen Content */}
-              <div className="absolute inset-2 rounded-[24px] bg-slate-50 overflow-hidden border border-slate-200">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white" />
-
-                {/* UI Mockup Elements */}
-                <div className="absolute top-8 left-8 right-8 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center px-4 gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
+              <div className="absolute inset-0 bg-slate-950 overflow-hidden">
+                {/* UI Header */}
+                <div className="h-24 bg-gradient-to-b from-blue-900/20 to-transparent p-6 pt-12 flex justify-between items-start">
+                  <div className="w-8 h-8 rounded-full bg-white/10" />
+                  <div className="w-20 h-4 rounded-full bg-white/10" />
                 </div>
 
-                <div className="absolute top-24 left-8 w-1/3 bottom-8 bg-white rounded-xl shadow-sm border border-slate-100 p-4 space-y-3">
-                  <div className="w-12 h-12 rounded-lg bg-blue-100" />
-                  <div className="h-4 w-3/4 bg-slate-100 rounded" />
-                  <div className="h-4 w-1/2 bg-slate-100 rounded" />
+                {/* UI Body */}
+                <div className="p-6 space-y-4">
+                  <div className="h-32 rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#FF7A00] opacity-80 p-4 flex flex-col justify-end">
+                    <div className="w-1/2 h-4 rounded-full bg-white/20 mb-2" />
+                    <div className="w-3/4 h-6 rounded-full bg-white/40" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="h-24 rounded-2xl bg-white/5 border border-white/10" />
+                    <div className="h-24 rounded-2xl bg-white/5 border border-white/10" />
+                    <div className="h-24 rounded-2xl bg-white/5 border border-white/10" />
+                    <div className="h-24 rounded-2xl bg-white/5 border border-white/10" />
+                  </div>
                 </div>
 
-                <div className="absolute top-24 right-8 w-1/2 h-40 bg-[#2563EB] rounded-xl shadow-lg shadow-blue-500/20 flex items-center justify-center">
-                  <Play className="w-12 h-12 text-white fill-current" />
+                {/* Bottom Nav */}
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/80 to-transparent flex justify-center items-center">
+                  <div className="w-32 h-1.5 rounded-full bg-white/20" />
                 </div>
               </div>
             </div>
 
-            {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 animate-bounce-slow">
+            {/* Floating Badge - Rabbit R1 Style */}
+            <div className="absolute top-1/2 -right-12 lg:-right-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 animate-bounce-slow hidden sm:block">
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">
-                  <CheckCircle2 className="h-6 w-6 text-green-600" />
+                <div className="h-12 w-12 rounded-xl bg-[#FF7A00] flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30">
+                  AI
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase text-slate-400 tracking-wide">Status</p>
-                  <p className="text-sm font-bold text-slate-800">System Online</p>
+                  <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Powered By</p>
+                  <p className="text-base font-bold text-slate-900">ClassNova OS</p>
                 </div>
               </div>
             </div>
-          </div >
-        </div >
-      </div >
-    </section >
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

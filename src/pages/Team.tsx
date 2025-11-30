@@ -1,93 +1,81 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Twitter } from "lucide-react";
 
-const team = [
-    {
-        name: "Hari Kiran",
-        role: "Founder & CEO",
-        bio: "Ex-Google, 10+ years in EdTech. Built 3 products from 0 to 1.",
-        image: "bg-blue-100", // Placeholder
-    },
-    {
-        name: "Aditya Rao",
-        role: "CTO",
-        bio: "AI Researcher, IIT Bombay. Expert in Edge Computing & Computer Vision.",
-        image: "bg-orange-100", // Placeholder
-    },
-    {
-        name: "Sarah Jenkins",
-        role: "Head of Growth",
-        bio: "Scaled 2 startups to Series A. Expert in B2B School Sales.",
-        image: "bg-slate-100", // Placeholder
-    },
-];
-
-const advisors = [
-    {
-        name: "Dr. Ramesh Mashelkar",
-        role: "Scientific Advisor",
-        bio: "Former DG, CSIR. Padma Vibhushan.",
-    },
-    {
-        name: "Vinod Khosla",
-        role: "Strategic Advisor",
-        bio: "Founder, Khosla Ventures (Example).",
-    },
-];
-
 const Team = () => {
     return (
         <div className="animate-fade-in bg-white min-h-screen pt-32 pb-20">
-            <div className="section-shell">
-                <div className="text-center max-w-3xl mx-auto mb-20">
-                    <p className="section-eyebrow text-[#2563EB]">THE TEAM</p>
-                    <h1 className="section-heading text-[#0F172A] uppercase">Builders & Visionaries</h1>
-                    <p className="section-subtitle text-[#64748B]">
-                        A diverse team of engineers, educators, and operators on a mission to transform education.
-                    </p>
-                </div>
+            {/* HERO */}
+            <div className="section-shell mb-20 text-center">
+                <p className="section-eyebrow text-[#2563EB]">THE TEAM</p>
+                <h1 className="h1 text-[#0F172A] mb-6 uppercase">Built by Educators & Engineers</h1>
+                <p className="body-text max-w-2xl mx-auto">
+                    We combine deep pedagogical expertise with world-class engineering to solve the hardest problems in education.
+                </p>
+            </div>
 
-                {/* FOUNDERS */}
-                {/* FOUNDERS - COMPACT HORIZONTAL */}
-                <div className="grid lg:grid-cols-3 gap-6 mb-24">
-                    {team.map((member) => (
-                        <div key={member.name} className="group flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
-                            <div className={`w-20 h-20 rounded-full ${member.image} flex-shrink-0 border-2 border-white shadow-md`} />
-                            <div className="text-left">
-                                <h3 className="text-lg font-bold text-[#0F172A]">{member.name}</h3>
-                                <p className="text-[#2563EB] text-xs font-bold uppercase tracking-wide mb-1">{member.role}</p>
-                                <div className="flex gap-2">
-                                    <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
-                                        <Linkedin className="h-4 w-4" />
+            {/* FOUNDERS */}
+            <section className="section-shell mb-32">
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    {[
+                        {
+                            name: "Hari Kiran",
+                            role: "Co-Founder & CEO",
+                            bio: "Ex-Product Manager at EdTech Unicorn. 10+ years in education policy and scaling B2B sales.",
+                            image: "bg-blue-100"
+                        },
+                        {
+                            name: "Technical Co-Founder",
+                            role: "CTO",
+                            bio: "Ex-Google Engineer. Specialist in offline-first architecture and edge computing.",
+                            image: "bg-orange-100"
+                        }
+                    ].map((member, i) => (
+                        <div key={i} className="group p-8 rounded-[32px] bg-white border border-slate-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+                            <div className={`w-32 h-32 mx-auto rounded-full ${member.image} mb-6 flex items-center justify-center text-4xl`}>
+                                👨‍💻
+                            </div>
+                            <div className="text-center">
+                                <h3 className="text-2xl font-bold text-[#0F172A] mb-1">{member.name}</h3>
+                                <p className="text-[#2563EB] font-bold uppercase text-sm tracking-wide mb-4">{member.role}</p>
+                                <p className="text-slate-600 mb-6 leading-relaxed">{member.bio}</p>
+                                <div className="flex justify-center gap-4">
+                                    <Button variant="ghost" size="icon" className="rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
+                                        <Linkedin className="h-5 w-5" />
                                     </Button>
-                                    <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
-                                        <Twitter className="h-4 w-4" />
+                                    <Button variant="ghost" size="icon" className="rounded-full hover:bg-blue-50 hover:text-[#2563EB]">
+                                        <Twitter className="h-5 w-5" />
                                     </Button>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
+            </section>
 
-                {/* ADVISORS */}
-                <div className="bg-slate-50 rounded-[32px] p-12 border border-slate-100">
-                    <div className="text-center mb-12">
-                        <h2 className="text-2xl font-bold text-[#0F172A] uppercase">Backed By Industry Leaders</h2>
+            {/* ADVISORS */}
+            <section className="section-padding bg-slate-50 border-y border-slate-200">
+                <div className="section-shell">
+                    <div className="text-center mb-16">
+                        <h2 className="section-heading text-[#0F172A] uppercase">Backed by Industry Leaders</h2>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {advisors.map((advisor) => (
-                            <div key={advisor.name} className="flex items-center gap-6 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                                <div className="h-16 w-16 rounded-full bg-slate-200 flex-shrink-0" />
-                                <div>
-                                    <h4 className="text-lg font-bold text-[#0F172A]">{advisor.name}</h4>
-                                    <p className="text-[#2563EB] text-xs font-bold uppercase tracking-wide">{advisor.role}</p>
-                                    <p className="text-sm text-[#64748B] mt-1">{advisor.bio}</p>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            { name: "Dr. A. Kumar", role: "Former Director, CBSE", desc: "Curriculum Strategy" },
+                            { name: "S. Reddy", role: "VP Engineering, BigTech", desc: "Technical Architecture" },
+                            { name: "M. Singh", role: "Founder, Unicorn EdTech", desc: "GTM Strategy" }
+                        ].map((advisor, i) => (
+                            <div key={i} className="p-6 rounded-2xl bg-white border border-slate-200 text-center">
+                                <div className="w-20 h-20 mx-auto rounded-full bg-slate-100 mb-4 flex items-center justify-center text-2xl">
+                                    🎓
                                 </div>
+                                <h4 className="text-lg font-bold text-[#0F172A]">{advisor.name}</h4>
+                                <p className="text-slate-500 text-sm font-medium mb-2">{advisor.role}</p>
+                                <p className="text-[#2563EB] text-xs font-bold uppercase tracking-wide">{advisor.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 };

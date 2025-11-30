@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, XCircle, Smartphone, Wifi, Shield, Zap, Layout, Monitor, Lock, Cloud, Server, Cpu } from "lucide-react";
+import { CheckCircle2, XCircle, Wifi, Shield, Zap, Layout, Monitor, Database, CloudOff, Server, Cpu } from "lucide-react";
 
 const Product = () => {
     return (
@@ -19,10 +19,10 @@ const Product = () => {
                             A single device that replaces the PC, Smart TV, and UPS. Connects to any projector and turns it smart instantly.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                            <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-orange-500/20">
+                            <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-orange-500/20 bg-[#FF7A00] hover:bg-[#E66E00] text-white rounded-2xl">
                                 REQUEST DEMO
                             </Button>
-                            <Button variant="outline" size="lg" className="h-14 px-10 text-lg">
+                            <Button variant="outline" size="lg" className="h-14 px-10 text-lg rounded-2xl">
                                 VIEW SPECS
                             </Button>
                         </div>
@@ -30,7 +30,7 @@ const Product = () => {
                 </div>
             </section>
 
-            {/* 2. PROBLEM STATEMENT (Page 2 Style) */}
+            {/* 2. PROBLEM STATEMENT */}
             <section className="section-padding bg-slate-50 border-y border-slate-100">
                 <div className="section-shell">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -77,7 +77,7 @@ const Product = () => {
                 </div>
             </section>
 
-            {/* 3. FEATURES BENTO GRID (Page 4 Style - Refined) */}
+            {/* 3. FEATURES BENTO GRID */}
             <section className="section-padding bg-white">
                 <div className="section-shell">
                     <div className="text-center max-w-3xl mx-auto mb-16">
@@ -132,37 +132,39 @@ const Product = () => {
                 </div>
             </section>
 
-            {/* 4. TECH STACK (Page 5 Style) */}
+            {/* 4. TECH STACK & SPECS (Framework Laptop Style) */}
             <section className="section-padding bg-[#0F172A] text-white">
                 <div className="section-shell">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <p className="section-eyebrow text-[#FF7A00]">TECHNOLOGY STACK</p>
-                            <h2 className="section-heading text-white uppercase">Powered by Modern Tech</h2>
-                            <p className="text-slate-400 mt-4 text-lg">
-                                Built on a robust, scalable architecture designed for performance on low-power hardware.
-                            </p>
-                            <div className="mt-8 space-y-4">
-                                <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                                    <Cpu className="h-8 w-8 text-blue-400" />
-                                    <div>
-                                        <p className="font-bold text-white">Edge Computing</p>
-                                        <p className="text-sm text-slate-400">Process AI tasks locally without lag.</p>
-                                    </div>
+                    <div className="text-center mb-16">
+                        <p className="section-eyebrow text-[#FF7A00]">SPECIFICATIONS</p>
+                        <h2 className="section-heading text-white uppercase">Built for Performance</h2>
+                    </div>
+
+                    <div className="grid lg:grid-cols-2 gap-12">
+                        {/* Visual Spec */}
+                        <div className="relative rounded-[32px] bg-white/5 border border-white/10 p-8 flex items-center justify-center min-h-[400px]">
+                            <div className="text-center">
+                                <div className="w-48 h-64 mx-auto bg-[#1E293B] rounded-[24px] border-4 border-[#334155] shadow-2xl relative mb-8">
+                                    <div className="absolute inset-2 bg-slate-900 rounded-[18px]" />
                                 </div>
-                                <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                                    <Server className="h-8 w-8 text-orange-400" />
-                                    <div>
-                                        <p className="font-bold text-white">Hybrid Cloud</p>
-                                        <p className="text-sm text-slate-400">Seamless sync between offline/online modes.</p>
-                                    </div>
-                                </div>
+                                <p className="text-slate-400 text-sm font-mono">ClassNova Device v1.0</p>
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            {["React", "Node.js", "Python", "TensorFlow", "WebRTC", "Docker"].map((tech) => (
-                                <div key={tech} className="p-6 rounded-xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-colors">
-                                    <p className="font-bold text-white">{tech}</p>
+
+                        {/* Specs Table */}
+                        <div className="space-y-6">
+                            {[
+                                { label: "Processor", value: "Quad-Core ARM Cortex-A76 @ 2.4GHz" },
+                                { label: "AI Engine", value: "6 TOPS NPU for Local Inference" },
+                                { label: "Memory", value: "8GB LPDDR4X RAM" },
+                                { label: "Storage", value: "128GB eMMC 5.1 (Expandable to 1TB)" },
+                                { label: "Connectivity", value: "Wi-Fi 6, Bluetooth 5.0, Gigabit Ethernet" },
+                                { label: "Ports", value: "HDMI 2.1, USB-C (PD), 2x USB-A 3.0" },
+                                { label: "OS", value: "ClassNova OS (Based on Linux)" }
+                            ].map((spec, i) => (
+                                <div key={i} className="flex justify-between items-center py-4 border-b border-white/10 hover:bg-white/5 px-4 rounded-lg transition-colors">
+                                    <span className="text-slate-400 font-medium">{spec.label}</span>
+                                    <span className="text-white font-bold font-mono text-right">{spec.value}</span>
                                 </div>
                             ))}
                         </div>
@@ -170,8 +172,49 @@ const Product = () => {
                 </div>
             </section>
 
-            {/* 5. COMPARISON TABLE (Page 8 Style) */}
-            <section className="section-padding bg-slate-50">
+            {/* 5. TESTIMONIALS (Teachmint Style) */}
+            <section className="section-padding bg-blue-50">
+                <div className="section-shell">
+                    <div className="text-center mb-16">
+                        <h2 className="section-heading text-[#0F172A] uppercase">Loved by Teachers</h2>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                quote: "Finally, a smart classroom solution that doesn't require me to be an IT expert. It just works.",
+                                author: "Sarah Jenkins",
+                                role: "Principal, St. Mary's School"
+                            },
+                            {
+                                quote: "The offline capability is a game changer for our rural branches. No more buffering videos.",
+                                author: "Rajesh Kumar",
+                                role: "Director, Vidya Mandir"
+                            },
+                            {
+                                quote: "ClassNova transformed our engagement levels. Students are actually excited to learn.",
+                                author: "Priya Sharma",
+                                role: "Senior Teacher, DPS"
+                            }
+                        ].map((t, i) => (
+                            <div key={i} className="p-8 rounded-[32px] bg-white border border-blue-100 shadow-xl shadow-blue-900/5">
+                                <div className="flex gap-1 mb-4">
+                                    {[1, 2, 3, 4, 5].map((star) => (
+                                        <div key={star} className="text-[#FF7A00]">★</div>
+                                    ))}
+                                </div>
+                                <p className="text-lg text-slate-700 mb-6 italic">"{t.quote}"</p>
+                                <div>
+                                    <p className="font-bold text-[#0F172A]">{t.author}</p>
+                                    <p className="text-sm text-slate-500 uppercase tracking-wide">{t.role}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* 6. COMPARISON TABLE */}
+            <section className="section-padding bg-white">
                 <div className="section-shell">
                     <div className="text-center mb-12">
                         <h2 className="section-heading text-[#0F172A] uppercase">Why ClassNova Wins</h2>
@@ -207,7 +250,7 @@ const Product = () => {
                 </div>
             </section>
 
-            {/* 6. VISION TIMELINE (Page 11 Style) */}
+            {/* 6. VISION TIMELINE */}
             <section className="section-padding bg-white">
                 <div className="section-shell">
                     <div className="text-center mb-16">
@@ -242,7 +285,7 @@ const Product = () => {
                     <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-10">
                         Join the partner program today and get the ClassNova kit at a special pilot price.
                     </p>
-                    <Button size="lg" className="h-16 px-12 text-xl bg-white text-[#2563EB] hover:bg-blue-50 shadow-xl">
+                    <Button size="lg" className="h-16 px-12 text-xl bg-white text-[#2563EB] hover:bg-blue-50 shadow-xl rounded-2xl">
                         GET STARTED NOW
                     </Button>
                 </div>

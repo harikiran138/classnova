@@ -21,21 +21,24 @@ const feedback = [
 
 export const TestimonialsSection = () => {
   return (
-    <section id="stories" className="section-padding bg-slate-900 text-white">
+    <section id="stories" className="section-padding bg-slate-50 border-t border-slate-100">
       <div className="section-shell">
-        <div className="text-center space-y-4">
-          <p className="section-eyebrow">Testimonials</p>
-          <h2 className="section-heading text-white">Trusted by educators</h2>
-          <p className="section-subtitle text-white/70">Short quotes from teacher interviews guiding the build.</p>
+        <div className="text-center space-y-4 mb-16">
+          <p className="section-eyebrow text-[#2563EB]">TESTIMONIALS</p>
+          <h2 className="section-heading text-[#0F172A] uppercase">Trusted by educators</h2>
+          <p className="section-subtitle text-[#64748B]">Short quotes from teacher interviews guiding the build.</p>
         </div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3">
           {feedback.map((item) => (
-            <div key={item.author} className="surface-panel p-8">
-              <p className="text-lg text-white">“{item.quote}”</p>
-              <div className="mt-6 text-sm text-white/70">
-                <p className="font-semibold text-white">{item.author}</p>
-                <p>{item.role}</p>
-                <p className="text-xs uppercase tracking-wide text-white/50">{item.context}</p>
+            <div key={item.author} className="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300">
+              <div className="relative">
+                <span className="absolute -top-4 -left-2 text-6xl text-blue-100 font-serif leading-none">“</span>
+                <p className="relative text-lg text-[#334155] leading-relaxed italic z-10 pt-4">{item.quote}</p>
+              </div>
+              <div className="mt-8 border-t border-slate-100 pt-6">
+                <p className="font-bold text-[#0F172A]">{item.author}</p>
+                <p className="text-sm text-[#64748B]">{item.role}</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-[#2563EB] mt-2">{item.context}</p>
               </div>
             </div>
           ))}
