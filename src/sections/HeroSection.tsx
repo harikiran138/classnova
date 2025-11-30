@@ -1,102 +1,98 @@
+```
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Play, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Download, Play, CheckCircle2 } from "lucide-react";
 
 export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative isolate overflow-hidden min-h-screen flex items-center pt-20"
+      className="relative isolate overflow-hidden min-h-screen flex items-center pt-20 bg-white"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 bg-[#020617]">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-500/20 rounded-full blur-[120px] opacity-50" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[600px] bg-cyan-500/10 rounded-full blur-[100px] opacity-30" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      {/* Background Shapes */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] rounded-full bg-blue-50/50 blur-3xl" />
+        <div className="absolute top-[20%] -left-[10%] w-[600px] h-[600px] rounded-full bg-orange-50/50 blur-3xl" />
       </div>
 
       <div className="section-shell relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-
+          
           {/* Text Content */}
           <div className="flex-1 space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 animate-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563EB]"></span>
               </span>
-              <span className="text-sm font-medium text-blue-200">Pilot ready · Meet us at DIDAC India</span>
+              <span className="text-sm font-bold uppercase tracking-wide text-[#2563EB]">Official Launch · Available Now</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white font-heading leading-[1.1] animate-fade-in-up">
-              Unlock smarter learning <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">
-                instantly.
-              </span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#0F172A] font-heading leading-[1.1] animate-fade-in-up uppercase">
+              Unlock Smarter <br />
+              <span className="text-[#2563EB]">Learning Instantly</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up delay-100">
-              Transform any projector into an interactive smart classroom.
-              No complex training. No expensive hardware upgrades. Just plug and teach.
+            <p className="text-lg sm:text-xl text-[#64748B] max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up delay-100 font-medium">
+              Transform any projector into an interactive smart classroom. 
+              <span className="text-[#FF7A00] font-bold"> No complex training. No expensive hardware.</span> Just plug and teach.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in-up delay-200">
-              <Button size="lg" className="h-14 px-8 text-lg shadow-glow w-full sm:w-auto">
-                Book a Demo
+              <Button size="lg" className="h-14 px-8 text-lg shadow-xl shadow-orange-500/20 w-full sm:w-auto">
+                BOOK A DEMO
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="h-14 px-8 text-lg w-full sm:w-auto">
-                Download Brochure
+                DOWNLOAD BROCHURE
                 <Download className="ml-2 h-5 w-5" />
               </Button>
             </div>
 
-            <div className="pt-8 flex items-center justify-center lg:justify-start gap-8 text-slate-400 animate-fade-in-up delay-300">
+            <div className="pt-8 flex items-center justify-center lg:justify-start gap-8 text-[#64748B] animate-fade-in-up delay-300">
               {["Plug & Play", "Zero Training", "Budget Friendly"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-blue-500" />
-                  <span className="text-sm font-medium">{item}</span>
+                  <CheckCircle2 className="h-5 w-5 text-[#2563EB]" />
+                  <span className="text-sm font-bold uppercase tracking-wide">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Visual Content */}
+          {/* Visual Content - Device Mockup Placeholder */}
           <div className="flex-1 relative w-full max-w-[600px] lg:max-w-none animate-float">
-            <div className="relative aspect-square md:aspect-[4/3] rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-2xl overflow-hidden group">
-              {/* Abstract UI Representation */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5" />
+            <div className="relative aspect-[4/3] rounded-[32px] bg-white shadow-2xl shadow-blue-900/10 border border-slate-100 overflow-hidden group">
+              {/* Screen Content */}
+              <div className="absolute inset-2 rounded-[24px] bg-slate-50 overflow-hidden border border-slate-200">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white" />
+                
+                {/* UI Mockup Elements */}
+                <div className="absolute top-8 left-8 right-8 h-12 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center px-4 gap-2">
+                   <div className="w-3 h-3 rounded-full bg-red-400" />
+                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                   <div className="w-3 h-3 rounded-full bg-green-400" />
+                </div>
+                
+                <div className="absolute top-24 left-8 w-1/3 bottom-8 bg-white rounded-xl shadow-sm border border-slate-100 p-4 space-y-3">
+                  <div className="w-12 h-12 rounded-lg bg-blue-100" />
+                  <div className="h-4 w-3/4 bg-slate-100 rounded" />
+                  <div className="h-4 w-1/2 bg-slate-100 rounded" />
+                </div>
 
-              {/* Floating Elements */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gradient-to-tr from-blue-600/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" />
-
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-64 h-64 bg-black/40 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl flex items-center justify-center transform transition-transform duration-500 group-hover:scale-105">
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                      <Sparkles className="h-8 w-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white font-heading">ClassNova Core</h3>
-                      <p className="text-sm text-slate-400">Smart Hub Active</p>
-                    </div>
-                  </div>
+                <div className="absolute top-24 right-8 w-1/2 h-40 bg-[#2563EB] rounded-xl shadow-lg shadow-blue-500/20 flex items-center justify-center">
+                   <Play className="w-12 h-12 text-white fill-current" />
                 </div>
               </div>
-
-              {/* Floating Cards */}
-              <div className="absolute top-12 right-12 p-4 bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <div className="flex items-center gap-3">
-                  <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-sm font-medium text-white">System Online</span>
+            </div>
+            
+            {/* Floating Badge */}
+            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 animate-bounce-slow">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">
+                  <CheckCircle2 className="h-6 w-6 text-green-600" />
                 </div>
-              </div>
-
-              <div className="absolute bottom-12 left-12 p-4 bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                    <Play className="h-4 w-4 text-blue-400" />
-                  </div>
-                  <span className="text-sm font-medium text-white">Interactive Mode</span>
+                <div>
+                  <p className="text-xs font-bold uppercase text-slate-400 tracking-wide">Status</p>
+                  <p className="text-sm font-bold text-slate-800">System Online</p>
                 </div>
               </div>
             </div>

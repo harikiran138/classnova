@@ -52,9 +52,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        glass: {
-          base: "hsl(var(--glass-base))",
-          border: "hsl(var(--glass-border))",
+        brand: {
+          blue: "#2563EB",
+          orange: "#FF7A00",
+          dark: "#0F172A",
+          light: "#F8FAFC",
         },
       },
       borderRadius: {

@@ -5,7 +5,6 @@ import SetupStepsSection from "@/sections/SetupStepsSection";
 import BenefitsSection from "@/sections/BenefitsSection";
 import MidCtaSection from "@/sections/MidCtaSection";
 import TestimonialsSection from "@/sections/TestimonialsSection";
-import DidacBannerSection from "@/sections/DidacBannerSection";
 
 const Home = () => {
   return (
@@ -17,7 +16,6 @@ const Home = () => {
       <BenefitsSection />
       <MidCtaSection />
       <TestimonialsSection />
-      <DidacBannerSection />
     </div>
   );
 };
