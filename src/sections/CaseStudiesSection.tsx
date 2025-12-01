@@ -30,13 +30,13 @@ export const CaseStudiesSection = () => {
                 <span className="rounded-full border border-slate-200 px-3 py-1 text-xs text-slate-600">{scenario.status}</span>
               </div>
               <div className="mt-4 space-y-4">
-                <div className="rounded-2xl bg-white p-4 shadow-sm">
-                  <p className="text-xs uppercase tracking-wide text-[#FF7A00]">Hypothesis</p>
+                <div className="rounded-2xl bg-white p-4 shadow-sm border border-slate-100">
+                  <p className="text-xs uppercase tracking-wide text-orange-500">Hypothesis</p>
                   <p className="mt-2 text-slate-700">{scenario.hypothesis}</p>
                 </div>
-                <div className="rounded-2xl bg-slate-900 p-4 text-white">
-                  <p className="text-xs uppercase tracking-wide text-emerald-200">What we need to measure</p>
-                  <p className="mt-2 text-white/90">{scenario.proofNeeded}</p>
+                <div className="rounded-2xl bg-blue-50 p-4 text-slate-900 border border-blue-100">
+                  <p className="text-xs uppercase tracking-wide text-blue-600">What we need to measure</p>
+                  <p className="mt-2 text-slate-700">{scenario.proofNeeded}</p>
                 </div>
               </div>
               <button className="mt-6 btn-pill border border-slate-300 bg-white text-slate-900">

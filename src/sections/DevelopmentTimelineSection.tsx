@@ -45,10 +45,10 @@ export const DevelopmentTimelineSection = () => {
                 <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs uppercase tracking-wide text-slate-600">
                   <span
                     className={`h-2 w-2 rounded-full ${milestone.status === "Complete"
-                        ? "bg-emerald-500"
-                        : milestone.status === "In progress"
-                          ? "bg-amber-500"
-                          : "bg-slate-300"
+                      ? "bg-emerald-500"
+                      : milestone.status === "In progress"
+                        ? "bg-amber-500"
+                        : "bg-slate-300"
                       }`}
                   />
                   {milestone.status}

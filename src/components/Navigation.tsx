@@ -49,7 +49,7 @@ const Navigation = () => {
       <div className="section-shell">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group" aria-label="Go to homepage">
+          <Link to="/" className="flex items-center gap-1 group" aria-label="Go to homepage">
             <img
               src="/logo.png"
               alt="ClassNova Logo"

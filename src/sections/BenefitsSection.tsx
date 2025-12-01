@@ -40,7 +40,7 @@ export const BenefitsSection = () => {
       <div className="section-shell">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange-50 border border-brand-orange-100 text-brand-orange-600 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-600 text-xs font-bold uppercase tracking-wider">
             Competitive Advantage
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">
@@ -53,7 +53,7 @@ export const BenefitsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Feature 1: Price */}
-          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-brand-blue-200 transition-all">
+          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-blue-200 transition-all">
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
               <DollarSign className="w-24 h-24 text-slate-900" />
             </div>
@@ -65,15 +65,15 @@ export const BenefitsSection = () => {
               </div>
               <div className="h-px bg-slate-200" />
               <div>
-                <p className="text-sm text-brand-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
-                <p className="text-4xl font-bold text-brand-blue-600">₹12,000</p>
+                <p className="text-sm text-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
+                <p className="text-4xl font-bold text-blue-600">₹12,000</p>
                 <p className="text-sm text-slate-500 mt-1">One-time cost. No hidden fees.</p>
               </div>
             </div>
           </div>
 
           {/* Feature 2: Connectivity */}
-          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-brand-blue-200 transition-all">
+          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-blue-200 transition-all">
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
               <Wifi className="w-24 h-24 text-slate-900" />
             </div>
@@ -85,15 +85,15 @@ export const BenefitsSection = () => {
               </div>
               <div className="h-px bg-slate-200" />
               <div>
-                <p className="text-sm text-brand-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
-                <p className="text-2xl font-bold text-brand-blue-600">Offline-First</p>
+                <p className="text-sm text-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
+                <p className="text-2xl font-bold text-blue-600">Offline-First</p>
                 <p className="text-sm text-slate-500 mt-1">Works perfectly without internet. Syncs later.</p>
               </div>
             </div>
           </div>
 
           {/* Feature 3: Setup */}
-          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-brand-blue-200 transition-all">
+          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-blue-200 transition-all">
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
               <Zap className="w-24 h-24 text-slate-900" />
             </div>
@@ -105,8 +105,8 @@ export const BenefitsSection = () => {
               </div>
               <div className="h-px bg-slate-200" />
               <div>
-                <p className="text-sm text-brand-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
-                <p className="text-2xl font-bold text-brand-blue-600">10 Minutes</p>
+                <p className="text-sm text-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
+                <p className="text-2xl font-bold text-blue-600">10 Minutes</p>
                 <p className="text-sm text-slate-500 mt-1">Plug-and-play. No technicians needed.</p>
               </div>
             </div>

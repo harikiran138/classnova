@@ -107,7 +107,7 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-4">
                             {[
                                 { label: "Schools", value: "10+", icon: Users },
                                 { label: "Students", value: "500+", icon: TrendingUp },

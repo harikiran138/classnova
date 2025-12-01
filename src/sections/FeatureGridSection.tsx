@@ -5,8 +5,6 @@ import {
   BarChart3,
   Mic,
   Zap,
-  Layout,
-  ShieldCheck,
   MousePointer2
 } from "lucide-react";
 
@@ -62,7 +60,7 @@ export const FeatureGridSection = () => {
       </div>
 
       <div className="section-shell relative z-10">
-        <div className="mb-20 max-w-3xl">
+        <div className="text-center mb-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -97,10 +95,10 @@ export const FeatureGridSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
+        <div className="grid md:grid-cols-3 gap-6">
           {features.map((feature, idx) => (
             <motion.div
-              key={feature.title}
+              key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -112,7 +110,7 @@ export const FeatureGridSection = () => {
 
               {/* Visuals */}
               {feature.visual === "analytics" && (
-                <div className="absolute right-0 bottom-0 w-3/4 h-3/4 opacity-30 group-hover:opacity-50 transition-opacity duration-500">
+                <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-20 group-hover:opacity-30 transition-opacity">
                   <div className="flex gap-3 items-end h-full p-8">
                     <div className="w-12 h-[40%] bg-orange-500 rounded-t-xl animate-pulse" />
                     <div className="w-12 h-[70%] bg-blue-500 rounded-t-xl animate-pulse delay-75" />
@@ -120,10 +118,6 @@ export const FeatureGridSection = () => {
                     <div className="w-12 h-[85%] bg-purple-500 rounded-t-xl animate-pulse delay-200" />
                   </div>
                 </div>
-              )}
-
-              {feature.visual === "os" && (
-                <div className="absolute -right-12 -bottom-12 w-80 h-80 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-colors duration-500" />
               )}
 
               <div className="relative z-10 h-full flex flex-col justify-between">
