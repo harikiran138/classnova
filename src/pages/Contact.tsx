@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="animate-fade-in bg-white min-h-screen pt-32 pb-20">
             {/* HERO */}
             <div className="section-shell mb-16 text-center">
-                <p className="section-eyebrow text-[#2563EB]">GET IN TOUCH</p>
+                <p className="text-[#2563EB] font-bold tracking-wider text-xl mb-2">GET IN TOUCH</p>
                 <h1 className="h1 text-[#0F172A] mb-6 uppercase">Let's Build the Future</h1>
                 <p className="body-text max-w-2xl mx-auto">
                     Have questions about the pilot program? Want to schedule a demo? We're here to help.
@@ -65,8 +65,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm font-bold text-slate-400 uppercase tracking-wide">Email Us</p>
-                                        <p className="text-lg font-medium mt-1">founders@classnova.com</p>
-                                        <p className="text-lg font-medium">support@classnova.com</p>
+                                        <p className="text-lg font-medium mt-1">harikiran1388@gmail.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-6 group">
@@ -75,7 +74,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm font-bold text-slate-400 uppercase tracking-wide">Call Us</p>
-                                        <p className="text-lg font-medium mt-1">+91 98765 43210</p>
+                                        <p className="text-lg font-medium mt-1">+91 94916 45242</p>
                                         <p className="text-sm text-slate-400 mt-1">Mon-Fri, 9am - 6pm IST</p>
                                     </div>
                                 </div>
@@ -86,9 +85,9 @@ const Contact = () => {
                                     <div>
                                         <p className="text-sm font-bold text-slate-400 uppercase tracking-wide">Visit Us</p>
                                         <p className="text-lg font-medium mt-1">
-                                            T-Hub, IIIT Hyderabad Campus,<br />
-                                            Gachibowli, Hyderabad,<br />
-                                            Telangana 500032
+                                            NSRIT Sontyam,<br />
+                                            Visakhapatnam, Andhra Pradesh,<br />
+                                            531173
                                         </p>
                                     </div>
                                 </div>
@@ -97,13 +96,16 @@ const Contact = () => {
 
                         {/* Map Placeholder */}
                         <div className="h-64 rounded-[32px] bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden relative group">
-                            <div className="absolute inset-0 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=Hyderabad&zoom=12&size=600x300&sensor=false')] bg-cover bg-center opacity-50 grayscale group-hover:grayscale-0 transition-all duration-500" />
-                            <div className="relative z-10 bg-white/80 backdrop-blur px-6 py-3 rounded-full shadow-sm">
-                                <p className="text-slate-600 font-bold uppercase tracking-wide text-sm flex items-center gap-2">
-                                    <MapPin className="h-4 w-4 text-[#FF7A00]" />
-                                    View on Google Maps
-                                </p>
-                            </div>
+                            <iframe
+                                title="NSRIT Location"
+                                className="absolute inset-0 w-full h-full grayscale-0"
+                                src="https://maps.google.com/maps?q=NSRIT+Sontyam&t=k&z=17&ie=UTF8&iwloc=&output=embed"
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight={0}
+                                marginWidth={0}
+                            />
+
                         </div>
                     </div>
                 </div>

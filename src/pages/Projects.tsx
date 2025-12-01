@@ -7,71 +7,49 @@ const Projects = () => {
             {/* HERO */}
             <div className="section-shell mb-20">
                 <div className="text-center max-w-3xl mx-auto">
-                    <p className="section-eyebrow text-[#2563EB]">OUR WORK</p>
+                    <p className="text-[#2563EB] font-bold tracking-wider text-xl mb-2">OUR JOURNEY</p>
                     <h1 className="section-heading text-[#0F172A] uppercase">Transforming Education, One School at a Time</h1>
                     <p className="section-subtitle text-[#64748B]">
-                        Explore our pilot deployments, case studies, and impact metrics across India.
+                        Celebrating our victories and the impact we've made across the educational landscape.
                     </p>
                 </div>
             </div>
 
-            {/* PROJECT SHOWCASE */}
+            {/* WHERE WE WON */}
             <section className="section-shell mb-24">
-                <div className="grid gap-12">
-                    {[
-                        {
-                            title: "Kendriya Vidyalaya Pilot",
-                            desc: "Deployed ClassNova kits in 5 classrooms to test offline content sync and teacher adoption rates.",
-                            tags: ["Deployment", "K-12", "Offline Sync"],
-                            metrics: [
-                                { label: "Teachers Trained", value: "15+" },
-                                { label: "Hours Saved/Week", value: "8hrs" },
-                                { label: "Student Engagement", value: "+40%" },
-                            ],
-                            image: "bg-blue-50", // Placeholder class
-                        },
-                        {
-                            title: "Rural School Initiative",
-                            desc: "Partnered with an NGO to bring digital learning to a remote village with zero internet connectivity.",
-                            tags: ["Social Impact", "Rural", "Low Cost"],
-                            metrics: [
-                                { label: "Students Reached", value: "200+" },
-                                { label: "Cost per Class", value: "₹15k" },
-                                { label: "Uptime", value: "99.9%" },
-                            ],
-                            image: "bg-orange-50", // Placeholder class
-                        },
-                    ].map((project, i) => (
-                        <div key={i} className="group grid lg:grid-cols-2 gap-8 items-center rounded-[32px] border border-slate-200 p-2 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
-                            <div className={`aspect-video rounded-[24px] ${project.image} flex items-center justify-center`}>
-                                <p className="font-bold text-slate-400 uppercase tracking-widest">Project Image</p>
-                            </div>
-                            <div className="p-6 lg:p-8 space-y-6">
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map(tag => (
-                                        <span key={tag} className="px-3 py-1 rounded-full bg-blue-50 text-[#2563EB] text-xs font-bold uppercase tracking-wide">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-                                <h3 className="text-3xl font-bold text-[#0F172A]">{project.title}</h3>
-                                <p className="text-lg text-[#64748B] leading-relaxed">{project.desc}</p>
-
-                                <div className="grid grid-cols-3 gap-4 py-6 border-y border-slate-100">
-                                    {project.metrics.map(metric => (
-                                        <div key={metric.label}>
-                                            <p className="text-2xl font-bold text-[#0F172A]">{metric.value}</p>
-                                            <p className="text-xs text-[#64748B] uppercase font-bold tracking-wide mt-1">{metric.label}</p>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <Button variant="ghost" className="text-[#FF7A00] hover:text-[#E66E00] hover:bg-orange-50 p-0 font-bold uppercase tracking-wide">
-                                    Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
-                                </Button>
-                            </div>
+                <div className="text-center mb-12">
+                    <h2 className="section-heading text-slate-900 uppercase !text-3xl">Where We Won</h2>
+                    <p className="text-slate-600 mt-4 text-lg max-w-2xl mx-auto">
+                        Recognized for excellence and innovation on prestigious platforms.
+                    </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                    <div className="group rounded-[32px] overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300">
+                        <div className="aspect-[4/3] relative overflow-hidden">
+                            <img
+                                src="/Gen-E-Summit.JPG"
+                                alt="Gen-E-Summit Win"
+                                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                            />
                         </div>
-                    ))}
+                        <div className="p-6 bg-white">
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Gen-E Summit</h3>
+                            <p className="text-slate-600 text-justify">I, along with my team from NSRIT, secured Third Place 🏆 in the Start-up Pitchathon conducted as part of the Gen E-Summit’25 at ANITS, organized by the Institution’s Innovation Council (IIC) in association with IEEE and the BizVERVE Club. The event provided a fantastic platform to pitch our innovative ideas, gain valuable feedback from industry experts, and compete with some of the brightest minds.</p>
+                        </div>
+                    </div>
+                    <div className="group rounded-[32px] overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300">
+                        <div className="aspect-[4/3] relative overflow-hidden">
+                            <img
+                                src="/Samyuktha.jpg"
+                                alt="Samyuktha Competition Win"
+                                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                            />
+                        </div>
+                        <div className="p-6 bg-white">
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Samyuktha</h3>
+                            <p className="text-slate-600 text-justify">I am proud to share that I secured the distinguished position of Winner 🏆 in the Startup Pitch Arena held as part of Samyukta 2025 – National-Level Student Innovation Summit at ANIL Neerukonda Institute of Technology & Sciences (ANITS). This achievement was under the Department of CSE, in collaboration with the departments of CSM, CSD, IT, ECE, EEE, and Mechanical Engineering, and supported by multiple innovation and entrepreneurship partners.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -80,7 +58,7 @@ const Projects = () => {
                 <div className="section-shell">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <p className="section-eyebrow text-orange-500">ACHIEVEMENTS</p>
+                            <p className="text-orange-500 font-bold tracking-wider text-xl mb-2">ACHIEVEMENTS</p>
                             <h2 className="section-heading text-slate-900 uppercase">Recognition & Impact</h2>
                             <p className="text-slate-600 mt-4 text-lg">
                                 We are proud to be recognized by leading institutions for our innovation in educational technology.
@@ -91,8 +69,8 @@ const Projects = () => {
                                         <Trophy className="h-6 w-6 text-yellow-500" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-slate-900">Best EdTech Startup 2024</h4>
-                                        <p className="text-slate-600">Awarded by T-Hub Innovation Summit</p>
+                                        <h4 className="text-xl font-bold text-slate-900">Winner - Startup Pitch Arena</h4>
+                                        <p className="text-slate-600">Samyukta 2025 (National Level Summit)</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
@@ -100,8 +78,8 @@ const Projects = () => {
                                         <Star className="h-6 w-6 text-yellow-500" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-slate-900">Patent Pending Tech</h4>
-                                        <p className="text-slate-600">For our offline-first sync architecture</p>
+                                        <h4 className="text-xl font-bold text-slate-900">Third Place - Pitchathon</h4>
+                                        <p className="text-slate-600">Gen E-Summit’25 (ANITS)</p>
                                     </div>
                                 </div>
                             </div>

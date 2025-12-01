@@ -36,10 +36,10 @@ export const DemoRequestSection = () => {
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl space-y-4 hover:bg-white/15 transition-colors cursor-default">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-lg">
-                      CK
+                      HK
                     </div>
                     <div>
-                      <p className="text-white font-bold text-sm">Chaitanya K.</p>
+                      <p className="text-white font-bold text-sm">Hari Kiran</p>
                       <p className="text-blue-200 text-xs">Founder & CEO</p>
                     </div>
                   </div>
@@ -52,11 +52,11 @@ export const DemoRequestSection = () => {
               <div className="relative z-10 space-y-3">
                 <div className="flex items-center gap-3 text-white/80 text-sm">
                   <Mail className="w-4 h-4" />
-                  <span>founders@classnova.com</span>
+                  <span>harikiran1388@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-white/80 text-sm">
                   <Phone className="w-4 h-4" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 94916 45242</span>
                 </div>
               </div>
             </div>

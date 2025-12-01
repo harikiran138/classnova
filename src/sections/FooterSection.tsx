@@ -7,7 +7,15 @@ export const FooterSection = () => {
           <p className="mt-3 text-sm text-white/60">
             Turning every projector into a smart classroom with teacher-first technology.
           </p>
-          <p className="mt-3 text-xs text-white/40">Prototype descriptions may evolve. We publish every update transparently.</p>
+          <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p className="text-xs text-white/80 mb-2">
+              We actively collaborate with institutions, NGOs, CSR foundations, educators, and distributors who share our mission of democratizing digital learning.
+            </p>
+            <a href="mailto:harikiran1388@gmail.com" className="text-sm font-bold text-blue-400 hover:text-blue-300 transition-colors">
+              harikiran1388@gmail.com
+            </a>
+          </div>
+          <p className="mt-6 text-xs text-white/40">Prototype descriptions may evolve. We publish every update transparently.</p>
           <div className="mt-4 flex gap-3 text-xs text-white/50">
             <span>© {new Date().getFullYear()} ClassNova</span>
             <span>•</span>
