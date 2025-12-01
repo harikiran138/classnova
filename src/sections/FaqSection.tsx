@@ -15,20 +15,20 @@ const faq = [
 
 export const FaqSection = () => {
   return (
-    <section id="faq" className="section-padding bg-[#030814] text-white">
+    <section id="faq" className="section-padding bg-slate-50 text-slate-900 border-t border-slate-200">
       <div className="section-shell">
         <div className="text-center space-y-4">
-          <p className="section-eyebrow">FAQ</p>
-          <h2 className="section-heading">Questions district teams ask us</h2>
+          <p className="section-eyebrow text-orange-500">FAQ</p>
+          <h2 className="section-heading text-slate-900">Questions district teams ask us</h2>
         </div>
         <div className="mx-auto mt-12 max-w-3xl space-y-4">
           {faq.map((item) => (
-            <div key={item.question} className="glass-panel p-6">
+            <div key={item.question} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-blue-200 transition-all">
               <div className="flex items-center justify-between text-left">
-                <p className="text-lg font-semibold text-white">{item.question}</p>
-                <span className="text-2xl text-white/50">+</span>
+                <p className="text-lg font-semibold text-slate-900">{item.question}</p>
+                <span className="text-2xl text-slate-400">+</span>
               </div>
-              <p className="mt-3 text-white/70">{item.answer}</p>
+              <p className="mt-3 text-slate-600">{item.answer}</p>
             </div>
           ))}
         </div>

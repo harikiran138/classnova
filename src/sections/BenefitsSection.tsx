@@ -115,7 +115,7 @@ export const BenefitsSection = () => {
 
         {/* Impact Stats */}
         <div
-          className="mt-16 rounded-3xl bg-slate-900 text-white p-8 sm:p-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          className="mt-16 rounded-3xl bg-slate-50 border border-slate-200 p-8 sm:p-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           {[
             { label: "Cost Savings", value: "80%" },
@@ -124,8 +124,8 @@ export const BenefitsSection = () => {
             { label: "Data Compression", value: "60%" },
           ].map((stat) => (
             <div key={stat.label} className="space-y-2">
-              <div className="text-3xl sm:text-4xl font-bold text-brand-orange-500">{stat.value}</div>
-              <div className="text-sm sm:text-base text-slate-400 font-medium">{stat.label}</div>
+              <div className="text-3xl sm:text-4xl font-bold text-orange-500">{stat.value}</div>
+              <div className="text-sm sm:text-base text-slate-600 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>

@@ -76,32 +76,32 @@ const Projects = () => {
             </section>
 
             {/* ACHIEVEMENTS */}
-            <section className="section-padding bg-[#0F172A] text-white">
+            <section className="section-padding bg-slate-50 border-t border-slate-200">
                 <div className="section-shell">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <p className="section-eyebrow text-[#FF7A00]">ACHIEVEMENTS</p>
-                            <h2 className="section-heading text-white uppercase">Recognition & Impact</h2>
-                            <p className="text-slate-400 mt-4 text-lg">
+                            <p className="section-eyebrow text-orange-500">ACHIEVEMENTS</p>
+                            <h2 className="section-heading text-slate-900 uppercase">Recognition & Impact</h2>
+                            <p className="text-slate-600 mt-4 text-lg">
                                 We are proud to be recognized by leading institutions for our innovation in educational technology.
                             </p>
                             <div className="mt-8 space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                                        <Trophy className="h-6 w-6 text-yellow-400" />
+                                    <div className="h-12 w-12 rounded-full bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 shadow-sm">
+                                        <Trophy className="h-6 w-6 text-yellow-500" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-white">Best EdTech Startup 2024</h4>
-                                        <p className="text-slate-400">Awarded by T-Hub Innovation Summit</p>
+                                        <h4 className="text-xl font-bold text-slate-900">Best EdTech Startup 2024</h4>
+                                        <p className="text-slate-600">Awarded by T-Hub Innovation Summit</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                                        <Star className="h-6 w-6 text-yellow-400" />
+                                    <div className="h-12 w-12 rounded-full bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 shadow-sm">
+                                        <Star className="h-6 w-6 text-yellow-500" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-white">Patent Pending Tech</h4>
-                                        <p className="text-slate-400">For our offline-first sync architecture</p>
+                                        <h4 className="text-xl font-bold text-slate-900">Patent Pending Tech</h4>
+                                        <p className="text-slate-600">For our offline-first sync architecture</p>
                                     </div>
                                 </div>
                             </div>
@@ -111,13 +111,13 @@ const Projects = () => {
                             {[
                                 { label: "Schools", value: "10+", icon: Users },
                                 { label: "Students", value: "500+", icon: TrendingUp },
-                                { label: "States", value: "3", icon: MapPin }, // Reusing MapPin from lucide-react (needs import if not global, but assuming context)
+                                { label: "States", value: "3", icon: MapPin },
                                 { label: "NPS Score", value: "72", icon: Star },
                             ].map((stat, i) => (
-                                <div key={i} className="p-8 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-all">
-                                    <stat.icon className="h-8 w-8 text-[#2563EB] mx-auto mb-4" />
-                                    <p className="text-4xl font-bold text-white mb-2">{stat.value}</p>
-                                    <p className="text-sm font-bold text-slate-400 uppercase tracking-wide">{stat.label}</p>
+                                <div key={i} className="p-8 rounded-2xl bg-white border border-slate-200 text-center hover:border-blue-200 hover:shadow-lg transition-all shadow-sm">
+                                    <stat.icon className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+                                    <p className="text-4xl font-bold text-slate-900 mb-2">{stat.value}</p>
+                                    <p className="text-sm font-bold text-slate-500 uppercase tracking-wide">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
