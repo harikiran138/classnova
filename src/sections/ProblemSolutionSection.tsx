@@ -3,24 +3,24 @@ import { CheckCircle2, Zap, Layout, DollarSign, Box, PenTool, Headphones } from 
 
 const highlights = [
   {
-    icon: Zap,
-    label: "Works Offline",
-    detail: "No internet needed for daily teaching. Syncs when online.",
-  },
-  {
     icon: Layout,
-    label: "3-Click Setup",
-    detail: "HDMI + Power + Remote. Ready in under 10 minutes.",
-  },
-  {
-    icon: Box,
-    label: "Teacher-Ready",
-    detail: "Intuitive UI designed for non-tech savvy users.",
+    label: "Massive Gap",
+    detail: "1.2M schools lack basic digital tools beyond projectors.",
   },
   {
     icon: DollarSign,
-    label: "Budget Friendly",
-    detail: "Complete smart classroom setup starting at ₹12,000.",
+    label: "Prohibitive Cost",
+    detail: "Smart boards cost ₹2-5 Lakhs ($2,400-$6,000).",
+  },
+  {
+    icon: Zap,
+    label: "Connectivity",
+    detail: "68% of schools have unreliable or no internet.",
+  },
+  {
+    icon: Box,
+    label: "Limited Budget",
+    detail: "Schools get only ₹50k-75k/year for infrastructure.",
   },
 ];
 
@@ -44,7 +44,7 @@ const essentials = [
 
 export const ProblemSolutionSection = () => {
   return (
-    <section id="what-is-classnova" className="pt-20 pb-32 sm:pb-40 bg-slate-50 overflow-hidden relative">
+    <section id="what-is-classnova" className="section-padding bg-slate-50 overflow-hidden relative">
       <div className="section-shell">
         <div className="grid gap-16 lg:grid-cols-[1.2fr_1fr] items-start">
 
@@ -55,17 +55,17 @@ export const ProblemSolutionSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue-50 border border-brand-blue-100 text-brand-blue-600 text-xs font-bold uppercase tracking-wider mb-6">
-              What is ClassNova?
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold uppercase tracking-wider mb-6">
+              The Market Gap
             </div>
 
             <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] text-slate-900 mb-6">
-              The classroom upgrade <br />
-              <span className="text-brand-blue-600">without the hassle.</span>
+              1.2 Million schools <br />
+              <span className="text-red-600">lack digital infrastructure.</span>
             </h2>
 
             <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-xl">
-              Instantly make any TV or projector interactive. Track lessons. Engage every student. All with one simple, affordable kit.
+              Smart boards cost <span className="font-bold text-slate-900">₹2-5 Lakhs</span>, making them unaffordable for 90% of schools. Plus, <span className="font-bold text-slate-900">68% of schools</span> struggle with unreliable internet, rendering cloud-only tools useless.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -137,25 +137,6 @@ export const ProblemSolutionSection = () => {
         </div>
       </div>
 
-      {/* Creative Transition: Slanted Clip & Floating Bridge */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-[#0F172A] transform origin-bottom -skew-y-2 translate-y-16 z-0" />
-
-      <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 z-20">
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex items-center gap-4 p-4 pr-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-2xl"
-        >
-          <div className="w-12 h-12 rounded-full bg-brand-orange-500 flex items-center justify-center shadow-lg shadow-brand-orange-500/30">
-            <Zap className="w-6 h-6 text-white fill-current" />
-          </div>
-          <div>
-            <p className="text-xs font-bold text-brand-orange-400 uppercase tracking-wider">Speed Record</p>
-            <p className="text-white font-bold text-lg">Setup in 10 Minutes</p>
-          </div>
-        </motion.div>
-      </div>
     </section>
   );
 };

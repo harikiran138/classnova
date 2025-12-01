@@ -59,7 +59,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden flex-1 items-center justify-center gap-8 text-sm md:flex">
+          <div className="hidden flex-1 items-center justify-center gap-6 text-sm lg:flex">
             {navLinks.map((item) => (
               <Link
                 key={item.label}
@@ -78,7 +78,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-4 lg:flex">
             <Button variant="ghost" className="text-[#64748B] hover:text-[#2563EB] font-semibold">
               LOG IN
             </Button>
@@ -90,7 +90,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               className="rounded-lg p-2 text-[#0F172A] transition-colors hover:bg-slate-100"
               onClick={() => setIsOpen(!isOpen)}
@@ -103,7 +103,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 right-0 animate-fade-in border-b border-slate-200 bg-white p-4 shadow-xl md:hidden">
+          <div className="absolute top-full left-0 right-0 animate-fade-in border-b border-slate-200 bg-white p-4 shadow-xl lg:hidden">
             <div className="flex flex-col gap-2">
               {navLinks.map((item) => (
                 <Link

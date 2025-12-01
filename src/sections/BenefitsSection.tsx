@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Layers, GraduationCap, Globe2, Hammer, Clock } from "lucide-react";
+import { TrendingUp, Layers, GraduationCap, Globe2, Hammer, Clock, DollarSign, Wifi, Zap } from "lucide-react";
 
 const benefits = [
   {
@@ -39,73 +39,96 @@ export const BenefitsSection = () => {
     <section id="benefits" className="section-padding bg-white">
       <div className="section-shell">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-brand-orange-600 font-bold uppercase tracking-wider text-sm"
-          >
-            Why Schools Choose Us
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl font-bold text-slate-900"
-          >
-            Real impact, <span className="text-brand-orange-500">measurable results.</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-slate-600"
-          >
-            Quick wins that principals care about, delivered instantly.
-          </motion.p>
+
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange-50 border border-brand-orange-100 text-brand-orange-600 text-xs font-bold uppercase tracking-wider">
+            Competitive Advantage
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">
+            Why ClassNova Wins
+          </h2>
+          <p className="text-lg text-slate-600">
+            We disrupt the market by removing the three biggest barriers: Cost, Complexity, and Connectivity.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, idx) => (
-            <motion.div
-              key={benefit.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="group p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand-orange-200 hover:shadow-xl hover:shadow-brand-orange-500/5 transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center mb-6 group-hover:bg-brand-orange-50 group-hover:border-brand-orange-100 transition-colors">
-                <benefit.icon className="w-6 h-6 text-slate-400 group-hover:text-brand-orange-500 transition-colors" />
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Feature 1: Price */}
+          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-brand-blue-200 transition-all">
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <DollarSign className="w-24 h-24 text-slate-900" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Initial Cost</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm text-slate-500 uppercase font-bold tracking-wider mb-1">Traditional Smart Boards</p>
+                <p className="text-2xl font-bold text-red-500">₹2 - 5 Lakhs</p>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-orange-600 transition-colors">{benefit.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{benefit.detail}</p>
-            </motion.div>
-          ))}
+              <div className="h-px bg-slate-200" />
+              <div>
+                <p className="text-sm text-brand-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
+                <p className="text-4xl font-bold text-brand-blue-600">₹12,000</p>
+                <p className="text-sm text-slate-500 mt-1">One-time cost. No hidden fees.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 2: Connectivity */}
+          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-brand-blue-200 transition-all">
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Wifi className="w-24 h-24 text-slate-900" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Internet Dependency</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm text-slate-500 uppercase font-bold tracking-wider mb-1">Others</p>
+                <p className="text-lg font-bold text-slate-700">Required (Always Online)</p>
+              </div>
+              <div className="h-px bg-slate-200" />
+              <div>
+                <p className="text-sm text-brand-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
+                <p className="text-2xl font-bold text-brand-blue-600">Offline-First</p>
+                <p className="text-sm text-slate-500 mt-1">Works perfectly without internet. Syncs later.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 3: Setup */}
+          <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100 relative overflow-hidden group hover:border-brand-blue-200 transition-all">
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Zap className="w-24 h-24 text-slate-900" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Installation</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm text-slate-500 uppercase font-bold tracking-wider mb-1">Others</p>
+                <p className="text-lg font-bold text-slate-700">Complex (Days/Weeks)</p>
+              </div>
+              <div className="h-px bg-slate-200" />
+              <div>
+                <p className="text-sm text-brand-blue-600 uppercase font-bold tracking-wider mb-1">ClassNova</p>
+                <p className="text-2xl font-bold text-brand-blue-600">10 Minutes</p>
+                <p className="text-sm text-slate-500 mt-1">Plug-and-play. No technicians needed.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Impact Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
+        <div
           className="mt-16 rounded-3xl bg-slate-900 text-white p-8 sm:p-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           {[
-            { label: "Setup Time", value: "10 min" },
-            { label: "Cost Savings", value: "60%" },
-            { label: "Teacher Adoption", value: "95%" },
-            { label: "Internet Needed", value: "0%" },
+            { label: "Cost Savings", value: "80%" },
+            { label: "Boot Time", value: "20s" },
+            { label: "AI Accuracy", value: "95%" },
+            { label: "Data Compression", value: "60%" },
           ].map((stat) => (
-            <div key={stat.label}>
-              <div className="text-3xl sm:text-4xl font-bold text-brand-orange-400 mb-2">{stat.value}</div>
-              <div className="text-sm text-slate-400 font-medium uppercase tracking-wide">{stat.label}</div>
+            <div key={stat.label} className="space-y-2">
+              <div className="text-3xl sm:text-4xl font-bold text-brand-orange-500">{stat.value}</div>
+              <div className="text-sm sm:text-base text-slate-400 font-medium">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

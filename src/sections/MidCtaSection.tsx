@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const MidCtaSection = () => {
   return (
-    <section className="py-20">
+    <section className="section-padding">
       <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

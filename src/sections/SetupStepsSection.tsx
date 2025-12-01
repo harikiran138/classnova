@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
-import { Play, Wifi, MousePointer2, Monitor, Briefcase } from "lucide-react";
+import { Play, Wifi, MousePointer2, Monitor, Briefcase, Zap } from "lucide-react";
 
 const steps = [
   {
     icon: Monitor,
-    title: "Plug & Play",
-    description: "Connect ClassNova Core to any projector or HDMI display.",
-    time: "10 min"
+    title: "1. Connect",
+    description: "Plug HDMI to projector & USB peripherals. Works with any setup.",
+    time: "2 min"
+  },
+  {
+    icon: Zap,
+    title: "2. Boot",
+    description: "ClassNova OS boots instantly. Ready to teach in seconds.",
+    time: "20 sec"
   },
   {
     icon: MousePointer2,
-    title: "Auto-Pairing",
-    description: "Tools pair instantly via Bluetooth. No manual setup.",
-    time: "1 min"
+    title: "3. Teach",
+    description: "Whiteboard, PDF, Video, Record. Just 5 simple buttons.",
+    time: "Instant"
   },
   {
     icon: Wifi,
-    title: "One-Time Sync",
-    description: "Download curriculum packs once. Teach offline forever.",
-    time: "5 min"
-  },
-  {
-    icon: Briefcase,
-    title: "Ready to Teach",
-    description: "Carry the kit room-to-room. Your classroom follows you.",
-    time: "Instant"
+    title: "4. Share",
+    description: "Recordings auto-sync to cloud when internet is available.",
+    time: "Auto"
   },
 ];
 
 export const SetupStepsSection = () => {
   return (
-    <section id="deployment" className="pt-32 pb-20 sm:pb-32 bg-[#0F172A] text-white overflow-hidden relative">
+    <section id="deployment" className="section-padding bg-[#0F172A] text-white overflow-hidden relative">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue-900/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />

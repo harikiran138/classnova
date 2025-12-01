@@ -71,11 +71,11 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900"
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8"
             >
-              Smart Classrooms, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-600 to-brand-blue-800">
-                Simplified.
+              Smart Classrooms for <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange-500 to-brand-orange-600">
+                ₹12,000.
               </span>
             </motion.h1>
 
@@ -83,9 +83,9 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-xl text-slate-600 leading-relaxed font-medium"
+              className="text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed"
             >
-              Transform any standard projector into an intelligent, interactive learning surface. <span className="text-slate-900 font-semibold">No internet required.</span>
+              ClassNova transforms any ordinary projector into an advanced interactive smart classroom for <span className="font-bold text-slate-900">₹12,000</span> — <span className="font-bold text-brand-blue-600">80% cheaper</span> than traditional smart boards.
             </motion.p>
           </div>
 
