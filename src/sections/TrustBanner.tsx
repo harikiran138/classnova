@@ -14,7 +14,7 @@ export const TrustBanner = () => {
     <section id="backed-by" className="section-padding bg-slate-50 border-y border-slate-100">
       <div className="section-shell">
         <div className="mx-auto max-w-3xl text-center space-y-4">
-          <p className="section-eyebrow text-[#2563EB]">BACKED BY EXPERTS</p>
+
           <h2 className="section-heading text-[#0F172A] uppercase">Developed with guidance from education leaders</h2>
           <p className="section-subtitle text-[#64748B]">Real partnerships in progress; more announced after pilot NDA lifts.</p>
         </div>

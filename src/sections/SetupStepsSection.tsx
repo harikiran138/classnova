@@ -1,63 +1,127 @@
+import { motion } from "framer-motion";
+import { Play, Wifi, MousePointer2, Monitor, Briefcase } from "lucide-react";
+
 const steps = [
   {
-    title: "Plug the core",
-    description: "Connect the ClassNova Core to any projector or HDMI display.",
+    icon: Monitor,
+    title: "Plug & Play",
+    description: "Connect ClassNova Core to any projector or HDMI display.",
+    time: "10 min"
   },
   {
-    title: "Pair teaching tools",
-    description: "Wireless mouse, air pen, and voice amp pair instantly via Bluetooth.",
+    icon: MousePointer2,
+    title: "Auto-Pairing",
+    description: "Tools pair instantly via Bluetooth. No manual setup.",
+    time: "1 min"
   },
   {
-    title: "Sync local language pack",
-    description: "Load curated, multilingual lesson packs over Wi-Fi once.",
+    icon: Wifi,
+    title: "One-Time Sync",
+    description: "Download curriculum packs once. Teach offline forever.",
+    time: "5 min"
   },
   {
-    title: "Teach anywhere",
-    description: "Carry the kit room-to-room. No internet dependency while teaching.",
+    icon: Briefcase,
+    title: "Ready to Teach",
+    description: "Carry the kit room-to-room. Your classroom follows you.",
+    time: "Instant"
   },
 ];
 
 export const SetupStepsSection = () => {
   return (
-    <section id="deployment" className="section-padding bg-[#050C1F] text-white">
-      <div className="section-shell">
-        <div className="mx-auto max-w-2xl text-center space-y-4">
-          <p className="section-eyebrow">Deployment</p>
-          <h2 className="section-heading">4 steps to digitize a classroom</h2>
-          <p className="section-subtitle">
-            District teams can deploy 100 classrooms a week with existing technicians.
-          </p>
+    <section id="deployment" className="pt-32 pb-20 sm:pb-32 bg-[#0F172A] text-white overflow-hidden relative">
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue-900/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-blue-900/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3" />
+      </div>
+
+      <div className="section-shell relative z-10">
+        <div className="mx-auto max-w-3xl text-center space-y-6 mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-blue-300 text-xs font-bold uppercase tracking-wider"
+          >
+            Rapid Deployment
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+          >
+            Digitize a classroom in <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-400 to-brand-blue-200">
+              under 10 minutes
+            </span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-slate-400 max-w-xl mx-auto"
+          >
+            District teams can deploy 100+ classrooms a week using existing technicians. No specialized training required.
+          </motion.p>
         </div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-4">
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 relative">
+          {/* Connecting Line (Desktop) */}
+          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-white/5 via-white/20 to-white/5 -z-10" />
+
           {steps.map((step, index) => (
-            <div key={step.title} className="relative glass-panel p-6">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-xl font-semibold">
-                {index + 1}
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15 }}
+              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+            >
+              <div className="w-12 h-12 rounded-xl bg-brand-blue-600/20 border border-brand-blue-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_-5px_rgba(37,99,235,0.3)]">
+                <step.icon className="w-6 h-6 text-brand-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold">{step.title}</h3>
-              <p className="mt-2 text-white/70">{step.description}</p>
-              <div className="absolute -top-3 -right-3 rounded-full border border-white/20 bg-[#0A1628] px-3 py-1 text-xs text-white/60">
-                5 min
+
+              <div className="absolute top-6 right-6 px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                {step.time}
               </div>
-            </div>
+
+              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <div className="max-w-4xl rounded-[32px] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 text-center shadow-soft">
-            <p className="section-eyebrow text-white/60">Prototype render</p>
-            <h3 className="mt-2 text-2xl font-semibold">Watch the 3-minute setup simulation</h3>
-            <div className="mt-6 aspect-video w-full rounded-2xl border border-dashed border-white/20 bg-[#02060F] flex items-center justify-center">
-              <button className="btn-ghost-pill">
-                <span className="mr-2 text-lg" aria-hidden>
-                  ▶
-                </span>
-                Play prototype demo
-              </button>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-20 max-w-5xl mx-auto"
+        >
+          <div className="rounded-[32px] border border-white/10 bg-[#020617] p-2 sm:p-4 shadow-2xl relative overflow-hidden group cursor-pointer">
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <div className="aspect-video rounded-[24px] bg-slate-900 border border-white/5 relative overflow-hidden flex items-center justify-center">
+              <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+
+              <div className="text-center z-10">
+                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                  <Play className="w-8 h-8 text-white fill-white ml-1" />
+                </div>
+                <p className="text-lg font-medium text-white">Watch Setup Walkthrough</p>
+                <p className="text-sm text-slate-500 mt-1">See how easy it really is</p>
+              </div>
             </div>
-            <p className="mt-4 text-sm text-white/60">Rendered walkthrough of the deployment flow. Real-world recording arrives after pilot.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

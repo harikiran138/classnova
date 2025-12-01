@@ -49,10 +49,12 @@ const Navigation = () => {
       <div className="section-shell">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group" aria-label="Go to homepage">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#2563EB] shadow-md transition-transform duration-300 group-hover:scale-105">
-              <span className="text-white text-xl font-bold font-heading">C</span>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group" aria-label="Go to homepage">
+            <img
+              src="/logo.png"
+              alt="ClassNova Logo"
+              className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
             <span className="text-2xl font-bold text-[#0F172A] font-heading tracking-tight">CLASSNOVA</span>
           </Link>
 

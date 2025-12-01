@@ -113,4 +113,8 @@
   .hero-gradient {
     background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
   }
+
+  .section-shell {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
 }

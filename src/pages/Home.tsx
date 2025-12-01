@@ -1,5 +1,5 @@
 import HeroSection from "@/sections/HeroSection";
-import TrustBanner from "@/sections/TrustBanner";
+
 import ProblemSolutionSection from "@/sections/ProblemSolutionSection";
 import SetupStepsSection from "@/sections/SetupStepsSection";
 import BenefitsSection from "@/sections/BenefitsSection";
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="animate-fade-in">
       <HeroSection />
-      <TrustBanner />
+
       <ProblemSolutionSection />
       <SetupStepsSection />
       <BenefitsSection />

@@ -9,7 +9,10 @@ const Footer = () => {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-primary">ClassNova</h3>
+              <div className="flex items-center gap-2 mb-2">
+                <img src="/logo.png" alt="ClassNova Logo" className="h-8 w-auto object-contain brightness-0 invert" />
+                <h3 className="text-2xl font-bold text-primary">ClassNova</h3>
+              </div>
               <p className="text-background/80 leading-relaxed">
                 Transforming education, one classroom at a time.
               </p>
