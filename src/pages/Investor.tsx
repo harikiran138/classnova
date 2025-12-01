@@ -70,7 +70,7 @@ const Investor = () => {
 
                 <div className="section-shell grid md:grid-cols-3 gap-8">
                     {[
-                        { icon: Monitor, title: "Hardware", desc: "Low-cost interactive panels & local servers." },
+                        { icon: Monitor, title: "Hardware", desc: "Smart Projector Kits & local servers." },
                         { icon: Globe, title: "Software", desc: "Offline-first LMS & AI Tutor." },
                         { icon: BarChart3, title: "Data", desc: "Real-time learning analytics." }
                     ].map((item, i) => (

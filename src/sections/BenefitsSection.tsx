@@ -60,7 +60,7 @@ export const BenefitsSection = () => {
             <h3 className="text-xl font-bold text-slate-900 mb-6">Initial Cost</h3>
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-slate-500 uppercase font-bold tracking-wider mb-1">Traditional Smart Boards</p>
+                <p className="text-sm text-slate-500 uppercase font-bold tracking-wider mb-1">New Smart Boards</p>
                 <p className="text-2xl font-bold text-red-500">₹2 - 5 Lakhs</p>
               </div>
               <div className="h-px bg-slate-200" />

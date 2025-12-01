@@ -14,7 +14,7 @@ const Footer = () => {
                 <h3 className="text-2xl font-bold text-primary">ClassNova</h3>
               </div>
               <p className="text-background/80 leading-relaxed">
-                Transforming education, one classroom at a time.
+                Transforming education for Colleges, Schools, and NGOs.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary flex items-center justify-center transition-smooth">
@@ -60,15 +60,15 @@ const Footer = () => {
               <ul className="space-y-3 text-background/80">
                 <li className="flex items-start gap-2">
                   <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>info@classnova.in</span>
+                  <span>harikiran1388@gmail.com</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>+91 XXXXX XXXXX</span>
+                  <span>+91 94916 45242</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>Bangalore, India</span>
+                  <span>Visakhapatnam, India</span>
                 </li>
               </ul>
             </div>

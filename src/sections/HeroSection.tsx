@@ -85,7 +85,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               className="text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed"
             >
-              ClassNova transforms any ordinary projector into an advanced interactive smart classroom for <span className="font-bold text-slate-900">₹12,000</span> — <span className="font-bold text-brand-blue-600">80% cheaper</span> than traditional smart boards.
+              ClassNova transforms any ordinary projector into an advanced interactive smart classroom. Designed for <span className="font-bold text-slate-900">Colleges, Schools, and NGOs</span> to modernize education instantly.
             </motion.p>
           </div>
 

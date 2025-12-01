@@ -28,7 +28,7 @@ const MidCtaSection = () => {
                 Ready to transform your school?
               </h2>
               <p className="text-xl text-blue-100 max-w-lg mx-auto md:mx-0">
-                Join 50+ schools upgrading to ClassNova this month. Book a demo to lock in early-bird pricing.
+                Join 50+ Colleges and Schools upgrading to ClassNova this month. Book a demo to lock in early-bird pricing.
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">

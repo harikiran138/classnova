@@ -52,30 +52,7 @@ const Team = () => {
                 </div>
             </section>
 
-            {/* ADVISORS */}
-            <section className="section-padding bg-slate-50 border-y border-slate-200">
-                <div className="section-shell">
-                    <div className="text-center mb-16">
-                        <h2 className="section-heading text-slate-900 uppercase">Backed by Industry Leaders</h2>
-                    </div>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            { name: "Dr. A. Kumar", role: "Former Director, CBSE", desc: "Curriculum Strategy" },
-                            { name: "S. Reddy", role: "VP Engineering, BigTech", desc: "Technical Architecture" },
-                            { name: "M. Singh", role: "Founder, Unicorn EdTech", desc: "GTM Strategy" }
-                        ].map((advisor, i) => (
-                            <div key={i} className="p-6 rounded-2xl bg-white border border-slate-200 text-center hover:shadow-lg transition-all duration-300">
-                                <div className="w-20 h-20 mx-auto rounded-full bg-slate-100 mb-4 flex items-center justify-center text-slate-500">
-                                    <GraduationCap className="w-8 h-8" />
-                                </div>
-                                <h4 className="text-lg font-bold text-[#0F172A]">{advisor.name}</h4>
-                                <p className="text-slate-500 text-sm font-medium mb-2">{advisor.role}</p>
-                                <p className="text-[#2563EB] text-xs font-bold uppercase tracking-wide">{advisor.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
         </div>
     );
 };

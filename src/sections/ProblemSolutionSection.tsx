@@ -65,7 +65,7 @@ export const ProblemSolutionSection = () => {
             </h2>
 
             <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-xl">
-              Smart boards cost <span className="font-bold text-slate-900">₹2-5 Lakhs</span>, making them unaffordable for 90% of schools. Plus, <span className="font-bold text-slate-900">68% of schools</span> struggle with unreliable internet, rendering cloud-only tools useless.
+              Most classrooms only have a basic projector. Upgrading to smart boards costs <span className="font-bold text-slate-900">₹2-5 Lakhs</span>, which is unaffordable for most Colleges and NGOs.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">

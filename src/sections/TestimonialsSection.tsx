@@ -4,9 +4,9 @@ import { Quote } from "lucide-react";
 const feedback = [
   {
     quote: "Before ClassNova, I struggled to keep students engaged. With the kit, lessons are interactive and my workload is lighter. My class is more focused than ever.",
-    author: "Shalini Rao",
-    role: "Govt. Hindi Teacher",
-    location: "Bengaluru",
+    author: "Dr. Shalini Rao",
+    role: "Professor",
+    location: "Engineering College, Bengaluru",
     initials: "SR",
     color: "bg-pink-100 text-pink-600"
   },

@@ -68,7 +68,7 @@ export const SetupStepsSection = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-400 max-w-xl mx-auto"
           >
-            District teams can deploy 100+ classrooms a week using existing technicians. No specialized training required.
+            District teams can deploy 100+ classrooms a week. Perfect for Colleges, Schools, and NGOs.
           </motion.p>
         </div>
 

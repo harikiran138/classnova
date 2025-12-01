@@ -2,22 +2,22 @@ const rows = [
   {
     feature: "Capex per classroom",
     board: "₹2-3 lakh",
-    classnova: "₹25k pilot kit*",
+    classnova: "₹12,000",
   },
   {
     feature: "Installation time",
     board: "1-2 days",
-    classnova: "Measured 6 min",
+    classnova: "10 min",
   },
   {
     feature: "Works offline",
     board: "No",
-    classnova: "Prototype: Yes",
+    classnova: "Yes (Native)",
   },
   {
     feature: "Teacher adoption",
-    board: "30%",
-    classnova: "TBD (target 80%)",
+    board: "Low (Complex)",
+    classnova: "High (Simple UI)",
   },
 ];
 
@@ -35,8 +35,8 @@ export const ComparisonSection = () => {
             <thead className="bg-white/5 text-sm uppercase tracking-wide text-white/60">
               <tr>
                 <th className="px-6 py-4">Metric</th>
-                <th className="px-6 py-4">Smart board</th>
-                <th className="px-6 py-4">ClassNova</th>
+                <th className="px-6 py-4">New Smart Board</th>
+                <th className="px-6 py-4">ClassNova Upgrade</th>
               </tr>
             </thead>
             <tbody>
@@ -50,7 +50,7 @@ export const ComparisonSection = () => {
             </tbody>
           </table>
         </div>
-        <p className="mt-4 text-center text-xs text-white/50">*Pilot pricing covers manufacturing + onsite support. Calculator will launch once BOM is finalized.</p>
+        <p className="mt-4 text-center text-xs text-white/50">*One-time hardware cost. Optional cloud subscription available.</p>
       </div>
     </section>
   );

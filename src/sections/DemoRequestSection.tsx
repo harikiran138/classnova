@@ -1,74 +1,137 @@
-import { MapPin, Phone, Mail, Calendar } from "lucide-react";
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, ArrowRight, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const DemoRequestSection = () => {
   return (
-    <section id="demo" className="section-padding bg-slate-900 text-white">
-      <div className="section-shell">
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div>
-            <p className="section-eyebrow">Demo</p>
-            <h2 className="section-heading mt-4 text-white">Request a walkthrough</h2>
-            <p className="section-subtitle mt-4">
-              We onboard two institutions per month so every pilot gets full attention.
-            </p>
-            <div className="mt-8 space-y-3 text-white/80 text-base">
-              <p className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Bengaluru · Mumbai · Delhi</p>
-              <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 98765 43210</p>
-              <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> hello@classnova.com</p>
-              <p className="flex items-center gap-2"><Calendar className="w-4 h-4" /> Current wait time: 10 days</p>
+    <section id="demo" className="section-padding bg-[#020617] text-white relative overflow-hidden py-20">
+      {/* Background Ambience */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-brand-blue-600/10 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />
+      </div>
+
+      <div className="section-shell relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[40px] overflow-hidden shadow-2xl"
+        >
+          <div className="grid lg:grid-cols-5 min-h-[500px]">
+
+            {/* Left: Creative Contact Card */}
+            <div className="lg:col-span-2 bg-gradient-to-br from-brand-blue-600 to-brand-blue-800 p-8 md:p-10 flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-2">Let's Talk</h3>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  Ready to modernize your institution? Reach out directly for a priority pilot review.
+                </p>
+              </div>
+
+              {/* Floating "Business Card" Visual */}
+              <div className="relative z-10 my-8">
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl space-y-4 hover:bg-white/15 transition-colors cursor-default">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-white text-brand-blue-600 flex items-center justify-center font-bold text-lg">
+                      CK
+                    </div>
+                    <div>
+                      <p className="font-bold text-white leading-none">Chepuri Hari Kiran</p>
+                      <p className="text-xs text-blue-200 mt-1">Founder & CEO</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2 text-sm">
+                    <a href="tel:+919491645242" className="flex items-center gap-3 text-blue-50 hover:text-white transition-colors">
+                      <Phone className="w-4 h-4" /> +91 94916 45242
+                    </a>
+                    <a href="mailto:harikiran1388@gmail.com" className="flex items-center gap-3 text-blue-50 hover:text-white transition-colors">
+                      <Mail className="w-4 h-4" /> harikiran1388@gmail.com
+                    </a>
+                    <div className="flex items-center gap-3 text-blue-50">
+                      <MapPin className="w-4 h-4" /> Visakhapatnam, India
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative z-10 text-xs text-blue-200 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                Responding within 24 hours
+              </div>
             </div>
-            <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white/70">
-              No installation fee. No maintenance cost. Cancel the pilot anytime before hardware ships.
+
+            {/* Right: Compact Form */}
+            <div className="lg:col-span-3 p-8 md:p-10 bg-white/5">
+              <form className="space-y-5">
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Name</label>
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="w-full h-11 px-4 rounded-lg bg-black/20 border border-white/10 text-white text-sm focus:border-brand-blue-500 focus:bg-black/30 transition-all outline-none"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Phone</label>
+                    <input
+                      type="tel"
+                      placeholder="+91..."
+                      className="w-full h-11 px-4 rounded-lg bg-black/20 border border-white/10 text-white text-sm focus:border-brand-blue-500 focus:bg-black/30 transition-all outline-none"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Email</label>
+                  <input
+                    type="email"
+                    placeholder="admin@institution.edu"
+                    className="w-full h-11 px-4 rounded-lg bg-black/20 border border-white/10 text-white text-sm focus:border-brand-blue-500 focus:bg-black/30 transition-all outline-none"
+                  />
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Institution</label>
+                    <input
+                      type="text"
+                      placeholder="School / College Name"
+                      className="w-full h-11 px-4 rounded-lg bg-black/20 border border-white/10 text-white text-sm focus:border-brand-blue-500 focus:bg-black/30 transition-all outline-none"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Size</label>
+                    <select className="w-full h-11 px-4 rounded-lg bg-black/20 border border-white/10 text-white text-sm focus:border-brand-blue-500 focus:bg-black/30 transition-all outline-none appearance-none cursor-pointer">
+                      <option className="bg-slate-900" value="">Select Size</option>
+                      <option className="bg-slate-900" value="<500">&lt; 500 Students</option>
+                      <option className="bg-slate-900" value="500-2000">500 - 2,000</option>
+                      <option className="bg-slate-900" value=">2000">2,000+</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Message</label>
+                  <textarea
+                    rows={2}
+                    placeholder="How can we help?"
+                    className="w-full p-4 rounded-lg bg-black/20 border border-white/10 text-white text-sm focus:border-brand-blue-500 focus:bg-black/30 transition-all outline-none resize-none"
+                  />
+                </div>
+
+                <Button className="w-full h-12 bg-white text-brand-blue-900 font-bold hover:bg-blue-50 transition-colors">
+                  Send Request
+                  <Send className="w-4 h-4 ml-2" />
+                </Button>
+              </form>
             </div>
           </div>
-          <form className="space-y-4 rounded-[32px] border border-white/10 bg-white/10 p-8 backdrop-blur">
-            <div>
-              <label className="text-sm text-white/70">Full name</label>
-              <input className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" />
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label className="text-sm text-white/70">Email</label>
-                <input className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" />
-              </div>
-              <div>
-                <label className="text-sm text-white/70">Phone / WhatsApp</label>
-                <input className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" />
-              </div>
-            </div>
-            <div>
-              <label className="text-sm text-white/70">Institution</label>
-              <input className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" />
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label className="text-sm text-white/70">School size</label>
-                <select className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white">
-                  <option className="text-slate-900" value="<500">Under 500 students</option>
-                  <option className="text-slate-900" value="500-1500">500 – 1,500 students</option>
-                  <option className="text-slate-900" value=">1500">1,500+ students</option>
-                </select>
-              </div>
-              <div>
-                <label className="text-sm text-white/70">Preferred demo time</label>
-                <input className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" placeholder="e.g. Weekday 4–6pm" />
-              </div>
-            </div>
-            <div>
-              <label className="text-sm text-white/70">Priority level</label>
-              <select className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white">
-                <option className="text-slate-900" value="standard">Exploring options</option>
-                <option className="text-slate-900" value="fast-track">Need deployment in &lt; 60 days</option>
-              </select>
-            </div>
-            <div>
-              <label className="text-sm text-white/70">What do you need?</label>
-              <textarea className="mt-2 w-full rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-white" rows={4} />
-            </div>
-            <button className="btn-pill w-full bg-white py-3 text-sm font-semibold text-[#050C1F]">Request pilot review</button>
-            <p className="text-xs text-white/50">We reply within 24 hours with notes, NDA, and next steps.</p>
-          </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

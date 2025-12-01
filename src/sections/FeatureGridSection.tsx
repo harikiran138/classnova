@@ -17,7 +17,7 @@ const features = [
     text: "text-white",
     icon: Cpu,
     title: "ClassNova OS",
-    desc: "Built from scratch for education. Boots in 20 seconds. Zero lag. 100% Virus-free.",
+    desc: "Hardened Linux base. 20-second boot time. Zero lag. 100% Virus-free.",
     visual: "os"
   },
   {
@@ -26,7 +26,7 @@ const features = [
     text: "text-white",
     icon: WifiOff,
     title: "Offline First",
-    desc: "Works perfectly without internet. Auto-syncs when online."
+    desc: "Intelligent Cloud Sync. Works 100% offline. Adaptive bandwidth management."
   },
   {
     colSpan: "md:col-span-1",
@@ -34,7 +34,7 @@ const features = [
     text: "text-white",
     icon: Mic,
     title: "AI Transcription",
-    desc: "Records and transcribes every lesson automatically."
+    desc: "95% accuracy for Indian accents. Supports code-switching (English-Hindi)."
   },
   {
     colSpan: "md:col-span-2",
@@ -42,7 +42,7 @@ const features = [
     text: "text-white",
     icon: BarChart3,
     title: "Smart Analytics",
-    desc: "Real-time insights on student engagement and learning outcomes.",
+    desc: "Real-time engagement metrics. Proprietary 60% video compression technology.",
     visual: "analytics"
   },
 ];
