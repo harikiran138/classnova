@@ -48,10 +48,12 @@ const MidCtaSection = () => {
                 Book Free Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="h-16 text-lg font-bold border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 bg-transparent">
-                Download Brochure
-                <Download className="ml-2 h-5 w-5" />
-              </Button>
+              <a href="/ClassNova.pdf" download="ClassNova.pdf" className="w-full md:w-auto">
+                <Button variant="outline" className="w-full h-16 text-lg font-bold border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 bg-transparent">
+                  Download Brochure
+                  <Download className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>

@@ -22,10 +22,25 @@ const Investor = () => {
                     ClassNova is capturing the $5B underserved market of budget private schools in India with a proprietary offline-first operating system.
                 </p>
                 <div className="flex justify-center gap-4">
-                    <Button size="lg" className="h-14 px-10 text-lg bg-[#2563EB] hover:bg-blue-700 text-white rounded-2xl shadow-xl shadow-blue-500/20">
-                        REQUEST PITCH DECK
-                        <Lock className="ml-2 h-4 w-4" />
-                    </Button>
+                    <a
+                        href="/ClassNova_Pitch.pdf"
+                        download="ClassNova Pitch.pdf"
+                        onClick={(e) => {
+                            // Allow default action (download) to happen
+
+                            // Open Google Form in new tab
+                            window.open("https://forms.gle/nvK8pgUDxgfErq497", "_blank");
+                        }}
+                        className="inline-block"
+                    >
+                        <Button
+                            size="lg"
+                            className="h-14 px-10 text-lg bg-[#2563EB] hover:bg-blue-700 text-white rounded-2xl shadow-xl shadow-blue-500/20 pointer-events-none"
+                        >
+                            REQUEST PITCH DECK
+                            <Lock className="ml-2 h-4 w-4" />
+                        </Button>
+                    </a>
                 </div>
             </section>
 
