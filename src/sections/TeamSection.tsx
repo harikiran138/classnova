@@ -39,12 +39,16 @@ export const TeamSection = () => {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {team.map((member) => (
             <div key={member.name} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:border-blue-200 hover:shadow-md transition-all group">
-              <div className="h-12 w-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-4 group-hover:scale-110 transition-transform">
-                {member.name.split(" ").map(n => n[0]).join("").substring(0, 2)}
+              <div className="h-24 w-24 rounded-full bg-blue-50 overflow-hidden mx-auto mb-4 group-hover:scale-110 transition-transform border-4 border-white shadow-lg">
+                <img
+                  src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member.name}`}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900">{member.name}</h3>
-              <p className="text-sm uppercase tracking-wide text-orange-500 font-bold mt-1">{member.role}</p>
-              <p className="mt-3 text-slate-600 text-sm leading-relaxed">{member.note}</p>
+              <h3 className="text-xl font-semibold text-slate-900 text-center">{member.name}</h3>
+              <p className="text-sm uppercase tracking-wide text-orange-500 font-bold mt-1 text-center">{member.role}</p>
+              <p className="mt-3 text-slate-600 text-sm leading-relaxed text-center">{member.note}</p>
             </div>
           ))}
         </div>

@@ -11,7 +11,6 @@ const About = () => {
             <TeamSection />
             <DevelopmentTimelineSection />
             <TransparencySection />
-            <PartnersSection />
         </div>
     );
 };

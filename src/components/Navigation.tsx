@@ -30,7 +30,6 @@ const Navigation = () => {
     { label: "Team", href: "/team" },
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
-    { label: "Resources", href: "/resources" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -79,14 +78,11 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden items-center gap-4 lg:flex">
-            <Button variant="ghost" className="text-[#64748B] hover:text-[#2563EB] font-semibold">
-              LOG IN
-            </Button>
-            <Link to="/contact">
+            <a href="https://forms.gle/nvK8pgUDxgfErq497" target="_blank" rel="noopener noreferrer">
               <Button className="shadow-lg shadow-orange-500/20">
                 BOOK DEMO
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,14 +115,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 border-t border-slate-100 pt-4 mt-2">
-                <Button variant="outline" className="w-full justify-center">
-                  LOG IN
-                </Button>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <a href="https://forms.gle/nvK8pgUDxgfErq497" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                   <Button className="w-full justify-center shadow-lg shadow-orange-500/20">
                     BOOK A DEMO
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

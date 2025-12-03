@@ -48,16 +48,14 @@ const Investor = () => {
                 </p>
                 <div className="flex justify-center gap-4">
                     <a
-                        href="/ClassNova_Pitch.pdf"
-                        download="ClassNova Pitch.pdf"
-                        onClick={(e) => {
-                            window.open("https://forms.gle/nvK8pgUDxgfErq497", "_blank");
-                        }}
+                        href="/classnova-pitch.pdf"
+                        download="classnova-pitch.pdf"
+                        onClick={() => window.open("https://forms.gle/nvK8pgUDxgfErq497", "_blank")}
                         className="inline-block"
                     >
                         <Button
                             size="lg"
-                            className="h-14 px-8 text-base font-bold bg-orange-500 hover:bg-orange-600 text-white rounded-xl shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-0.5 pointer-events-none"
+                            className="h-14 px-8 text-base font-bold bg-orange-500 hover:bg-orange-600 text-white rounded-xl shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-0.5"
                         >
                             REQUEST PITCH DECK
                             <Lock className="ml-2 h-5 w-5" />
@@ -169,10 +167,10 @@ const Investor = () => {
 
                         {/* Market Graphic */}
                         <div className="relative flex items-center justify-center">
-                            <div className="w-[350px] h-[350px] rounded-full border border-slate-200 bg-white/50 flex items-center justify-center relative">
-                                <p className="absolute top-6 text-slate-400 font-bold text-sm">TAM ₹837 Cr</p>
+                            <div className="w-[350px] h-[350px] rounded-full border border-orange-600 bg-orange-500 flex items-center justify-center relative shadow-xl">
+                                <p className="absolute top-6 text-white font-bold text-sm">TAM ₹837 Cr</p>
                                 <div className="w-[250px] h-[250px] rounded-full border border-slate-200 bg-white flex items-center justify-center relative shadow-sm">
-                                    <p className="absolute top-6 text-slate-400 font-bold text-sm">SAM ₹251 Cr</p>
+                                    <p className="absolute top-6 text-slate-500 font-bold text-sm">SAM ₹251 Cr</p>
                                     <div className="w-[150px] h-[150px] rounded-full bg-blue-600 flex items-center justify-center shadow-2xl shadow-blue-500/30">
                                         <div className="text-center">
                                             <p className="text-white font-bold text-lg">SOM</p>

@@ -158,8 +158,8 @@ const Product = () => {
                         <div className="absolute left-[28px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-blue-200 to-transparent md:left-1/2 md:-translate-x-1/2" />
 
                         {[
-                            { year: "2024", title: "Pilot Phase", desc: "Deploy in 10 partner schools. Gather feedback.", status: "done", icon: Layers },
-                            { year: "2025", title: "Market Launch", desc: "Expand to 100+ institutions. Release v2.0 hardware.", status: "current", icon: Zap },
+                            { year: "2025", title: "Pilot Phase", desc: "Deploy in 10 partner schools. Gather feedback.", status: "done", icon: Layers },
+                            { year: "2026", title: "Market Launch", desc: "Expand to 100+ institutions. Release v2.0 hardware.", status: "current", icon: Zap },
                             { year: "2026", title: "AI Integration", desc: "Advanced personalized tutor and voice analytics.", status: "future", icon: Sparkles },
                             { year: "2027", title: "Global Scale", desc: "Export to emerging markets in Africa and SE Asia.", status: "future", icon: Globe },
                         ].map((item, i) => (

@@ -87,15 +87,15 @@ const Projects = () => {
 
                         <div className="grid grid-cols-2 gap-4">
                             {[
-                                { label: "Schools", value: "10+", icon: Users },
-                                { label: "Students", value: "500+", icon: TrendingUp },
-                                { label: "States", value: "3", icon: MapPin },
+                                { label: "Students Impacted", value: "500+", icon: TrendingUp },
+                                { label: "States Reached", value: "3", icon: MapPin },
                                 { label: "NPS Score", value: "72", icon: Star },
+                                { label: "Awards Won", value: "2", icon: Trophy },
                             ].map((stat, i) => (
-                                <div key={i} className="p-8 rounded-2xl bg-white border border-slate-200 text-center hover:border-blue-200 hover:shadow-lg transition-all shadow-sm">
-                                    <stat.icon className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-                                    <p className="text-4xl font-bold text-slate-900 mb-2">{stat.value}</p>
-                                    <p className="text-sm font-bold text-slate-500 uppercase tracking-wide">{stat.label}</p>
+                                <div key={i} className="p-6 rounded-2xl bg-white border border-slate-200 text-center hover:border-blue-200 hover:shadow-lg transition-all shadow-sm flex flex-col items-center justify-center h-full">
+                                    <stat.icon className="h-8 w-8 text-blue-600 mb-3" />
+                                    <p className="text-3xl font-bold text-slate-900 mb-1">{stat.value}</p>
+                                    <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
