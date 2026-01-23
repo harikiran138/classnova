@@ -1,0 +1,43 @@
+import subprocess
+
+def run_ssh_command(ip, user, password, command):
+    print(f"--- Running: {command} ---")
+    expect_script = f"""
+    set timeout 20
+    spawn ssh {user}@{ip} "{command}"
+    expect {{
+        "password:" {{
+            send "{password}\\r"
+            expect {{
+                 eof {{ exit 0 }}
+                 timeout {{ exit 0 }}
+            }}
+        }}
+        "yes/no" {{
+            send "yes\\r"
+            exp_continue
+        }}
+        timeout {{ exit 2 }}
+        eof {{ exit 1 }}
+    }}
+    catch wait result
+    exit [lindex $result 3]
+    """
+    result = subprocess.run(['expect', '-c', expect_script], capture_output=True, text=True)
+    print(result.stdout)
+
+target_ip = "172.18.161.85"
+user = "classnova"
+password = "hari1388"
+
+# 1. Force remove lock files
+run_ssh_command(target_ip, user, password, "rm -rf /tmp/.X1-lock /tmp/.X11-unix/X1 /home/classnova/.vnc/*.pid")
+
+# 2. Kill any lingering X processes again just in case
+run_ssh_command(target_ip, user, password, "killall Xtightvnc")
+
+# 3. Start VNC server clean
+run_ssh_command(target_ip, user, password, "vncserver :1 -geometry 1280x720 -depth 24")
+
+# 4. Verify process
+run_ssh_command(target_ip, user, password, "ps aux | grep Xtightvnc")
