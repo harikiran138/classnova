@@ -21,8 +21,6 @@ const queryClient = new QueryClient();
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
-import { Analytics } from "@vercel/analytics/react";
-
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
@@ -69,7 +67,6 @@ const App = () => {
             </main>
             <FooterSection />
           </div>
-          <Analytics />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
